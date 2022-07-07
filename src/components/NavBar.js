@@ -7,14 +7,20 @@ const NavBar = () => {
     <Navbar expand="md" fixed="top">
       <Container>
         <Navbar.Brand>
-            <img src={logo} alt="SnapFood logo" height="70" width="100" />
+            <img src={logo} alt="SnapFood logo" height="60" width="90" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link>Home</Nav.Link>
-            <Nav.Link>Sign up</Nav.Link>
-            <Nav.Link>Log in</Nav.Link>
+          <Nav className="ml-auto">
+            <Nav.Link>
+                <i class="fa-solid fa-house"></i>Home
+            </Nav.Link>
+            <Nav.Link>
+                <i class="fa-solid fa-user-plus"></i>Sign up
+            </Nav.Link>
+            <Nav.Link>
+                <i class="fa-solid fa-right-to-bracket"></i>Log in
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
