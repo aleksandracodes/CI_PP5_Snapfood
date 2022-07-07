@@ -1,0 +1,14 @@
+/* Colors pallet */
+:root {
+  --dark-slate-grey: #293f4a;
+  --light-grey: #718085;
+  --light: #d6dad9;
+  --beige: #b1aca6;
+}
+
+.App {
+  font-family: "Inter", sans-serif;
+  color: var(--dark-slate-grey);
+  background-color: var(--light);
+  min-height: 100vh;
+}
