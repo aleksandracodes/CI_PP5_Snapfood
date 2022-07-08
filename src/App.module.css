@@ -12,3 +12,29 @@
   background-color: var(--light);
   min-height: 100vh;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--dark-slate-grey) !important;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover i {
+  color: var(--dark-slate-grey);
+  transition: color ease-in-out 0.3s;
+	transform: rotate(-15deg) scale(1.1);
+}
+
+i {
+  color: var(--light-grey);
+  font-size: 1.5rem;
+  padding: 6px;
+  vertical-align: middle;
+}
