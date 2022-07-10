@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+.Body {
+  padding-top: 120px;
+}
+
 a {
   color: var(--dark-slate-grey) !important;
   font-weight: bold;

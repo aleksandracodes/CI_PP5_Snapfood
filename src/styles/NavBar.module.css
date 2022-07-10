@@ -1,3 +1,12 @@
 .NavBar {
     box-shadow: 1px 1px 5px var(--dark-slate-grey);
 }
+
+.NavLink {
+    padding: 8px;
+}
+
+.Active i {
+    transform: rotate(-15deg) scale(1.1);
+    color: var(--dark-slate-grey);
+}
