@@ -14,7 +14,7 @@ const Landing = () => {
               <Card.Title>
                 <h1>SnapFood - Get started</h1>
               </Card.Title>
-              <Card.Text>
+              <Card.Text className="font-weight-bold">
                 SnapFood is Food Photo Sharing Portal. If you’re looking for an
                 inspiration for your next meal, you’re in the right place.
                 <br />
@@ -26,10 +26,10 @@ const Landing = () => {
             <img src={landingImage} className={styles.LandingImage} alt="Person photographing a plate with food"/>
             <Card.Body className="mb-3">
               <NavLink to="/signup">
-                <Button className="mx-2">Happy to join</Button>
+                <Button className={styles.LandingButton}> Happy to join</Button>
               </NavLink>
               <NavLink to="/signin">
-                <Button className="mx-2">
+                <Button className={styles.LandingButton}>
                   I’m already a member, log me in!
                 </Button>
               </NavLink>

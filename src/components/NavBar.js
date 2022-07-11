@@ -13,7 +13,7 @@ const NavBar = () => {
             <img src={logo} alt="SnapFood logo" height="60" width="90" />
           </Navbar.Brand>
         </NavLink>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle className={styles.NavbarToggle} aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-right">
             <NavLink exact className={styles.NavLink} activeClassName={styles.Active} to="/">

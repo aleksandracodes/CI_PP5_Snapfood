@@ -3,15 +3,19 @@
   margin: 0 auto;
 }
 
-Button {
-  background-color: var(--salmon) !important;
+.LandingButton {
+  background-color: var(--salmon);
   box-shadow: 1px 1px 5px var(--salmon);
-  border-color: var(--salmon) !important;
+  border-color: var(--salmon);
 }
 
-Button:hover {
+.LandingButton:first-child {
+  margin-right: 15px;
+}
+
+.LandingButton:hover, .LandingButton:focus {
     background-color: var(--light) !important;
     color: var(--dark-slate-grey) !important;
-    box-shadow: 1px 1px 5px var(--light);
+    box-shadow: 1px 1px 5px var(--light) !important;
     border-color: var(--dark-slate-grey) !important;
 }

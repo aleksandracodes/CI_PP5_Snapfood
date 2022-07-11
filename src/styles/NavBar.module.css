@@ -11,3 +11,7 @@
     transform: rotate(-15deg) scale(1.1);
     color: var(--dark-slate-grey);
 }
+
+.NavbarToggle {
+    border: none !important;
+}
