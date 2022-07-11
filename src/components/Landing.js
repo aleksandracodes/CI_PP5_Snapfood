@@ -1,9 +1,8 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Card, Button, Row, Col } from "react-bootstrap";
 import NavLink from "react-router-dom/NavLink";
+import landingImage from "../assets/landing-page-image.png";
+import styles from "../styles/Landing.module.css";
 
 const Landing = () => {
   return (
@@ -24,13 +23,13 @@ const Landing = () => {
                 someone else!
               </Card.Text>
             </Card.Body>
-            <img src="https://res.cloudinary.com/dgcydxlev/image/upload/v1657316420/istockphoto-1263096919-612x612_muqujg.jpg" style={{ width: '350px' }} alt="Person photographing a plate with food"/>
-            <Card.Body>
+            <img src={landingImage} className={styles.LandingImage} alt="Person photographing a plate with food"/>
+            <Card.Body className="mb-3">
               <NavLink to="/signup">
-                <Button variant="secondary">Happy to join</Button>
+                <Button className="mx-2">Happy to join</Button>
               </NavLink>
               <NavLink to="/signin">
-                <Button variant="secondary">
+                <Button className="mx-2">
                   I’m already a member, log me in!
                 </Button>
               </NavLink>

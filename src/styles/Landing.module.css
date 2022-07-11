@@ -1,0 +1,17 @@
+.LandingImage {
+  width: 370px;
+  margin: 0 auto;
+}
+
+Button {
+  background-color: var(--salmon) !important;
+  box-shadow: 1px 1px 5px var(--salmon);
+  border-color: var(--salmon) !important;
+}
+
+Button:hover {
+    background-color: var(--light) !important;
+    color: var(--dark-slate-grey) !important;
+    box-shadow: 1px 1px 5px var(--light);
+    border-color: var(--dark-slate-grey) !important;
+}
