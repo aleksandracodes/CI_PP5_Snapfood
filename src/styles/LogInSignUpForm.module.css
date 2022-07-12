@@ -8,11 +8,13 @@
   padding: 15px;
 }
 
+.Input:focus {
+  box-shadow: none;
+  border: 1px solid var(--salmon);
+}
+
 .Link {
-  text-decoration: none;
-  text-align: center;
   display: block;
-  margin: auto;
 }
 
 .Link span {

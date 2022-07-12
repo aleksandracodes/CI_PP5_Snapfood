@@ -4,7 +4,7 @@
   --light-grey: #718085;
   --light: #d6dad9;
   --beige: #b1aca6;
-  --salmon: salmon;
+  --salmon: #F87364;
 }
 
 .App {
@@ -51,3 +51,20 @@ i {
   vertical-align: middle;
 }
 
+.button {
+  background-color: var(--salmon);
+  box-shadow: 1px 1px 5px var(--salmon);
+  border-color: var(--salmon);
+  font-weight: bold;
+}
+
+.button:first-child {
+  margin-right: 15px;
+}
+
+.button:hover, .button:focus {
+    background-color: var(--light) !important;
+    color: var(--dark-slate-grey) !important;
+    box-shadow: 1px 1px 5px var(--light) !important;
+    border-color: var(--dark-slate-grey) !important;
+}

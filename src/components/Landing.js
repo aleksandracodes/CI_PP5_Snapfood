@@ -3,6 +3,7 @@ import { Card, Button, Row, Col, Container } from "react-bootstrap";
 import NavLink from "react-router-dom/NavLink";
 import landingImage from "../assets/landing-page-image.png";
 import styles from "../styles/Landing.module.css";
+import appStyles from "../App.module.css";
 
 const Landing = () => {
   return (
@@ -12,7 +13,7 @@ const Landing = () => {
           <Card>
             <Card.Body>
               <Card.Title>
-                <h1>SnapFood - Get started</h1>
+                <h1 className="mb-4">SnapFood - Get started</h1>
               </Card.Title>
               <Card.Text className="font-weight-bold">
                 SnapFood is Food Photo Sharing Portal. If you’re looking for an
@@ -30,10 +31,10 @@ const Landing = () => {
             />
             <Card.Body className="mb-3">
               <NavLink to="/signup">
-                <Button className={styles.LandingButton}> Happy to join</Button>
+                <Button className={appStyles.button}> Happy to join</Button>
               </NavLink>
               <NavLink to="/signin">
-                <Button className={styles.LandingButton}>
+                <Button className={appStyles.button}>
                   I’m already a member, log me in!
                 </Button>
               </NavLink>
