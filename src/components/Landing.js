@@ -1,15 +1,15 @@
 import React from "react";
-import { Card, Button, Row, Col } from "react-bootstrap";
+import { Card, Button, Row, Col, Container } from "react-bootstrap";
 import NavLink from "react-router-dom/NavLink";
 import landingImage from "../assets/landing-page-image.png";
 import styles from "../styles/Landing.module.css";
 
 const Landing = () => {
   return (
-    <div>
-      <Row>
-        <Col sm={12}>
-        <Card className="text-center">
+    <Row className="text-center">
+      <Col sm={12}>
+        <Container>
+          <Card>
             <Card.Body>
               <Card.Title>
                 <h1>SnapFood - Get started</h1>
@@ -23,7 +23,11 @@ const Landing = () => {
                 someone else!
               </Card.Text>
             </Card.Body>
-            <img src={landingImage} className={styles.LandingImage} alt="Person photographing a plate with food"/>
+            <img
+              src={landingImage}
+              className={styles.LandingImage}
+              alt="Person photographing a plate with food"
+            />
             <Card.Body className="mb-3">
               <NavLink to="/signup">
                 <Button className={styles.LandingButton}> Happy to join</Button>
@@ -35,9 +39,9 @@ const Landing = () => {
               </NavLink>
             </Card.Body>
           </Card>
-        </Col>
-      </Row>
-    </div>
+        </Container>
+      </Col>
+    </Row>
   );
 };
 

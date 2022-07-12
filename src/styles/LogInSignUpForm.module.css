@@ -1,0 +1,21 @@
+.Input {
+  background: #fff;
+  border: 1px solid var(--light);
+  box-sizing: border-box;
+  border-radius: 3px;
+  color: var(--dark-slate-grey);
+  text-align: center;
+  padding: 15px;
+}
+
+.Link {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.Link span {
+  color: var(--salmon);
+}
+
