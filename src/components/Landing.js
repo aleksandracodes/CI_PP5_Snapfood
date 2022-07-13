@@ -33,7 +33,7 @@ const Landing = () => {
               <NavLink to="/signup">
                 <Button className={appStyles.button}> Happy to join</Button>
               </NavLink>
-              <NavLink to="/signin">
+              <NavLink to="/login">
                 <Button className={appStyles.button}>
                   I’m already a member, log me in!
                 </Button>

@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import Landing from './components/Landing';
 import "./api/axiosDefaults";
 import SignUpForm from './pages/auth/SignUpForm';
+import LogInForm from './pages/auth/LogInForm';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Switch>
             <Route exact path="/" render={() => <Landing />} />
             <Route exact path="/signup" render={() => <SignUpForm />} />
-            <Route exact path="/login" render={() => <h1>Log in</h1>} />
+            <Route exact path="/login" render={() => <LogInForm />} />
             <Route render={()=><h3>Ooops, this page was not found!</h3>} />
           </Switch>
         </Container>
