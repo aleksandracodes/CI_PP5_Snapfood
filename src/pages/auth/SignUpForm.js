@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/LogInSignUpForm.module.css";
-import { Alert, Form, Button, Col, Row, Container } from "react-bootstrap";
 import appStyles from "../../App.module.css";
+import { Alert, Form, Button, Col, Row, Container } from "react-bootstrap";
 import axios from "axios";
 
 const SignUpForm = () => {
@@ -100,7 +100,11 @@ const SignUpForm = () => {
                 {message}
               </Alert>
             ))}
-            <Button className={`my-3 ${appStyles.button}`} type="submit">
+            <Button
+              className={`my-3 ${appStyles.button}`}
+              type="submit"
+              onMouseDown={(e) => e.preventDefault()}
+            >
               Sign up!
             </Button>
 
