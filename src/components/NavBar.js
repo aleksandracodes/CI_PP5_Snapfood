@@ -1,15 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/SnapFood-logo.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
-import { CurrentUserContext } from "../App";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 const NavBar = () => {
-  const currentUser = useContext(CurrentUserContext);
+  const currentUser = useCurrentUser();
 
   // Variable to display current username in the navbar
-  const loggedInNavBar = <>{currentUser?.username}</>
+  const loggedInNavBar = <>{currentUser?.username}</>;
 
   // Navbar visible to users not logged-in
   const loggedOutNavBar = (
