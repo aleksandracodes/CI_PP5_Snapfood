@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/LogInSignUpForm.module.css";
 import appStyles from "../../App.module.css";
-import { Form, Button, Col, Row, Container } from "react-bootstrap";
+import { Alert, Form, Button, Col, Row, Container } from "react-bootstrap";
 import axios from "axios";
 
 function LogInForm() {
@@ -12,6 +12,8 @@ function LogInForm() {
   });
 
   const { username, password } = logInData;
+
+  const [errors, setErrors] = useState({});
 
   const history = useHistory();
 
@@ -29,8 +31,9 @@ function LogInForm() {
     e.preventDefault();
     try {
       await axios.post("/dj-rest-auth/login/", logInData);
-      history.push("/")
+      history.push("/");
     } catch (err) {
+      setErrors(err.response?.data);
     }
   };
 
@@ -41,6 +44,11 @@ function LogInForm() {
           <h1 className="mb-4">Log in</h1>
 
           <Form onSubmit={handleSubmit}>
+            {errors.username?.map((message, idx) => (
+              <Alert variant="warning" className={styles.Alert} key={idx}>
+                {message}
+              </Alert>
+            ))}
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
@@ -53,6 +61,11 @@ function LogInForm() {
               />
             </Form.Group>
 
+            {errors.password?.map((message, idx) => (
+              <Alert variant="warning" className={styles.Alert} key={idx}>
+                {message}
+              </Alert>
+            ))}
             <Form.Group controlId="password">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
@@ -65,10 +78,15 @@ function LogInForm() {
               />
             </Form.Group>
 
-            <Button 
-                className={`my-3 ${appStyles.button}`}
-                type="submit"
-                onMouseDown={(e) => e.preventDefault()}
+            {errors.non_field_errors?.map((message, idx) => (
+              <Alert variant="warning" className={styles.Alert} key={idx}>
+                {message}
+              </Alert>
+            ))}
+            <Button
+              className={`my-3 ${appStyles.button}`}
+              type="submit"
+              onMouseDown={(e) => e.preventDefault()}
             >
               Log in!
             </Button>
