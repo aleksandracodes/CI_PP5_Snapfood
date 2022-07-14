@@ -29,15 +29,15 @@ const NavBar = () => {
               {currentUser?.username}
             </div>
           }
-          id="nav-dropdown"
+          id="dropdown-menu-align-right"
         >
-          <NavDropdown.Item>
+          <NavDropdown.Item className={styles.Dropdown}>
             <NavLink
               to={`/profiles/${currentUser?.profile_id}`}>
                 Profile
             </NavLink>
           </NavDropdown.Item>
-          <NavDropdown.Item>
+          <NavDropdown.Item className={styles.Dropdown}>
             <NavLink
                 to="/" onClick={handleLogOut}>
                   Log out

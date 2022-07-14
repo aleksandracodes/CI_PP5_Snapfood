@@ -15,3 +15,11 @@
 .NavbarToggle {
     border: none !important;
 }
+
+.Dropdown:active {
+    background-color: var(--light) !important;
+}
+
+a::after {
+    display: none !important;
+  }
