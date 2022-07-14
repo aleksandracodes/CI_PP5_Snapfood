@@ -27,16 +27,16 @@ const SignUpForm = () => {
   /* 
     Handle submitted in the form data on signing up. Redirect to log in page.
   */
-    const handleSubmit = async (e) => {
-      e.preventDefault(); // prevent page refresh
-      try {
-        await axios.post("/dj-rest-auth/registration/", signUpData);
-        history.push("/login");
-      } catch (err) {
-        setErrors(err.response?.data);
-      }
-    };
-  
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // prevent page refresh
+    try {
+      await axios.post("/dj-rest-auth/registration/", signUpData);
+      history.push("/login");
+    } catch (err) {
+      setErrors(err.response?.data);
+    }
+  };
+
   return (
     <Row className="text-center">
       <Col className="my-auto offset-md-2" md={8}>
@@ -44,18 +44,22 @@ const SignUpForm = () => {
           <h1 className="mb-4">Sign up</h1>
 
           <Form onSubmit={handleSubmit}>
-          {errors.username?.map((message, idx) => (
+            {errors.username?.map((message, idx) => (
               <Alert variant="warning" className={styles.Alert} key={idx}>
                 {message}
               </Alert>
             ))}
             <Form.Group controlId="username">
+              <Form.Text id="passwordHelpBlock" muted>
+                Your username must be 1-10 characters long.
+              </Form.Text>
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
                 className={styles.Input}
                 type="text"
                 placeholder="Your username"
                 name="username"
+                maxlength="10"
                 value={username}
                 onChange={handleChange}
               />
@@ -77,7 +81,7 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
-            
+
             {errors.password2?.map((message, idx) => (
               <Alert variant="warning" className={styles.Alert} key={idx}>
                 {message}
@@ -109,8 +113,8 @@ const SignUpForm = () => {
             </Button>
 
             <Link className={styles.Link} to="/login">
-            Already a member? Click <span>here </span>to log in.
-          </Link>
+              Already a member? Click <span>here </span>to log in.
+            </Link>
           </Form>
         </Container>
       </Col>
