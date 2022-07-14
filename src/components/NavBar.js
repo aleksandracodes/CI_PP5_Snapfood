@@ -4,13 +4,23 @@ import logo from "../assets/SnapFood-logo.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Avatar from "./Avatar";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
 
   // Variable to display current username in the navbar
-  const loggedInNavBar = <>{currentUser?.username}</>;
+  const loggedInNavBar = (
+    <>
+      <NavLink
+        className={styles.NavLink}
+        to={`/profiles/${currentUser?.profile_id}`}
+      >
+        <Avatar src={currentUser?.profile_image} text={currentUser?.username} height={40} />
+      </NavLink>
 
+    </>
+  );
   // Navbar visible to users not logged-in
   const loggedOutNavBar = (
     <>
