@@ -1,24 +1,49 @@
 import React from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, NavDropdown, Container, Nav } from "react-bootstrap";
 import logo from "../assets/SnapFood-logo.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
-import { useCurrentUser } from "../contexts/CurrentUserContext";
+import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
+import axios from "axios";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
+  const setCurrentUser = useSetCurrentUser();
+
+  const handleLogOut = async () => {
+    try {
+      await axios.post("dj-rest-auth/logout/");
+      setCurrentUser(null);
+    } catch (err) {
+    }
+  }
 
   // Variable to display current username in the navbar
   const loggedInNavBar = (
     <>
-      <NavLink
-        className={styles.NavLink}
-        to={`/profiles/${currentUser?.profile_id}`}
-      >
-        <Avatar src={currentUser?.profile_image} text={currentUser?.username} height={40} />
-      </NavLink>
-
+        <NavDropdown
+          title={
+            <div>
+              <Avatar src={currentUser?.profile_image} height={40} />
+              {currentUser?.username}
+            </div>
+          }
+          id="nav-dropdown"
+        >
+          <NavDropdown.Item>
+            <NavLink
+              to={`/profiles/${currentUser?.profile_id}`}>
+                Profile
+            </NavLink>
+          </NavDropdown.Item>
+          <NavDropdown.Item>
+            <NavLink
+                to="/" onClick={handleLogOut}>
+                  Log out
+            </NavLink>  
+          </NavDropdown.Item>
+        </NavDropdown>
     </>
   );
   // Navbar visible to users not logged-in
