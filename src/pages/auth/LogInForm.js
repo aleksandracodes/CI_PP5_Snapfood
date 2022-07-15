@@ -49,14 +49,14 @@ function LogInForm() {
 
           <Form onSubmit={handleSubmit}>
             {errors.username?.map((message, idx) => (
-              <Alert variant="warning" className={styles.Alert} key={idx}>
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
             ))}
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className={`${appStyles.Input} text-center`}
                 type="text"
                 placeholder="Your username"
                 name="username"
@@ -66,14 +66,14 @@ function LogInForm() {
             </Form.Group>
 
             {errors.password?.map((message, idx) => (
-              <Alert variant="warning" className={styles.Alert} key={idx}>
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
             ))}
             <Form.Group controlId="password">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className={`${appStyles.Input} text-center`}
                 type="password"
                 placeholder="Password"
                 name="password"
@@ -83,7 +83,7 @@ function LogInForm() {
             </Form.Group>
 
             {errors.non_field_errors?.map((message, idx) => (
-              <Alert variant="warning" className={styles.Alert} key={idx}>
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
             ))}
