@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import Upload from "../../assets/upload-image.png";
 import styles from "../../styles/PostCreateEditForm.module.css";
@@ -6,24 +6,56 @@ import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 
 function PostCreateForm() {
+  const [errors, setErrors] = useState({});
+
+  const [postData, setPostData] = useState({
+    title: "",
+    category: "",
+    description: "",
+    image: "",
+  });
+
+  const { title, category, description, image } = postData;
+
+  const handleChange = (e) => {
+    setPostData({
+      ...postData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Handle changes to the file input field
+  const handleChangeImage = (e) => {
+    if (e.target.files.length) {
+      URL.revokeObjectURL(image); // for changing image after adding one
+      setPostData({
+        ...postData,
+        image: URL.createObjectURL(e.target.files[0]),
+      });
+    }
+  };
 
   const textFields = (
     <div className="text-center">
       <Form.Group>
         <Form.Label>Title</Form.Label>
-        <Form.Control 
+        <Form.Control
           type="text"
           name="title"
           className={appStyles.Input}
+          value={title}
+          onChange={handleChange}
         />
       </Form.Group>
 
       <Form.Group>
         <Form.Label>Category</Form.Label>
-        <Form.Control 
-            as="select"
-            name="category"
-            className={appStyles.Input}
+        <Form.Control
+          as="select"
+          name="category"
+          className={appStyles.Input}
+          value={category}
+          onChange={handleChange}
         >
           <option>Select type of cousine</option>
           <option value="spanish">Spanish</option>
@@ -55,6 +87,8 @@ function PostCreateForm() {
           rows={6}
           name="description"
           className={appStyles.Input}
+          value={description}
+          onChange={handleChange}
         />
       </Form.Group>
 
@@ -79,14 +113,39 @@ function PostCreateForm() {
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
             <Form.Group className="text-center">
-              <Form.Label
-                className="d-flex justify-content-center"
-                htmlFor="image-upload"
-              >
-                    <Asset src={Upload} message="Click or tap to upload a picture" alt="Upload image" />
-              </Form.Label>
-            </Form.Group>
+              {image ? (
+                <>
+                  <figure>
+                    <Image className={appStyles.Image} src={image} rounded />
+                  </figure>
+                  <div>
+                    <Form.Label
+                      className={`${appStyles.button} ${styles.ButtonChangeImage} btn`}
+                      htmlFor="image-upload"
+                    >
+                      Change the image
+                    </Form.Label>
+                  </div>
+                </>
+              ) : (
+                <Form.Label
+                  className="d-flex justify-content-center"
+                  htmlFor="image-upload"
+                >
+                  <Asset
+                    src={Upload}
+                    message="Click or tap to upload a picture"
+                  />
+                </Form.Label>
+              )}
 
+              <Form.File
+                id="image-upload"
+                accept="image/*"
+                className="d-none"
+                onChange={handleChangeImage}
+              />
+            </Form.Group>
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>

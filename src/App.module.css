@@ -96,3 +96,9 @@ i {
   font-weight: bold;
   color: var(--dark-slate-grey);
 }
+
+.Image {
+  max-height: 40vh;
+  max-width: 100%;
+  object-fit: contain;
+}
