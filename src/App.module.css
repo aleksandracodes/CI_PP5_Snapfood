@@ -97,3 +97,24 @@ i {
   max-width: 100%;
   object-fit: contain;
 }
+
+
+@media all and (max-width: 992px) {
+  .CollapsedColumn {
+    display: inline-block;
+    width: 32%;
+  }
+  .CollapsedColumn:nth-child(2) {
+    margin: 0 2%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .CollapsedColumn {
+    display: block;
+    width: 100%;
+  }
+  .CollapsedColumn:nth-child(2) {
+    margin: 0;
+  }
+}
