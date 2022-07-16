@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import Upload from "../../assets/upload-image.png";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
+import { useHistory } from "react-router-dom";
+import { axiosReq } from "../../api/axiosDefaults";
+
 
 function PostCreateForm() {
   const [errors, setErrors] = useState({});
@@ -16,6 +19,9 @@ function PostCreateForm() {
   });
 
   const { title, category, description, image } = postData;
+
+  const imageInput = useRef(null);
+  const history = useHistory();
 
   const handleChange = (e) => {
     setPostData({
@@ -32,6 +38,27 @@ function PostCreateForm() {
         ...postData,
         image: URL.createObjectURL(e.target.files[0]),
       });
+    }
+  };
+
+  // Handle the form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+
+    formData.append("title", title);
+    formData.append("category", category);
+    formData.append("description", description);
+    formData.append("image", imageInput.current.files[0]);
+
+    try {
+      const { data } = await axiosReq.post("/posts/", formData);
+      history.push(`/posts/${data.id}`);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
     }
   };
 
@@ -92,18 +119,24 @@ function PostCreateForm() {
         />
       </Form.Group>
 
-      <Button className={`my-3 ${appStyles.button}`} type="submit">
+      <Button 
+        className={`my-3 ${appStyles.button}`}
+        type="submit"
+      >
         Create
       </Button>
 
-      <Button className={`${appStyles.button} mx-3`} onClick={() => {}}>
+      <Button 
+        className={`${appStyles.button} mx-3`}
+        onClick={() => history.goBack()}
+      >
         Cancel
       </Button>
     </div>
   );
 
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Row>
         <Col md={7} lg={8} className="d-none d-md-block p-0 p-md-2">
           <Container className={appStyles.Content}>{textFields}</Container>
@@ -144,6 +177,7 @@ function PostCreateForm() {
                 accept="image/*"
                 className="d-none"
                 onChange={handleChangeImage}
+                ref={imageInput}
               />
             </Form.Group>
             <div className="d-md-none">{textFields}</div>
