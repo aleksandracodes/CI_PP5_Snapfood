@@ -1,0 +1,17 @@
+.Post {
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.Line {
+  width: 70px;
+  color: var(--dark-slate-grey);
+}
+
+.BadgePost {
+  padding: 5px;
+  margin: 0 4px;
+  font-size: inherit;
+}
