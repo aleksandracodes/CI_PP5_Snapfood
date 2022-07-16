@@ -92,11 +92,6 @@ i {
   font-weight: normal;
 }
 
-.Input[value] {
-  font-weight: bold;
-  color: var(--dark-slate-grey);
-}
-
 .Image {
   max-height: 40vh;
   max-width: 100%;

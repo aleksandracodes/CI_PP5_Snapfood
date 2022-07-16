@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
+import { Alert, Button, Col, Container, Form, Image, Row } from "react-bootstrap";
 import Upload from "../../assets/upload-image.png";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
@@ -66,6 +66,11 @@ function PostCreateForm() {
     <div className="text-center">
       <Form.Group>
         <Form.Label>Title</Form.Label>
+        {errors.title?.map((message, idx) => (
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
+                {message}
+              </Alert>
+            ))}
         <Form.Control
           type="text"
           name="title"
@@ -77,6 +82,11 @@ function PostCreateForm() {
 
       <Form.Group>
         <Form.Label>Category</Form.Label>
+        {errors.category?.map((message, idx) => (
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
+                {message}
+              </Alert>
+            ))}
         <Form.Control
           as="select"
           name="category"
@@ -180,6 +190,11 @@ function PostCreateForm() {
                 ref={imageInput}
               />
             </Form.Group>
+            {errors.image?.map((message, idx) => (
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
+                {message}
+              </Alert>
+            ))}
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
