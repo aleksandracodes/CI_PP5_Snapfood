@@ -5,6 +5,42 @@
   text-align: center;
 }
 
+.Container {
+    display: grid;
+    grid-template-columns: 60px auto 200px;
+    grid-template-rows: 30px 30px;
+    grid-auto-flow: row;
+}
+
+.AvatarGrid {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.Username {
+  grid-column: 2;
+  grid-row: 1/2;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.UpdatedOn {
+  grid-column: 2;
+  grid-row: 2/3;
+  text-align: left;
+  margin-left: 10px;
+  font-size: 80%;
+}
+
+.EditIcon {
+  grid-column: 3;
+  grid-row: 1/3;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .Line {
   width: 70px;
   color: var(--dark-slate-grey);

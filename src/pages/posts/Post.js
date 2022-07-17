@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/Post.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Badge, Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Badge, Card, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 
@@ -27,17 +27,16 @@ const Post = (props) => {
 
   return (
     <Card className={styles.Post}>
-      <Card.Body>
-        <Media className="align-items-center justify-content-between">
+      <Card.Body className={styles.Container}>
           <Link to={`/profiles/${profile_id}`}>
-            <Avatar src={profile_image} height={50} />
-            {owner}
+            <Avatar src={profile_image} height={50} className={styles.AvatarGrid} />
           </Link>
-          <div className="d-flex align-items-center">
-            <span>{updated_on}</span>
-            {is_owner && postPage && "..."}
+          <Link to={`/profiles/${profile_id}`} className={styles.Username}>{owner}</Link>
+          
+          <div className={styles.UpdatedOn}>{updated_on}</div>
+          <div className={styles.EditIcon}>
+            {is_owner && postPage && "Dropdown"}
           </div>
-        </Media>
       </Card.Body>
       <Link to={`/posts/${id}`}>
         <Card.Img src={image} alt={title} />
