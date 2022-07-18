@@ -4,6 +4,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Badge, Card, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
+import { axiosRes } from "../../api/axiosDefaults";
 
 const Post = (props) => {
   const {
@@ -20,10 +21,27 @@ const Post = (props) => {
     image,
     updated_on,
     postPage,
+    setPosts,
   } = props;
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const handleLike = async () => {
+    try {
+      const { data } = await axiosRes.post("/likes/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_number: post.likes_number + 1, like_id: data.id }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <Card className={styles.Post}>
@@ -61,7 +79,7 @@ const Post = (props) => {
               <i className="fas fa-heart" />
             </span>
           ) : currentUser ? (
-            <span onClick={() => {}}>
+            <span onClick={handleLike}>
               <i className="far fa-heart" />
             </span>
           ) : (
@@ -72,7 +90,7 @@ const Post = (props) => {
 
           {likes_number}
           <Link to={`/posts/${id}`}>
-            <i className="far fa-comments" />
+            <i class="fa-regular fa-comment" />
           </Link>
           {comments_number}
         </div>
