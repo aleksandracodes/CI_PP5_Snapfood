@@ -20,6 +20,12 @@
     background-color: var(--light) !important;
 }
 
+a:hover i {
+    color: var(--dark-slate-grey);
+    transition: color ease-in-out 0.3s;
+      transform: rotate(-15deg) scale(1.1);
+  }
+  
 a::after {
     display: none !important;
   }

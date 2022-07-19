@@ -1,0 +1,9 @@
+.FlexDisplay {    
+    display: flex;
+    flex-direction: column
+}
+
+.Link {
+    display: inline;
+    margin-left: 10px;
+}

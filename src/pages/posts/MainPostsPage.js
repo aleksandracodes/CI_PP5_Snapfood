@@ -2,17 +2,14 @@ import React from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/MainPostsPage.module.css";
+import LikeFeedAddPost from "../../components/LikeFeedAddPost";
 
 function PostsPage() {
   return (
     <Container>
       <Row>
         <Col className="py-2 p-0 p-lg-2" lg={4}>
-          <Container
-            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-3`}
-          >
-            Like, feed, add
-          </Container>
+            <LikeFeedAddPost />
 
           <Container
             className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-3`}
