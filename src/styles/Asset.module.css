@@ -5,3 +5,8 @@
     align-items: center;
     min-height: 120px;
   }
+
+  .Asset > img {
+    width: 150px;
+    height: 140px;
+  }
