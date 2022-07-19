@@ -8,15 +8,44 @@ import SignUpForm from "./pages/auth/SignUpForm";
 import LogInForm from "./pages/auth/LogInForm";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
+import MainPostsPage from "./pages/posts/MainPostsPage";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 function App() {
+  const currentUser = useCurrentUser();
+  const profile_id = currentUser?.profile_id || "";
 
   return (
         <div className={styles.App}>
           <NavBar />
           <Container className={styles.Body}>
             <Switch>
-              <Route exact path="/" render={() => <Landing />} />
+              <Route 
+                exact path="/" 
+                render={() => (
+                  <MainPostsPage 
+                    message="No results found. Adjust the search keyword." /> 
+                )} 
+              />
+              {/* Feed route */}
+              <Route 
+                exact path="/feed" 
+                render={() => (
+                  <MainPostsPage 
+                    message="No results found. Adjust the search keyword or follow a user."
+                    filter={`owner__followed__owner__profile=${profile_id}&`} />
+                )} 
+              />
+              {/* Like posts route */}
+              <Route 
+                exact path="/liked" 
+                render={() => (
+                  <MainPostsPage 
+                    message="No results found. Adjust the search keyword or like a post."
+                    filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`} />
+                )} 
+              />
+
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/login" render={() => <LogInForm />} />
               <Route exact path="/posts/create" render={() => <PostCreateForm /> } />
