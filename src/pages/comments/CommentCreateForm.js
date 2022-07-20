@@ -66,6 +66,7 @@ function CommentCreateForm(props) {
       >
         Add
       </Button>
+      <hr className={styles.Line} />
     </Form>
   );
 }

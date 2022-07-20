@@ -1,0 +1,17 @@
+.CommentBox {
+    color: var(--dark-slate-grey);
+    padding-left: 20px;
+    border: 1px solid var(--light);
+    border-radius: 35px;
+}
+
+.OwnerName {
+    font-weight: bold;
+    color: var(--dark-slate-grey);
+    margin-right: 6px;
+  }
+  
+  .Date {
+    font-weight: lighter;
+    color: #b5b5b8;
+  }

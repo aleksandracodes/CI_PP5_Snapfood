@@ -11,3 +11,8 @@
   box-shadow: none;
   border: 1px solid var(--salmon);
 }
+
+.Line {
+    background: var(--salmon);
+    margin: 25px 0;
+}
