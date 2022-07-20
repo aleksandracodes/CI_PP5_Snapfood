@@ -1,8 +1,8 @@
 .CommentBox {
     color: var(--dark-slate-grey);
-    padding-left: 20px;
     border: 1px solid var(--light);
     border-radius: 35px;
+    padding: 5px 10px 5px 20px;
 }
 
 .OwnerName {
