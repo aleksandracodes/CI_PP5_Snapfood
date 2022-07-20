@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "../../styles/Post.module.css";
+import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Badge, Card, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import Like from "../../assets/like.png";
+import Unlike from "../../assets/unlike.png";
 
 const Post = (props) => {
   const {
@@ -88,27 +91,25 @@ const Post = (props) => {
               placement="top"
               overlay={<Tooltip>This is your post, you cannot like it ;-) </Tooltip>}
             >
-              <i className="far fa-heart" />
+              <img src={Unlike} className={appStyles.LikeIcon} alt="Like hand" height="35" width="35" />
             </OverlayTrigger>
           ) : like_id ? (
             <span onClick={handleUnlike}>
-              <i className="fas fa-heart" />
+              <img src={Like} className={appStyles.LikeIcon} alt="Like hand" height="35" width="35" />
             </span>
           ) : currentUser ? (
             <span onClick={handleLike}>
-              <i className="far fa-heart" />
+              <img src={Unlike} className={appStyles.LikeIcon} alt="Unlike hand" height="35" width="35" />
             </span>
           ) : (
-            <OverlayTrigger>
-              <i className="far fa-heart" />
-            </OverlayTrigger>
+              <img src={Unlike} className={appStyles.LikeIcon} alt="Like hand" height="35" width="35" />
           )}
 
-          {likes_number}
+          <span class="ml-1">{likes_number}</span>
           <Link to={`/posts/${id}`}>
             <i class="fa-regular fa-comment ml-2" />
           </Link>
-          {comments_number}
+          <span class="ml-1">{comments_number}</span>
         </div>
       </Card.Body>
     </Card>
