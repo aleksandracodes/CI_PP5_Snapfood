@@ -1,0 +1,13 @@
+.Form {
+  color: var(--dark-slate-grey);
+  padding-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 35px;
+  border-top-left-radius: 35px !important;
+  border-bottom-left-radius: 35px !important;
+}
+
+.Form:focus {
+  box-shadow: none;
+  border: 1px solid var(--salmon);
+}
