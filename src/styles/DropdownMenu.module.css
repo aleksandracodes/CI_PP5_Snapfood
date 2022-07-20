@@ -1,0 +1,9 @@
+.DropdownItem {
+  display: inline-block;
+  max-width: 40%;
+  padding: 0;
+}
+
+.DropdownItem:active {
+  background-color: var(--light) !important;
+}
