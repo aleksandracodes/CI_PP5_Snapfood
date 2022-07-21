@@ -1,17 +1,21 @@
 .CommentBox {
-    color: var(--dark-slate-grey);
-    border: 1px solid var(--light);
-    border-radius: 35px;
-    padding: 5px 10px 5px 20px;
+  color: var(--dark-slate-grey);
+  border: 1px solid var(--light);
+  border-radius: 35px;
+  padding: 5px 10px 5px 20px;
 }
 
 .OwnerName {
-    font-weight: bold;
-    color: var(--dark-slate-grey);
-    margin-right: 6px;
-  }
-  
-  .Date {
-    font-weight: lighter;
-    color: #b5b5b8;
-  }
+  font-weight: bold;
+  color: var(--dark-slate-grey);
+  margin-right: 6px;
+}
+
+.Date {
+  font-weight: lighter;
+  color: #b5b5b8;
+}
+
+.DropdownDots {
+  float: right;
+}
