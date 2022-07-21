@@ -19,14 +19,13 @@ function PostPage() {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: post }, { data: comments}] = await Promise.all([
+        const [{ data: post }, { data: comments }] = await Promise.all([
           axiosReq.get(`/posts/${id}`),
-          axiosReq.get(`/comments/?post=${id}`)
+          axiosReq.get(`/comments/?post=${id}`),
         ]);
         setPost({ results: [post] });
         setComments(comments);
-      } catch (err) {
-      }
+      } catch (err) {}
     };
 
     handleMount();
@@ -56,29 +55,33 @@ function PostPage() {
         </Col>
 
         <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <Post {...post.results[0]} setPosts={setPost} postPage />
+          <Post {...post.results[0]} setPosts={setPost} postPage />
           <Container className={appStyles.Content}>
-          {currentUser ? (
-            <CommentCreateForm
-              profile_id={currentUser.profile_id}
-              profileImage={profile_image}
-              post={id}
-              setPost={setPost}
-              setComments={setComments}
-            />
-          ) : comments.results.length ? (
-            "Comments"
-          ) : null}
-           {comments.results.length ? (
-             comments.results.map((comment) => (
-              <Comment key={comment.id} {...comment} />
+            {currentUser ? (
+              <CommentCreateForm
+                profile_id={currentUser.profile_id}
+                profileImage={profile_image}
+                post={id}
+                setPost={setPost}
+                setComments={setComments}
+              />
+            ) : comments.results.length ? (
+              "Comments"
+            ) : null}
+            {comments.results.length ? (
+              comments.results.map((comment) => (
+                <Comment
+                  key={comment.id}
+                  {...comment}
+                  setPost={setPost}
+                  setComments={setComments}
+                />
               ))
-          ) : currentUser ? (
-            <span>Be the first one to comment!</span>
-          ) : (
-            <span>No comments</span>
-          )}
-
+            ) : currentUser ? (
+              <span>Be the first one to comment!</span>
+            ) : (
+              <span>No comments</span>
+            )}
           </Container>
         </Col>
       </Row>
