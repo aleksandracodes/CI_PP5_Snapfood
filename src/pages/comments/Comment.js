@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
@@ -6,6 +6,7 @@ import styles from "../../styles/Comment.module.css";
 import { DropdownMenu } from "../../components/DropdownMenu";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
+import CommentEditForm from "./CommentEditForm";
 
 const Comment = (props) => {
   const {
@@ -19,6 +20,7 @@ const Comment = (props) => {
     setComments,
   } = props;
 
+  const [showEditForm, setShowEditForm] = useState(false);
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
@@ -52,11 +54,25 @@ const Comment = (props) => {
             <span className={styles.OwnerName}>{owner}</span>
             <span className={styles.Date}> | {updated_on}</span>
             <span className={styles.DropdownDots}>
-              {is_owner && (
-                <DropdownMenu handleEdit={() => {}} handleDelete={handleDelete} />
+              {is_owner && !showEditForm && (
+                <DropdownMenu
+                  handleEdit={() => setShowEditForm(true)}
+                  handleDelete={handleDelete}
+                />
               )}
             </span>
-            <p className="pr-2 pt-2">{content}</p>
+            {showEditForm ? (
+              <CommentEditForm
+                id={id}
+                profile_id={profile_id}
+                content={content}
+                profileImage={profile_image}
+                setComments={setComments}
+                setShowEditForm={setShowEditForm}
+              />
+            ) : (
+              <p className="pr-2 pt-2">{content}</p>
+            )}
           </div>
         </Media.Body>
       </Media>

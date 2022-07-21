@@ -61,7 +61,7 @@ function CommentCreateForm(props) {
       </Form.Group>
 
       <Button 
-        className={appStyles.button}
+        className={styles.CommentsButton}
         type="submit"
       >
         Add
