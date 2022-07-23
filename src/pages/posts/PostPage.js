@@ -90,7 +90,7 @@ function PostPage() {
             />
             ) : currentUser ? (
               <div className="text-center">
-                <img src={commentsImage} width={105} height={85} />
+                <img src={commentsImage} width={105} height={85} alt="Comments icon when no comments posted"/>
                 <p>Be the first to comment!</p>
               </div>
             ) : (
