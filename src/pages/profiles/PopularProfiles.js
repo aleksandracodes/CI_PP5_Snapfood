@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { axiosReq } from "../../api/axiosDefaults";
 import appStyles from "../../App.module.css";
+import styles from "../../styles/SmallMenuContainer.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Asset from "../../components/Asset";
 
@@ -32,17 +33,21 @@ const PopularProfiles = () => {
   }, [currentUser]);
 
   return (
-    <Container className={`${appStyles.Content} font-weight-bold`}>
+    <Container className={`${appStyles.Content} font-weight-bold pt-1`}>
+
       {popularProfiles.results.length ? (
         <>
           <p>Top Users</p>
-          {popularProfiles.results.map((profile) => (
-            <p key={profile.id}>{profile.owner}</p>
-          ))}
+          <div className={styles.UsersDisplay}>
+            {popularProfiles.results.slice(0, 3).map((profile) => (
+                <p key={profile.id}>{profile.owner}</p>
+            ))}
+          </div> 
         </>
       ) : (
         <Asset spinner />
       )}
+    
     </Container>
   );
 };
