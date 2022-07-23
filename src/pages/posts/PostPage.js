@@ -10,6 +10,7 @@ import Comment from "../comments/Comment";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
+import commentsImage from "../../assets/comment.png";
 
 function PostPage() {
   const { id } = useParams();
@@ -59,7 +60,7 @@ function PostPage() {
 
         <Col className="py-2 p-0 p-lg-2" lg={8}>
           <Post {...post.results[0]} setPosts={setPost} postPage />
-          <Container className={appStyles.Content}>
+          <Container className={`${appStyles.Content} pb-3 mb-3`}>
             {currentUser ? (
               <CommentCreateForm
                 profile_id={currentUser.profile_id}
@@ -88,7 +89,10 @@ function PostPage() {
                 next={() => fetchMoreData(comments, setComments)}
             />
             ) : currentUser ? (
-              <span>Be the first one to comment!</span>
+              <div className="text-center">
+                <img src={commentsImage} width={105} height={85} />
+                <p>Be the first to comment!</p>
+              </div>
             ) : (
               <span>No comments</span>
             )}
