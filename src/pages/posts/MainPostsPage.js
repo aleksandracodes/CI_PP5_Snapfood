@@ -10,6 +10,7 @@ import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import PopularProfiles from "../profiles/PopularProfiles";
 
 function MainPostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -48,7 +49,7 @@ function MainPostsPage({ message, filter = "" }) {
           <Container
             className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-3`}
           >
-            Top 3 users
+            <PopularProfiles />
           </Container>
 
           <Container
