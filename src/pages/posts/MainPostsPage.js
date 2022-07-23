@@ -73,6 +73,7 @@ function MainPostsPage({ message, filter = "" }) {
             className="mr-sm-2"
             placeholder="Search posts"
           />
+          <i className={`fa-solid fa-eraser ${styles.Clear}`} onClick={() => setQuery("")} />
         </Form>
 
         {hasLoaded ? (
