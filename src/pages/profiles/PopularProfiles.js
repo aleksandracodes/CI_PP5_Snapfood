@@ -5,6 +5,7 @@ import appStyles from "../../App.module.css";
 import styles from "../../styles/SmallMenuContainer.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Asset from "../../components/Asset";
+import Profile from "./Profile";
 
 const PopularProfiles = () => {
   const [profileData, setProfileData] = useState({
@@ -33,14 +34,14 @@ const PopularProfiles = () => {
   }, [currentUser]);
 
   return (
-    <Container className={`${appStyles.Content} font-weight-bold pt-1`}>
+    <Container className={`${appStyles.Content} font-weight-bold pt-1 pb-0`}>
 
       {popularProfiles.results.length ? (
         <>
           <p>Top Users</p>
           <div className={styles.UsersDisplay}>
             {popularProfiles.results.slice(0, 3).map((profile) => (
-                <p key={profile.id}>{profile.owner}</p>
+                <Profile key={profile.id} profile={profile} />
             ))}
           </div> 
         </>

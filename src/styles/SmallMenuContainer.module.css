@@ -3,21 +3,21 @@
   margin-left: 7px;
 }
 
-@media all and (min-width: 992px) {
+@media all and (min-width: 991px) {
   .LikeFeedAddDisplay {
     display: flex;
     flex-direction: column;
   }
 }
 
-@media all and (max-width: 772px) {
+@media all and (max-width: 768px) {
   .UsersDisplay {
     display: flex;
     justify-content: space-around;
   }
 }
 
-@media all and (max-width: 395px) {
+@media all and (max-width: 430px) {
   .Link {
     display: block;
   }

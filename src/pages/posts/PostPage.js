@@ -40,19 +40,19 @@ function PostPage() {
       <Row>
         <Col className="py-2 p-0 p-lg-2" lg={4}>
           <Container
-            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-3`}
+            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-2`}
           >
             Like, feed, add
           </Container>
 
           <Container
-            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-3`}
+            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-2`}
           >
             Top 3 users
           </Container>
 
           <Container
-            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-3`}
+            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-2`}
           >
             Post category
           </Container>

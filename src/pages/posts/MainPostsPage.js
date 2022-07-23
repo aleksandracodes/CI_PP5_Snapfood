@@ -43,17 +43,17 @@ function MainPostsPage({ message, filter = "" }) {
   return (
     <Container>
       <Row>
-        <Col className="py-2 p-0 p-lg-2" lg={4}>
+        <Col className="pt-2 p-0 p-lg-2" lg={4}>
             <LikeFeedAddPost />
 
           <Container
-            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-3`}
+            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-2`}
           >
             <PopularProfiles />
           </Container>
 
           <Container
-            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-3`}
+            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-2`}
           >
             Post category
           </Container>
