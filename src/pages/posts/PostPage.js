@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap";
+import columnStyles from "../../styles/SmallMenuContainer.module.css";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -40,19 +41,19 @@ function PostPage() {
       <Row>
         <Col className="py-2 p-0 p-lg-2" lg={4}>
           <Container
-            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-2`}
+            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} mb-2`}
           >
             Like, feed, add
           </Container>
 
           <Container
-            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-2`}
+            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} mb-2`}
           >
             Top 3 users
           </Container>
 
           <Container
-            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-2`}
+            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} mb-2`}
           >
             Post category
           </Container>

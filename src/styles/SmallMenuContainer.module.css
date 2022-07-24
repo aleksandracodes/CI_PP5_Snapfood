@@ -16,10 +16,34 @@
   }
 }
 
+@media all and (max-width: 991px) {
+  /* 3 columns on medium - small screens */
+  .CollapsedColumn {
+    display: table-cell;
+    width: 31%;
+  }
+  /* Display of categories badges */
+  .CategoriesColumn {
+    display: table-cell;
+  }
+}
+
 @media all and (max-width: 768px) {
+  .CollapsedColumn {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .CollapsedColumn:nth-child(2) {
+    margin: 0;
+  }
   .UsersDisplay {
     display: flex;
     justify-content: space-around;
+  }
+  
+  .CategoriesColumn {
+    display: inline-table;
   }
 }
 

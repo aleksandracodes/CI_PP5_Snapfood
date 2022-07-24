@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Badge, Col, Container, Form, Row } from "react-bootstrap";
 import styles from "../../styles/MainPostsPage.module.css";
+import columnStyles from "../../styles/SmallMenuContainer.module.css";
 import appStyles from "../../App.module.css";
 import Post from "./Post";
 import Asset from "../../components/Asset";
@@ -52,13 +53,13 @@ function MainPostsPage({ message, filter = "" }) {
             <LikeFeedAddPost />
 
           <Container
-            className={`${appStyles.Content} ${appStyles.CollapsedColumn} mb-2`}
+            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} mb-2`}
           >
             <PopularProfiles />
           </Container>
 
           <Container
-            className={`${appStyles.Content} ${appStyles.CollapsedColumn} ${appStyles.CategoriesColumn} mb-2`}
+            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} ${columnStyles.CategoriesColumn} mb-2`}
           >
             <p className=" font-weight-bold ml-2">Post categories</p>
               <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory(null)}>All</Badge>     
