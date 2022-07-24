@@ -30,6 +30,7 @@
   text-align: left;
   margin-left: 10px;
   font-size: 80%;
+  width: max-content;
 }
 
 .EditIcon {

@@ -51,6 +51,7 @@
   .ProfilesDisplaySmall {
     flex-direction: column;
     justify-content: center;
+    margin: 0 !important;
   }
   .ProfilesDisplaySmall img {
     margin: 0 !important;

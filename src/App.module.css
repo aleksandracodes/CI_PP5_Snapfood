@@ -108,6 +108,10 @@ i {
   .CollapsedColumn:nth-child(2) {
     margin: 0 2%;
   }
+  /* Display of categories badges */
+  .CategoriesColumn {
+    display: inline-table;
+  }
 }
 
 @media all and (max-width: 768px) {
