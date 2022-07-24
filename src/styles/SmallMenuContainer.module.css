@@ -3,6 +3,12 @@
   margin-left: 7px;
 }
 
+
+.LikeFeedAddDisplay a {
+  display: block !important;
+  margin: 5px 0;
+}
+
 @media all and (min-width: 991px) {
   .LikeFeedAddDisplay {
     display: flex;
@@ -24,6 +30,7 @@
 
   .LikeFeedAddDisplay a {
     text-align: center !important;
+    margin: 0;
   }
 
   .LikeFeedAddDisplay img {
