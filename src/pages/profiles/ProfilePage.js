@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
+import buttonStyles from "../../styles/Profile.module.css";
 import appStyles from "../../App.module.css";
 import columnStyles from "../../styles/SmallMenuContainer.module.css";
 import PopularProfiles from "./PopularProfiles";
@@ -18,6 +19,7 @@ function ProfilePage() {
   const setProfileData = useSetProfileData(); // update the page profile data
   const {pageProfile} = useProfileData();
   const [profile] = pageProfile.results;
+  const is_owner = currentUser?.username === profile?.owner; // check if the logged-in user is the profile's owner
 
   useEffect(() => {
     const fetchData = async () => {
@@ -50,7 +52,7 @@ function ProfilePage() {
 
         <Col lg={6}>
           <h3 className="m-3">{profile?.owner}</h3>
-          <Row className="justify-content-center">
+          <Row className="justify-content-around">
                 <Col xs={3} className="my-3">
                     <div>Followers</div>
                     <div>{profile?.followers_number}</div>
@@ -66,10 +68,21 @@ function ProfilePage() {
           </Row>
         </Col>
 
-        <Col lg={3} className="text-lg-right">
-        <p>Follow button</p>
+        <Col lg={3} className="text-lg-right mt-md-3 mt-sm-1">
+        {currentUser &&
+          !is_owner &&
+          (profile?.following_id ? (
+            <Button className={`${buttonStyles.Button} ${buttonStyles.ButtonUnfollow}`} onClick={() => {}}>
+              unfollow
+            </Button>
+          ) : (
+            <Button className={`${buttonStyles.Button} ${buttonStyles.ButtonFollow}`} onClick={() => {}}>
+              follow
+            </Button>
+          ))}
         </Col>
-        <Col className="p-3">Profile description</Col>
+
+            { profile?.content && <Col className="p-3">{profile?.description}</Col>}
       </Row>
     </>
   );
@@ -77,7 +90,7 @@ function ProfilePage() {
   const mainProfilePosts = (
     <>
       <hr />
-      <p className="text-center">Profile owner's posts</p>
+      <p className="text-center">{profile?.owner}'s posts</p>
       <hr />
     </>
   );
