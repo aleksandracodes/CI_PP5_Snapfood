@@ -120,11 +120,11 @@ const Post = (props) => {
               <img src={Unlike} className={appStyles.LikeIcon} alt="Like hand" height="35" width="35" />
           )}
 
-          <span class="ml-1">{likes_number}</span>
+          <span className="ml-1">{likes_number}</span>
           <Link to={`/posts/${id}`}>
-            <i class="fa-regular fa-comment ml-2" />
+            <i className="fa-regular fa-comment ml-2" />
           </Link>
-          <span class="ml-1">{comments_number}</span>
+          <span className="ml-1">{comments_number}</span>
         </div>
       </Card.Body>
     </Card>
