@@ -99,7 +99,7 @@ const Post = (props) => {
         {category && <Card.Text>Type: 
             <Badge variant="secondary" className={styles.BadgePost}> {category}</Badge>
         </Card.Text>}
-        <hr className={styles.Line} />
+        <hr className={appStyles.Line} />
         <div>
           {is_owner ? (
             <OverlayTrigger

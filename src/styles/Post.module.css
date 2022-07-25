@@ -42,11 +42,6 @@
   align-items: center;
 }
 
-.Line {
-  width: 70px;
-  color: var(--dark-slate-grey);
-}
-
 .BadgePost {
   padding: 5px;
   margin: 0 4px;
