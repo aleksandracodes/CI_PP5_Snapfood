@@ -49,7 +49,7 @@ function MainPostsPage({ message, filter = "" }) {
   return (
     <Container>
       <Row>
-        <Col className={`${columnStyles.SplitColumns} pt-2 p-0 p-lg-2 lg={4}`}>
+        <Col className={`${columnStyles.SplitColumns} pt-2 p-0 p-lg-2`} lg={4}>
             <LikeFeedAddPost />
 
           <Container

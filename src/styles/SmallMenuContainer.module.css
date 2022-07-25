@@ -14,13 +14,6 @@
   border-spacing: 7px;
 }
 
-@media all and (min-width: 991px) {
-  .LikeFeedAddDisplay {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 @media all and (max-width: 991px) {
   /* 3 columns on medium - small screens */
   .CollapsedColumn {
