@@ -153,12 +153,16 @@ function PostEditForm() {
         />
       </Form.Group>
 
-      <Button className={`my-3 ${appStyles.button}`} type="submit">
+      <Button 
+        className={`my-3 ${appStyles.button}`}
+        onMouseDown={(e) => e.preventDefault()}
+        type="submit">
         Save
       </Button>
 
       <Button
         className={`${appStyles.button} mx-3`}
+        onMouseDown={(e) => e.preventDefault()}
         onClick={() => history.goBack()}
       >
         Cancel

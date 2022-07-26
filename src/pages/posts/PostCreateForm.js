@@ -131,6 +131,7 @@ function PostCreateForm() {
 
       <Button 
         className={`my-3 ${appStyles.button}`}
+        onMouseDown={(e) => e.preventDefault()}
         type="submit"
       >
         Create
@@ -138,6 +139,7 @@ function PostCreateForm() {
 
       <Button 
         className={`${appStyles.button} mx-3`}
+        onMouseDown={(e) => e.preventDefault()}
         onClick={() => history.goBack()}
       >
         Cancel
