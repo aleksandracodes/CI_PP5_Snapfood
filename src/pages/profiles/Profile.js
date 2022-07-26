@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/Profile.module.css";
+import buttonsStyles from "../../styles/FollowButtons.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
@@ -25,15 +26,15 @@ const Profile = (props) => {
         </Link>
       </div>
 
-      <div className={`${styles.FollowButtonsRemove} ml-auto`}>
+      <div className={`${buttonsStyles.FollowButtonsRemove} ml-auto`}>
         {currentUser &&
           !is_owner &&
           (following_id ? (
-            <Button className={`${styles.Button} ${styles.ButtonFollow}`} onClick={() => {}}>
+            <Button className={`${buttonsStyles.Button} ${buttonsStyles.ButtonFollow}`} onClick={() => {}}>
               follow
             </Button>
           ) : (
-            <Button className={`${styles.Button} ${styles.ButtonUnfollow}`} onClick={() => {}}>
+            <Button className={`${buttonsStyles.Button} ${buttonsStyles.ButtonUnfollow}`} onClick={() => {}}>
               unfollow
             </Button>
           ))}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
-import buttonStyles from "../../styles/Profile.module.css";
+import buttonsStyles from "../../styles/FollowButtons.module.css";
 import appStyles from "../../App.module.css";
 import columnStyles from "../../styles/SmallMenuContainer.module.css";
 import PopularProfiles from "./PopularProfiles";
@@ -85,14 +85,14 @@ function ProfilePage() {
             !is_owner &&
             (profile?.following_id ? (
               <Button
-                className={`${buttonStyles.Button} ${buttonStyles.ButtonUnfollow}`}
+                className={`${buttonsStyles.Button} ${buttonsStyles.ButtonUnfollow}`}
                 onClick={() => {}}
               >
                 unfollow
               </Button>
             ) : (
               <Button
-                className={`${buttonStyles.Button} ${buttonStyles.ButtonFollow}`}
+                className={`${buttonsStyles.Button} ${buttonsStyles.ButtonFollow}`}
                 onClick={() => {}}
               >
                 follow
