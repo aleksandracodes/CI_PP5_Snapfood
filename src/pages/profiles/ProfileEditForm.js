@@ -120,7 +120,7 @@ const ProfileEditForm = () => {
           <Form.Group>
             {image && (
               <figure>
-                <Image src={image} fluid />
+                <Image className={appStyles.Image} src={image} rounded />
               </figure>
             )}
             

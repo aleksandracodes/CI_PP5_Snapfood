@@ -68,7 +68,7 @@ export function ProfileEditDropdown({ id }) {
             onClick={() => history.push(`/profiles/${id}/edit`)}
             aria-label="edit-profile"
           >
-            <i className="fas fa-edit" />
+            <i className="fa-solid fa-pen"></i>
           </Dropdown.Item>
         </OverlayTrigger>
 
