@@ -102,7 +102,7 @@ function ProfilePage() {
             ))}
         </Col>
 
-        {profile?.content && <Col className="p-3">{profile?.description}</Col>}
+        {profile?.description && <Col className="p-3"><hr className={appStyles.Line} />{profile?.description}</Col>}
       </Row>
     </>
   );
