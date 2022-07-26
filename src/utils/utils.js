@@ -26,3 +26,15 @@ export const followHelper = (profile, clickedProfile, following_id) => {
     ? { ...profile, following_number: profile.following_number + 1 }
     : profile;
 };
+
+export const unfollowHelper = (profile, clickedProfile) => {
+  return profile.id === clickedProfile.id
+    ? {
+        ...profile,
+        followers_number: profile.followers_number - 1,
+        following_id: null,
+      }
+    : profile.is_owner
+    ? { ...profile, following_number: profile.following_number - 1 }
+    : profile;
+}
