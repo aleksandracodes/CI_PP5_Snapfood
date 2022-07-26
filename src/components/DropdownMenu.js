@@ -1,6 +1,7 @@
 import React from "react";
-import Dropdown from "react-bootstrap/Dropdown";
+import { Dropdown, Tooltip, OverlayTrigger } from "react-bootstrap";
 import styles from "../styles/DropdownMenu.module.css";
+import { useHistory } from "react-router";
 
 const DropdownDots = React.forwardRef(({ onClick }, ref) => (
   <i
@@ -20,23 +21,69 @@ export const DropdownMenu = ({ handleEdit, handleDelete }) => {
 
       <Dropdown.Menu
         className="text-center"
-        popperConfig={{ strategy: "fixed" }}  // to ensure the position of the dropdown menu is consistent across browsers
+        popperConfig={{ strategy: "fixed" }} // to ensure the position of the dropdown menu is consistent across browsers
       >
-        <Dropdown.Item
-          className={styles.DropdownItem}
-          onClick={handleEdit}
-          aria-label="edit post"
-        >
+        <OverlayTrigger placement="top" overlay={<Tooltip>Edit post</Tooltip>}>
+          <Dropdown.Item
+            className={styles.DropdownItem}
+            onClick={handleEdit}
+            aria-label="edit post"
+          >
             <i className="fa-solid fa-pen"></i>
-        </Dropdown.Item>
-        <Dropdown.Item
-          className={styles.DropdownItem}
-          onClick={handleDelete}
-          aria-label="delete post"
+          </Dropdown.Item>
+        </OverlayTrigger>
+
+        <OverlayTrigger
+          placement="top"
+          overlay={<Tooltip>Delete post</Tooltip>}
         >
-          <i className="fas fa-trash" />
-        </Dropdown.Item>
+          <Dropdown.Item
+            className={styles.DropdownItem}
+            onClick={handleDelete}
+            aria-label="delete post"
+          >
+            <i className="fas fa-trash" />
+          </Dropdown.Item>
+        </OverlayTrigger>
       </Dropdown.Menu>
     </Dropdown>
   );
 };
+
+export function ProfileEditDropdown({ id }) {
+  const history = useHistory();
+  return (
+    <Dropdown className="ml-auto" drop="left">
+      <Dropdown.Toggle as={DropdownDots} />
+
+      <Dropdown.Menu
+        className="d-flex"
+        popperConfig={{ strategy: "fixed" }}
+      >
+        <OverlayTrigger
+          placement="top"
+          overlay={<Tooltip>Edit profile</Tooltip>}
+        >
+          <Dropdown.Item
+            onClick={() => history.push(`/profiles/${id}/edit`)}
+            aria-label="edit-profile"
+          >
+            <i className="fas fa-edit" />
+          </Dropdown.Item>
+        </OverlayTrigger>
+
+        <OverlayTrigger
+          placement="top"
+          overlay={<Tooltip>Change password</Tooltip>}
+        >
+          <Dropdown.Item
+            onClick={() => history.push(`/profiles/${id}/edit/password`)}
+            aria-label="change-password"
+          >
+            <i className="fas fa-key" />
+          </Dropdown.Item>
+        </OverlayTrigger>
+      </Dropdown.Menu>
+    </Dropdown>
+  );
+}

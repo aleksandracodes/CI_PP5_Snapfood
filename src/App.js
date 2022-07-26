@@ -12,52 +12,58 @@ import MainPostsPage from "./pages/posts/MainPostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 
 function App() {
   const currentUser = useCurrentUser();
   const profile_id = currentUser?.profile_id || "";
 
   return (
-        <div className={styles.App}>
-          <NavBar />
-          <Container className={styles.Body}>
-            <Switch>
-              <Route 
-                exact path="/" 
-                render={() => (
-                  <MainPostsPage 
-                    message="No results found. Adjust the search keyword." /> 
-                )} 
+    <div className={styles.App}>
+      <NavBar />
+      <Container className={styles.Body}>
+        <Switch>
+          <Route
+            exact path="/"
+            render={() => (
+              <MainPostsPage 
+                message="No results found. Adjust the search keyword." />
+            )}
+          />
+          {/* Feed route */}
+          <Route
+            exact path="/feed"
+            render={() => (
+              <MainPostsPage
+                message="No results found. Adjust the search keyword or follow a user."
+                filter={`owner__followed__owner__profile=${profile_id}&`}
               />
-              {/* Feed route */}
-              <Route 
-                exact path="/feed" 
-                render={() => (
-                  <MainPostsPage 
-                    message="No results found. Adjust the search keyword or follow a user."
-                    filter={`owner__followed__owner__profile=${profile_id}&`} />
-                )} 
+            )}
+          />
+          {/* Like posts route */}
+          <Route
+            exact path="/liked"
+            render={() => (
+              <MainPostsPage
+                message="No results found. Adjust the search keyword or like a post."
+                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
               />
-              {/* Like posts route */}
-              <Route 
-                exact path="/liked" 
-                render={() => (
-                  <MainPostsPage 
-                    message="No results found. Adjust the search keyword or like a post."
-                    filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`} />
-                )} 
-              />
+            )}
+          />
 
-              <Route exact path="/signup" render={() => <SignUpForm />} />
-              <Route exact path="/login" render={() => <LogInForm />} />
-              <Route exact path="/posts/create" render={() => <PostCreateForm /> } />
-              <Route exact path="/posts/:id" render={() => <PostPage /> } />
-              <Route exact path="/posts/:id/edit" render={() => <PostEditForm /> } />
-              <Route exact path="/profiles/:id" render={() => <ProfilePage /> } />
-              <Route render={() => <h3>Ooops, this page was not found!</h3>} />
-            </Switch>
-          </Container>
-        </div>
+          <Route exact path="/signup" render={() => <SignUpForm />} />
+          <Route exact path="/login" render={() => <LogInForm />} />
+          <Route exact path="/posts/create" render={() => <PostCreateForm />} />
+          <Route exact path="/posts/:id" render={() => <PostPage />} />
+          <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
+          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />}/>
+          <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />} />
+          <Route render={() => <h3>Ooops, this page was not found!</h3>} />
+        </Switch>
+      </Container>
+    </div>
   );
 }
 
