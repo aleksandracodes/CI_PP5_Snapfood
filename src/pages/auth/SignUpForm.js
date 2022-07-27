@@ -4,6 +4,7 @@ import styles from "../../styles/LogInSignUpForm.module.css";
 import appStyles from "../../App.module.css";
 import { Alert, Form, Button, Col, Row, Container } from "react-bootstrap";
 import axios from "axios";
+import PasswordCriteria from "../../components/PasswordCriteria";
 
 const SignUpForm = () => {
   const [signUpData, setSignUpData] = useState({
@@ -104,6 +105,9 @@ const SignUpForm = () => {
                 {message}
               </Alert>
             ))}
+
+            <PasswordCriteria />
+            
             <Button
               className={`my-3 ${appStyles.button}`}
               type="submit"
