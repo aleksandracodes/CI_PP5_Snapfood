@@ -32,15 +32,15 @@ const NavBar = () => {
               {currentUser?.username}
             </div>
           }
-          id="dropdown-menu-align-right"
+          id="basic-nav-dropdown"
         >
-          <NavDropdown.Item className={styles.Dropdown}>
+          <NavDropdown.Item className={`${styles.Dropdown} text-right`}>
             <NavLink
               to={`/profiles/${currentUser?.profile_id}`}>
                 Profile
             </NavLink>
           </NavDropdown.Item>
-          <NavDropdown.Item className={styles.Dropdown}>
+          <NavDropdown.Item className={`${styles.Dropdown} text-right`}>
             <NavLink
                 to="/" onClick={handleLogOut}>
                   Log out

@@ -2,7 +2,6 @@ import React from "react";
 import { Dropdown, Tooltip, OverlayTrigger } from "react-bootstrap";
 import styles from "../styles/DropdownMenu.module.css";
 import { useHistory } from "react-router";
-
 const DropdownDots = React.forwardRef(({ onClick }, ref) => (
   <i
     className="fas fa-ellipsis"
@@ -57,7 +56,7 @@ export function ProfileEditDropdown({ id }) {
       <Dropdown.Toggle as={DropdownDots} />
 
       <Dropdown.Menu
-        className="d-flex"
+        className="text-center"
         popperConfig={{ strategy: "fixed" }}
       >
         <OverlayTrigger
@@ -65,6 +64,7 @@ export function ProfileEditDropdown({ id }) {
           overlay={<Tooltip>Edit profile</Tooltip>}
         >
           <Dropdown.Item
+            className={styles.DropdownItem}
             onClick={() => history.push(`/profiles/${id}/edit`)}
             aria-label="edit-profile"
           >
@@ -77,6 +77,7 @@ export function ProfileEditDropdown({ id }) {
           overlay={<Tooltip>Change password</Tooltip>}
         >
           <Dropdown.Item
+            className={styles.DropdownItem}
             onClick={() => history.push(`/profiles/${id}/edit/password`)}
             aria-label="change-password"
           >
