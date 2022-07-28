@@ -60,7 +60,7 @@ function LogInForm() {
                 type="text"
                 placeholder="Your username"
                 name="username"
-                maxlength="10"
+                maxLength={10}
                 value={username}
                 onChange={handleChange}
               />

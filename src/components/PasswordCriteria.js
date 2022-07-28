@@ -4,8 +4,8 @@ import { Button, OverlayTrigger, Popover } from "react-bootstrap";
 const PasswordCriteria = () => {
     return (
         <div className="my-4">
+            {/* trigger default as ['hover', 'focus'] */}
             <OverlayTrigger
-                trigger="hover"
                 key="bottom"
                 placement="bottom"
                 overlay={
