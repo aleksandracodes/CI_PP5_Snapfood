@@ -115,7 +115,7 @@ const ProfileEditForm = () => {
       <Col className="d-none d-md-block p-0 p-md-2 text-center" md={8} lg={8}>
         <Container className={appStyles.Content}>{textFields}</Container>
       </Col>
-      <Col className="py-2 p-0 p-md-2 text-center" md={4} lg={4}>
+      <Col className="py-2 pb-4 p-md-2 text-center" md={4} lg={4}>
         <Container className={appStyles.Content}>
           <Form.Group>
             {image && (
