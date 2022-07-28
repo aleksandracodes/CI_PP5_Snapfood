@@ -12,6 +12,8 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import commentsImage from "../../assets/comment.png";
+import LikeFeedAddPost from "../../components/LikeFeedAddPost";
+import PopularProfiles from "../profiles/PopularProfiles";
 
 function PostPage() {
   const { id } = useParams();
@@ -39,27 +41,17 @@ function PostPage() {
   return (
     <Container>
       <Row>
-        <Col className="py-2 p-0 p-lg-2" lg={4}>
-          <Container
-            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} mb-2`}
-          >
-            Like, feed, add
-          </Container>
+        <Col className={`${columnStyles.SplitColumns} py-2 p-0 p-lg-2`} lg={4}>
+            <LikeFeedAddPost />
 
           <Container
-            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} mb-2`}
+            className={`${appStyles.Content} ${columnStyles.CollapsedColumn}`}
           >
-            Top 3 users
-          </Container>
-
-          <Container
-            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} mb-2`}
-          >
-            Post category
+            <PopularProfiles />
           </Container>
         </Col>
 
-        <Col className="py-2 p-0 p-lg-2" lg={8}>
+        <Col className="py-1 p-0 p-lg-2" lg={8}>
           <Post {...post.results[0]} setPosts={setPost} postPage />
           <Container className={`${appStyles.Content} pb-3 mb-3`}>
             {currentUser ? (
