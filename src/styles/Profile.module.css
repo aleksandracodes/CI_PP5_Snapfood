@@ -1,8 +1,7 @@
-/* Adjust display of the top users container follow buttons, user icon & name */
+/* Small screens - adjust display of the top users container follow buttons, user icon & name */
 @media all and (max-width: 768px) {
   .ProfilesDisplaySmall {
     flex-direction: column;
-    justify-content: center;
     margin: 0 !important;
   }
   .ProfilesDisplaySmall img {

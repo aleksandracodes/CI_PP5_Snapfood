@@ -43,9 +43,9 @@
     }
   }
   
-  /* Adjust display of the top users container follow buttons, user icon & name */
+  /* Adjust display of the follow buttons centered below the username */
   @media all and (max-width: 768px) {
     .FollowButtonsRemove {
-      display: block;
+      display: contents;
     }
 }
