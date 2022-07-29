@@ -23,6 +23,15 @@ function App() {
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Body}>
+
+      {!currentUser ? (
+        <Switch>
+          <Route exact path="/" render={() => <Landing />} />
+          <Route exact path="/signup" render={() => <SignUpForm />} />
+          <Route exact path="/login" render={() => <LogInForm />} />
+          <Route render={() => <Landing />} />
+        </Switch>
+      ) : (
         <Switch>
           <Route
             exact path="/"
@@ -52,8 +61,6 @@ function App() {
             )}
           />
 
-          <Route exact path="/signup" render={() => <SignUpForm />} />
-          <Route exact path="/login" render={() => <LogInForm />} />
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
@@ -62,6 +69,7 @@ function App() {
           <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />} />
           <Route render={() => <h3>Ooops, this page was not found!</h3>} />
         </Switch>
+      )}
       </Container>
     </div>
   );
