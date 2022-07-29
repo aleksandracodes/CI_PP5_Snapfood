@@ -29,12 +29,12 @@ const Landing = () => {
               className={styles.LandingImage}
               alt="Person photographing a plate with food"
             />
-            <Card.Body className="mb-3">
+            <Card.Body>
               <NavLink to="/signup">
-                <Button className={appStyles.button}> Happy to join</Button>
+                <Button className={`${appStyles.button} mb-3`}> Happy to join!</Button>
               </NavLink>
               <NavLink to="/login">
-                <Button className={appStyles.button}>
+                <Button className={`${appStyles.button} mb-3`}>
                   I’m already a member, log me in!
                 </Button>
               </NavLink>
