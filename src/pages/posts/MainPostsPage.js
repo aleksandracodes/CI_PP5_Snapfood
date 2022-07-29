@@ -65,6 +65,7 @@ function MainPostsPage({ message, filter = "" }) {
               <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory(null)}>All</Badge>     
               <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("spanish")}>Spanish</Badge>             
               <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("polish")}>Polish</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("portuguese")}>Portuguese</Badge>
               <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("italian")}>Italian</Badge>
               <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("greek")}>Greek</Badge>
               <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("turkish")}>Turkish</Badge>

@@ -121,6 +121,7 @@ function PostEditForm() {
           <option>Select type of cousine</option>
           <option value="spanish">Spanish</option>
           <option value="polish">Polish</option>
+          <option value="portuguese">Portuguese</option>
           <option value="greek">Greek</option>
           <option value="italian">Italian</option>
           <option value="turkish">Turkish</option>
