@@ -59,7 +59,7 @@ function MainPostsPage({ message, filter = "" }) {
           </Container>
 
           <Container
-            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} ${columnStyles.CategoriesColumn} mb-2`}
+            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} ${columnStyles.CategoriesColumn}`}
           >
             <p className=" font-weight-bold ml-2">Post categories</p>
               <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory(null)}>All</Badge>     

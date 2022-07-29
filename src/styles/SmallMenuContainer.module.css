@@ -29,7 +29,9 @@
   }
   .SplitColumns {
     display: inline-table;
-    border-spacing: 0;
+  }
+  .TwoColumns {
+    border-spacing: 0 !important;
   }
 }
 
