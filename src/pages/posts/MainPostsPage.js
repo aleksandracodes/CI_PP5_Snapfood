@@ -107,7 +107,12 @@ function MainPostsPage({ message, filter = "" }) {
             {posts.results.length ? (
               <InfiniteScroll
                 children={posts.results.map((post) => (
-                  <Post key={post.id} {...post} setPosts={setPosts} />
+                  <Post 
+                    key={post.id} 
+                    {...post} 
+                    setPosts={setPosts} 
+                    // truncate post description on the main page to 500 characters
+                    description={post.description.length > 500 ? (post.description.slice(0, 500) + ' .....') : post.description} />
                 ))}
                 dataLength={posts.results.length}
                 loader={<Asset spinner />}
