@@ -91,7 +91,7 @@ function ProfilePage() {
             (profile?.following_id ? (
               <Button
                 className={`${buttonsStyles.Button} ${buttonsStyles.ButtonUnfollow}`}
-                onMouseDown={(e) => encodeURIComponent.preventDefault()}
+                onMouseDown={(e) => e.preventDefault()}
                 onClick={() => handleUnfollow(profile)}
               >
                 unfollow
