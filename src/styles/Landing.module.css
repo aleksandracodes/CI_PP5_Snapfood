@@ -8,3 +8,13 @@
     width: 80%;
   }
 }
+
+.footer {
+  display: flow-root;
+  margin-top: 20px;
+}
+
+.footer p {
+  margin-bottom: 0;
+  padding-top: 7px;
+}
