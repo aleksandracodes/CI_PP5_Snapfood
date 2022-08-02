@@ -19,6 +19,7 @@ const NavBar = () => {
     try {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
+      setExpanded(false)
       removeTokenTimestamp();
     } catch (err) {
     }
@@ -29,8 +30,8 @@ const NavBar = () => {
     <>
         <NavDropdown
           title={
-            <div>
-              <Avatar src={currentUser?.profile_image} height={40} />
+            <div className="exp">
+              <Avatar src={currentUser?.profile_image} height={40} className="exp" />
               {currentUser?.username}
             </div>
           }
