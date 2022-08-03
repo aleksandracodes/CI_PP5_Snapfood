@@ -60,10 +60,6 @@ i {
   font-weight: bold;
 }
 
-.button:first-child {
-  margin-right: 15px;
-}
-
 .button:hover, .button:focus {
     background-color: var(--light) !important;
     color: var(--dark-slate-grey) !important;

@@ -3,10 +3,8 @@
   margin: 0 auto;
 }
 
-@media all and (max-width: 440px) {
-  .LandingImage {
-    width: 80%;
-  }
+.LandingButtonMargin {
+  margin-right: 15px;
 }
 
 .footer {
@@ -17,4 +15,16 @@
 .footer p {
   margin-bottom: 0;
   padding-top: 7px;
+}
+
+@media all and (max-width: 500px) {
+  .LandingButtonMargin {
+    margin-right: 0;
+  }
+}
+
+@media all and (max-width: 440px) {
+  .LandingImage {
+    width: 80%;
+  }
 }
