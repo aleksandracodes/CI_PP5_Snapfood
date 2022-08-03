@@ -22,11 +22,11 @@ export const DropdownMenu = ({ handleEdit, handleDelete }) => {
         className="text-center"
         popperConfig={{ strategy: "fixed" }} // to ensure the position of the dropdown menu is consistent across browsers
       >
-        <OverlayTrigger placement="top" overlay={<Tooltip>Edit post</Tooltip>}>
+        <OverlayTrigger placement="top" overlay={<Tooltip>Edit</Tooltip>}>
           <Dropdown.Item
             className={styles.DropdownItem}
             onClick={handleEdit}
-            aria-label="edit post"
+            aria-label="edit"
           >
             <i className="fa-solid fa-pen"></i>
           </Dropdown.Item>
@@ -34,12 +34,12 @@ export const DropdownMenu = ({ handleEdit, handleDelete }) => {
 
         <OverlayTrigger
           placement="top"
-          overlay={<Tooltip>Delete post</Tooltip>}
+          overlay={<Tooltip>Delete</Tooltip>}
         >
           <Dropdown.Item
             className={styles.DropdownItem}
             onClick={handleDelete}
-            aria-label="delete post"
+            aria-label="delete"
           >
             <i className="fas fa-trash" />
           </Dropdown.Item>
