@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/Post.module.css";
 import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
@@ -9,6 +9,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 import Like from "../../assets/like.png";
 import Unlike from "../../assets/unlike.png";
 import { DropdownMenu } from "../../components/DropdownMenu";
+import Alert from "../../components/Alert";
 
 const Post = (props) => {
   const {
@@ -31,6 +32,7 @@ const Post = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
@@ -39,7 +41,8 @@ const Post = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
-      history.push("/");
+      setShowAlert(true);
+      setTimeout(function(){history.push("/");}, 1500);
     } catch (err) {
       // console.log(err);
     }
@@ -79,6 +82,9 @@ const Post = (props) => {
 
   return (
     <Card className={styles.Post}>
+      {showAlert &&
+        <Alert variant="info" message="Your post has been deleted" />
+       }
       <Card.Body className={styles.Container}>
           <Link to={`/profiles/${profile_id}`}>
             <Avatar src={profile_image} height={50} className={styles.AvatarGrid} />
