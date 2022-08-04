@@ -7,6 +7,7 @@ import { DropdownMenu } from "../../components/DropdownMenu";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
 import CommentEditForm from "./CommentEditForm";
+import Alert from "../../components/Alert";
 
 const Comment = (props) => {
   const {
@@ -23,6 +24,7 @@ const Comment = (props) => {
   const [showEditForm, setShowEditForm] = useState(false);
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleDelete = async () => {
     try {
@@ -45,6 +47,12 @@ const Comment = (props) => {
 
   return (
     <div>
+      {showAlert ? (
+        <Alert type="info" message="Comment updated" />
+        ) : (
+          null
+      )}
+      
       <Media>
         <Link to={`/profiles/${profile_id}`} className="my-3">
           <Avatar src={profile_image} />
@@ -69,6 +77,7 @@ const Comment = (props) => {
                 profileImage={profile_image}
                 setComments={setComments}
                 setShowEditForm={setShowEditForm}
+                setShowAlert={setShowAlert}
               />
             ) : (
               <p className="pr-2 pt-2">{content}</p>
