@@ -5,6 +5,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import editButtonStyles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
+import UserAlert from "../../components/Alert";
 
 const ProfileEditForm = () => {
   const currentUser = useCurrentUser();
@@ -21,6 +22,8 @@ const ProfileEditForm = () => {
   const { name, description, image } = profileData;
 
   const [errors, setErrors] = useState({});
+
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
     const handleMount = async () => {
@@ -64,7 +67,9 @@ const ProfileEditForm = () => {
         ...currentUser,
         profile_image: data.image,
       }));
-      history.goBack();
+      setShowAlert(true);
+      setTimeout(function(){history.goBack();}, 3000);
+      // history.goBack();
     } catch (err) {
       // console.log(err);
       setErrors(err.response?.data);
@@ -74,6 +79,9 @@ const ProfileEditForm = () => {
   const textFields = (
     <>
       <Form.Group>
+      {showAlert &&
+        <UserAlert variant="info" message="Your profile has been updated. Taking you back to your profile's page..." />
+       }
         <Form.Label className="font-weight-bold">Profile description</Form.Label>
         <Form.Control
           as="textarea"
