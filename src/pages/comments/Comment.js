@@ -47,11 +47,9 @@ const Comment = (props) => {
 
   return (
     <div>
-      {showAlert ? (
-        <Alert type="info" message="Comment updated" />
-        ) : (
-          null
-      )}
+      {showAlert &&
+        <Alert variant="info" message="Comment has been updated" />
+       }
       
       <Media>
         <Link to={`/profiles/${profile_id}`} className="my-3">

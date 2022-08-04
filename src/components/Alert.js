@@ -4,16 +4,16 @@ import css from "classnames";
 import React from "react";
 import { useState } from "react";
 
-export default function Alert({ type, message }) {
-  const [isShow, setIsShow] = useState(true);
+export default function Alert({ variant, message }) {
+  const [isShown, setIsShown] = useState(true);
 
   const handleClose = (e) => {
     e.preventDefault();
-    setIsShow(false);
+    setIsShown(false);
   };
 
   return (
-    <div className={css(styles.alert, styles[type], !isShow && styles.hide)}>
+    <div className={css(styles.alert, styles[variant], !isShown && styles.hide)}>
       <span className={styles.closebtn} onClick={handleClose}>
         &times;
       </span>
