@@ -5,7 +5,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import editButtonStyles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
-import UserAlert from "../../components/Alert";
+import FeedbackMsg from "../../components/FeedbackMsg";
 
 const ProfileEditForm = () => {
   const currentUser = useCurrentUser();
@@ -80,7 +80,7 @@ const ProfileEditForm = () => {
     <>
       <Form.Group>
       {showAlert &&
-        <UserAlert variant="info" message="Your profile has been updated. Taking you back to your profile's page..." />
+        <FeedbackMsg variant="info" message="Your profile has been updated. Taking you back to your profile's page..." />
        }
         <Form.Label className="font-weight-bold">Profile description</Form.Label>
         <Form.Control

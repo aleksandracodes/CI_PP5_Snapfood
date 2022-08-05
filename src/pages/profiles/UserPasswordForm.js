@@ -5,7 +5,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import appStyles from "../../App.module.css";
 import PasswordCriteria from "../../components/PasswordCriteria";
-import UserAlert from "../../components/Alert";
+import FeedbackMsg from "../../components/FeedbackMsg";
 
 const UserPasswordForm = () => {
   const history = useHistory();
@@ -50,7 +50,7 @@ const UserPasswordForm = () => {
     <Row>
       <Col className="py-2 mx-auto text-center font-weight-bold" md={8}>
       {showAlert &&
-        <UserAlert variant="info" message="Password has been changed. Taking you back to your profile's page..." />
+        <FeedbackMsg variant="info" message="Password has been changed. Taking you back to your profile's page..." />
        }
         <Container className={appStyles.Content}>
           <Form onSubmit={handleSubmit}>

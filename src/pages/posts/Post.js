@@ -9,7 +9,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 import Like from "../../assets/like.png";
 import Unlike from "../../assets/unlike.png";
 import { DropdownMenu } from "../../components/DropdownMenu";
-import Alert from "../../components/Alert";
+import FeedbackMsg from "../../components/FeedbackMsg";
 
 const Post = (props) => {
   const {
@@ -83,7 +83,7 @@ const Post = (props) => {
   return (
     <Card className={styles.Post}>
       {showAlert &&
-        <Alert variant="info" message="Your post has been deleted" />
+        <FeedbackMsg variant="info" message="Your post has been deleted" />
        }
       <Card.Body className={styles.Container}>
           <Link to={`/profiles/${profile_id}`}>

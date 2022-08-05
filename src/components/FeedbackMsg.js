@@ -1,10 +1,10 @@
 // https://blog.logrocket.com/create-custom-react-alert-message/
-import styles from "../styles/Alert.module.css";
+import styles from "../styles/FeedbackMsg.module.css";
 import css from "classnames";
 import React from "react";
 import { useState } from "react";
 
-export default function Alert({ variant, message }) {
+export default function FeedbackMsg({ variant, message }) {
   const [isShown, setIsShown] = useState(true);
 
   const handleClose = (e) => {
