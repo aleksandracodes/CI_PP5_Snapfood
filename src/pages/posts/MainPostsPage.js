@@ -18,10 +18,18 @@ function MainPostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [category, setCategory] = useState(null);
   const [hasLoaded, setHasLoaded] = useState(false);
+  // detect the url change between home, feed & liked pages
   const { pathname } = useLocation();
   const currentUser = useCurrentUser();
   const [query, setQuery] = useState("");
 
+  /*
+    Handles API request using the filters for each of pages
+    to fetch relevant posts to the filter
+    Displays all the posts, just posts by the profiles followed, 
+    just the liked posts or posts in a specific category
+    Shows a loading spinner when required
+  */
   useEffect(() => {
     const fetchPosts = async () => {
         try {
@@ -35,8 +43,11 @@ function MainPostsPage({ message, filter = "" }) {
         } catch (err) {
         }
     };
-
     setHasLoaded(false);
+    /*
+      Delays making an API request and fetching posts of 1 second
+      instead of on each key stroke
+    */
     const timer = setTimeout(() => {
       fetchPosts();
     }, 1000);
@@ -88,6 +99,7 @@ function MainPostsPage({ message, filter = "" }) {
 
         <Col className="py-2 p-0 p-lg-2" lg={8}>
 
+        {/* Posts text search bar */}
         <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form
           className={styles.SearchBar}
@@ -121,12 +133,14 @@ function MainPostsPage({ message, filter = "" }) {
                 next={() => fetchMoreData(posts, setPosts)}
               />
             ) : (
+              // if no results found, show no results asset with a relevant message
               <Container className={appStyles.Content}>
                 <Asset src={NoResultsImage} width={20} height={20} message={message} />
               </Container>
             )}
           </>
         ) : (
+          // display a loading spinner if the posts haven't been loaded yet
           <Container className={appStyles.Content}>
             <Asset spinner />
           </Container>

@@ -13,7 +13,11 @@ export const useSetCurrentUser = () => useContext(SetCurrentUserContext);
 export const CurrentUserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory();
-  
+
+  /*
+    Handles request of current user data from the API
+    perform the request when the component is mounted
+  */
   const handleMount = async () => {
     try {
       const { data } = await axiosRes.get("dj-rest-auth/user/");
@@ -27,8 +31,10 @@ export const CurrentUserProvider = ({ children }) => {
     handleMount();
   }, []);
 
-  // Handle access tokens.
-  // If refreshingof token fails, redirect user to log-in page
+  /* 
+    Handle access tokens
+    Redirects user to log-in page if refreshing of token fails
+  */
   useMemo(() => {
     axiosReq.interceptors.request.use(
       async (config) => {
@@ -52,7 +58,6 @@ export const CurrentUserProvider = ({ children }) => {
         return Promise.reject(err);
       }
     );
-
 
     axiosRes.interceptors.response.use(
       (response) => response,

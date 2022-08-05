@@ -38,7 +38,7 @@ function App() {
             exact path="/"
             render={() => (
               <MainPostsPage 
-                message="No results found. Adjust the search keyword." />
+                message="No results found" />
             )}
           />
           {/* Feed route */}

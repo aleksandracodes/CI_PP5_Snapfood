@@ -9,7 +9,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
 
 function LogInForm() {
-  const setCurrentUser = useSetCurrentUser()
+  const setCurrentUser = useSetCurrentUser();
   useRedirect("loggedIn");
 
   const [logInData, setLogInData] = useState({
@@ -18,11 +18,12 @@ function LogInForm() {
   });
 
   const { username, password } = logInData;
-
   const [errors, setErrors] = useState({});
-
   const history = useHistory();
 
+  /* 
+    Handles changes to any of the input fields
+  */
   const handleChange = (e) => {
     setLogInData({
       ...logInData,
@@ -37,7 +38,7 @@ function LogInForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const {data} = await axios.post("/dj-rest-auth/login/", logInData);
+      const { data } = await axios.post("/dj-rest-auth/login/", logInData);
       setCurrentUser(data.user);
       setTokenTimestamp(data);
       history.push("/");
@@ -59,6 +60,7 @@ function LogInForm() {
                 {message}
               </Alert>
             ))}
+            
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
@@ -95,7 +97,7 @@ function LogInForm() {
                 {message}
               </Alert>
             ))}
-            
+
             <Button
               className={`my-3 ${appStyles.button}`}
               type="submit"

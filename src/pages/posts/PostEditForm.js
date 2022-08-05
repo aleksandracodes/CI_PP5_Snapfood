@@ -29,6 +29,12 @@ function PostEditForm() {
   const history = useHistory();
   const { id } = useParams(); // get a parameter out of the URL
 
+  /*
+    Handles API request using the post id parameter
+    Gets the data about the posts user wants to edit
+    Prevents editing other users' posts
+    and redirects to main page if attempted
+  */
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -44,6 +50,9 @@ function PostEditForm() {
     handleMount();
   }, [history, id]);
 
+  /* 
+    Handles changes to the create form input fields
+  */
   const handleChange = (e) => {
     setPostData({
       ...postData,
@@ -51,7 +60,9 @@ function PostEditForm() {
     });
   };
 
-  // Handle changes to the file input field
+  /* 
+    Handles change to the file (image) input field
+  */
   const handleChangeImage = (e) => {
     if (e.target.files.length) {
       URL.revokeObjectURL(image); // for changing image after adding one
@@ -62,7 +73,10 @@ function PostEditForm() {
     }
   };
 
-  // Handle the form submission
+  /* 
+    Handles the edit post form submission
+    Redirects the user to the post page
+  */
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -154,10 +168,11 @@ function PostEditForm() {
         />
       </Form.Group>
 
-      <Button 
+      <Button
         className={`my-3 ${appStyles.button}`}
         onMouseDown={(e) => e.preventDefault()}
-        type="submit">
+        type="submit"
+      >
         Save
       </Button>
 

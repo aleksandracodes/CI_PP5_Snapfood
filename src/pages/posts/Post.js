@@ -38,16 +38,28 @@ const Post = (props) => {
     history.push(`/posts/${id}/edit`);
   };
 
+  /*
+    Handles deleting of the post
+    Shows the confirmation message to the user
+    Redirects the user to the main page after a short delay
+  */
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
       setShowAlert(true);
-      setTimeout(function(){history.push("/");}, 1500);
+      setTimeout(function () {
+        history.push("/");
+      }, 1500);
     } catch (err) {
       // console.log(err);
     }
   };
 
+  /*
+    Handles liking of the post by the user
+    Sends a request to the API for a post with a specific id
+    Increments the likes number by 1
+  */
   const handleLike = async () => {
     try {
       const { data } = await axiosRes.post("/likes/", { post: id });
@@ -64,6 +76,11 @@ const Post = (props) => {
     }
   };
 
+  /*
+    Handles unliking of the post already liked by the user
+    Sends a request to the API for a post with a specific id
+    Decrements the likes number by 1
+  */
   const handleUnlike = async () => {
     try {
       await axiosRes.delete(`/likes/${like_id}/`);
@@ -82,51 +99,93 @@ const Post = (props) => {
 
   return (
     <Card className={styles.Post}>
-      {showAlert &&
+      {showAlert && (
         <FeedbackMsg variant="info" message="Your post has been deleted" />
-       }
+      )}
       <Card.Body className={styles.Container}>
-          <Link to={`/profiles/${profile_id}`}>
-            <Avatar src={profile_image} height={50} className={styles.AvatarGrid} />
-          </Link>
-          <Link to={`/profiles/${profile_id}`} className={styles.Username}>{owner}</Link>
-          
-          <div className={styles.UpdatedOn}>{updated_on}</div>
-          <div className={styles.EditIcon}>
-            {is_owner && postPage && <DropdownMenu handleEdit={handleEdit} handleDelete={handleDelete} />}
-          </div>
+        <Link to={`/profiles/${profile_id}`}>
+          <Avatar
+            src={profile_image}
+            height={50}
+            className={styles.AvatarGrid}
+          />
+        </Link>
+        <Link to={`/profiles/${profile_id}`} className={styles.Username}>
+          {owner}
+        </Link>
+        <div className={styles.UpdatedOn}>{updated_on}</div>
+
+        {/* Display the edit dropdown menu for owner of the post and if the
+        postPage prop exists */}
+        <div className={styles.EditIcon}>
+          {is_owner && postPage && (
+            <DropdownMenu handleEdit={handleEdit} handleDelete={handleDelete} />
+          )}
+        </div>
       </Card.Body>
+
       <Link to={`/posts/${id}`}>
         <Card.Img src={image} alt={title} />
       </Link>
+
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
         {description && <Card.Text>{description}</Card.Text>}
-        {category && <Card.Text>Type: 
-            <Badge variant="secondary" className={styles.BadgePost}> {category}</Badge>
-        </Card.Text>}
+        {category && (
+          <Card.Text>
+            Type:
+            <Badge variant="secondary" className={styles.BadgePost}>
+              {" "}
+              {category}
+            </Badge>
+          </Card.Text>
+        )}
         <hr className={appStyles.Line} />
-        <div>
-          {is_owner ? (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>This is your post, you cannot like it ;-) </Tooltip>}
-            >
-              <img src={Unlike} className={appStyles.LikeIcon} alt="Like hand" height="35" width="35" />
-            </OverlayTrigger>
-          ) : like_id ? (
-            <span onClick={handleUnlike}>
-              <img src={Like} className={appStyles.LikeIcon} alt="Like hand" height="35" width="35" />
-            </span>
-          ) : currentUser ? (
-            <span onClick={handleLike}>
-              <img src={Unlike} className={appStyles.LikeIcon} alt="Unlike hand" height="35" width="35" />
-            </span>
-          ) : (
-              <img src={Unlike} className={appStyles.LikeIcon} alt="Like hand" height="35" width="35" />
-          )}
 
+        <div>
+          {
+            is_owner ? (
+              // users cannot like their own posts
+              <OverlayTrigger
+                placement="top"
+                overlay={
+                  <Tooltip>This is your post, you cannot like it ;-) </Tooltip>
+                }
+              >
+                <img
+                  src={Unlike}
+                  className={appStyles.LikeIcon}
+                  alt="Like hand"
+                  height="35"
+                  width="35"
+                />
+              </OverlayTrigger>
+            ) : like_id ? (
+              // check if the user has already liked the post
+              <span onClick={handleUnlike}>
+                <img
+                  src={Like}
+                  className={appStyles.LikeIcon}
+                  alt="Like hand"
+                  height="35"
+                  width="35"
+                />
+              </span>
+            ) : currentUser ? (
+              // ability to like the post
+              <span onClick={handleLike}>
+                <img
+                  src={Unlike}
+                  className={appStyles.LikeIcon}
+                  alt="Unlike hand"
+                  height="35"
+                  width="35"
+                />
+              </span>
+            ) : null // user must be logged in to the app to view the content
+          }
           <span className="ml-1">{likes_number}</span>
+
           <Link to={`/posts/${id}`}>
             <i className="fa-regular fa-comment ml-2" />
           </Link>

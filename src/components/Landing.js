@@ -17,7 +17,7 @@ const Landing = () => {
                   <h1 className="mb-4">SnapFood - Get started</h1>
                 </Card.Title>
                 <Card.Text className="font-weight-bold">
-                  SnapFood is Food Photo Sharing Portal. If you’re looking for
+                  SnapFood is a Food Photo Sharing Portal. If you’re looking for
                   an inspiration for your next meal, you’re in the right place.
                   <br />
                   <br />

@@ -1,12 +1,19 @@
 import React, { useRef, useState } from "react";
-import { Alert, Button, Col, Container, Form, Image, Row } from "react-bootstrap";
+import {
+  Alert,
+  Button,
+  Col,
+  Container,
+  Form,
+  Image,
+  Row,
+} from "react-bootstrap";
 import Upload from "../../assets/upload-image.png";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import Asset from "../../components/Asset";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
-
 
 function PostCreateForm() {
   const [errors, setErrors] = useState({});
@@ -19,10 +26,12 @@ function PostCreateForm() {
   });
 
   const { title, category, description, image } = postData;
-
   const imageInput = useRef(null);
   const history = useHistory();
 
+  /* 
+    Handles changes to the create form input fields
+  */
   const handleChange = (e) => {
     setPostData({
       ...postData,
@@ -30,7 +39,9 @@ function PostCreateForm() {
     });
   };
 
-  // Handle changes to the file input field
+  /* 
+    Handles change to the file (image) input field
+  */
   const handleChangeImage = (e) => {
     if (e.target.files.length) {
       URL.revokeObjectURL(image); // for changing image after adding one
@@ -41,7 +52,10 @@ function PostCreateForm() {
     }
   };
 
-  // Handle the form submission
+  /* 
+    Handles the create post form submission
+    Refreshes the user's access token before making a request to create a post
+  */
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -55,22 +69,26 @@ function PostCreateForm() {
       const { data } = await axiosReq.post("/posts/", formData);
       history.push(`/posts/${data.id}`);
     } catch (err) {
-      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
     }
   };
 
+  /*
+    Hold input fields and buttons to create and cancel
+  */
   const textFields = (
     <div className="text-center">
       <Form.Group>
         <Form.Label>Title</Form.Label>
+
         {errors.title?.map((message, idx) => (
-              <Alert variant="warning" className={appStyles.Alert} key={idx}>
-                {message}
-              </Alert>
-            ))}
+          <Alert variant="warning" className={appStyles.Alert} key={idx}>
+            {message}
+          </Alert>
+        ))}
+
         <Form.Control
           type="text"
           name="title"
@@ -82,11 +100,13 @@ function PostCreateForm() {
 
       <Form.Group>
         <Form.Label>Category</Form.Label>
+
         {errors.category?.map((message, idx) => (
-              <Alert variant="warning" className={appStyles.Alert} key={idx}>
-                {message}
-              </Alert>
-            ))}
+          <Alert variant="warning" className={appStyles.Alert} key={idx}>
+            {message}
+          </Alert>
+        ))}
+
         <Form.Control
           as="select"
           name="category"
@@ -130,7 +150,7 @@ function PostCreateForm() {
         />
       </Form.Group>
 
-      <Button 
+      <Button
         className={`my-3 ${appStyles.button}`}
         onMouseDown={(e) => e.preventDefault()}
         type="submit"
@@ -138,7 +158,7 @@ function PostCreateForm() {
         Create
       </Button>
 
-      <Button 
+      <Button
         className={`${appStyles.button} mx-3`}
         onMouseDown={(e) => e.preventDefault()}
         onClick={() => history.goBack()}
@@ -193,11 +213,13 @@ function PostCreateForm() {
                 ref={imageInput}
               />
             </Form.Group>
+
             {errors.image?.map((message, idx) => (
               <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
             ))}
+
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
