@@ -15,20 +15,22 @@ const SignUpForm = () => {
     password2: "",
   });
   const { username, password1, password2 } = signUpData;
-
   const [errors, setErrors] = useState({});
-
   const history = useHistory();
 
+  /* 
+    Handles changes to any of the input fields
+  */
   const handleChange = (e) => {
     setSignUpData({
       ...signUpData,
-      [e.target.name]: e.target.value, //key is an input field name, value is the value entered by the user
+      [e.target.name]: e.target.value, // key is an input field name, value is the value entered by the user
     });
   };
 
   /* 
-    Handle submitted in the form data on signing up. Redirect to log in page.
+    Handles submitted in the form data on signing up
+    Redirects user to login page
   */
   const handleSubmit = async (e) => {
     e.preventDefault(); // prevent page refresh
@@ -46,12 +48,14 @@ const SignUpForm = () => {
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className="mb-4">Sign up</h1>
 
+          {/* Sign up form with alert messages for any errors in input fields */}
           <Form onSubmit={handleSubmit}>
             {errors.username?.map((message, idx) => (
               <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
             ))}
+
             <Form.Group controlId="username">
               <Form.Text id="passwordHelpBlock" muted>
                 Your username must be 1-10 characters long.
@@ -73,6 +77,7 @@ const SignUpForm = () => {
                 {message}
               </Alert>
             ))}
+
             <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
@@ -90,6 +95,7 @@ const SignUpForm = () => {
                 {message}
               </Alert>
             ))}
+
             <Form.Group controlId="password2">
               <Form.Label className="d-none">Confirm password</Form.Label>
               <Form.Control
@@ -109,7 +115,7 @@ const SignUpForm = () => {
             ))}
 
             <PasswordCriteria />
-            
+
             <Button
               className={`my-3 ${appStyles.button}`}
               type="submit"
