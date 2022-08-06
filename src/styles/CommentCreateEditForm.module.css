@@ -13,23 +13,25 @@
 }
 
 .Line {
-    background: var(--salmon);
-    margin: 25px 0;
+  background: var(--salmon);
+  margin: 20px 0 25px;
 }
 
+/* Add, update & cancel comment buttons */
 .CommentsButton {
   background-color: var(--salmon);
   box-shadow: 1px 1px 5px var(--salmon);
   border-radius: 35px;
   border-color: var(--salmon);
   font-weight: bold;
-  margin-right: 10px;
+  margin: 0 10px 5px 0;
   padding: 3px 15px;
 }
 
-.CommentsButton:hover, .CommentsButton:focus {
-    background-color: var(--light) !important;
-    color: var(--dark-slate-grey) !important;
-    box-shadow: 1px 1px 5px var(--light) !important;
-    border-color: var(--dark-slate-grey) !important;
+.CommentsButton:hover,
+.CommentsButton:focus {
+  background-color: var(--light) !important;
+  color: var(--dark-slate-grey) !important;
+  box-shadow: 1px 1px 5px var(--light) !important;
+  border-color: var(--dark-slate-grey) !important;
 }

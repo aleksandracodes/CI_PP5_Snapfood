@@ -17,12 +17,14 @@
   padding-top: 7px;
 }
 
+/* Remove right margin to the buttons on smaller screens */
 @media all and (max-width: 500px) {
   .LandingButtonMargin {
     margin-right: 0;
   }
 }
 
+/* Adjust landing page image size on smaller screens */
 @media all and (max-width: 440px) {
   .LandingImage {
     width: 80%;

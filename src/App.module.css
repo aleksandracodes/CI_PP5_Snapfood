@@ -4,9 +4,10 @@
   --light-grey: #718085;
   --light: #d6dad9;
   --beige: #b1aca6;
-  --salmon: #F87364;
+  --salmon: #f87364;
 }
 
+/* Highlighting of text */
 ::selection {
   background-color: rgba(248, 115, 100, 0.4);
 }
@@ -27,16 +28,17 @@
 }
 
 h3 {
-  font-weight: bold
+  font-weight: bold;
 }
 
 .Content {
-  background-color: #fff;
+  background-color: white;
   padding: 10px;
   border-radius: 3px;
-  border: 1px solid #fff;
+  border: 1px solid white;
 }
 
+/* Style app links */
 a {
   color: var(--dark-slate-grey) !important;
   font-weight: bold;
@@ -50,6 +52,7 @@ a:hover i {
   color: var(--dark-slate-grey);
 }
 
+/* Style app icons */
 i {
   color: var(--light-grey);
   font-size: 1.5rem;
@@ -57,6 +60,7 @@ i {
   vertical-align: middle;
 }
 
+/* Buttons */
 .button {
   background-color: var(--salmon);
   box-shadow: 1px 1px 5px var(--salmon);
@@ -64,21 +68,24 @@ i {
   font-weight: bold;
 }
 
-.button:hover, .button:focus {
-    background-color: var(--light) !important;
-    color: var(--dark-slate-grey) !important;
-    box-shadow: 1px 1px 5px var(--light) !important;
-    border-color: var(--dark-slate-grey) !important;
+.button:hover,
+.button:focus {
+  background-color: var(--light) !important;
+  color: var(--dark-slate-grey) !important;
+  box-shadow: 1px 1px 5px var(--light) !important;
+  border-color: var(--dark-slate-grey) !important;
 }
 
+/* Add style to bootstrap alerts */
 .Alert {
   margin-bottom: 0;
-  padding: 0;
+  padding: 5px;
   font-weight: bold;
 }
 
+/* Forms input field */
 .Input {
-  background: #fff;
+  background: white;
   border: 1px solid var(--light);
   box-sizing: border-box;
   border-radius: 3px;
@@ -100,8 +107,10 @@ i {
   object-fit: contain;
 }
 
+/* Like thumb-up icon style on hover */
 .LikeIcon:hover {
-    transform: rotate(-15deg) scale(1.1);
+  transform: rotate(-15deg) scale(1.1);
+  cursor: pointer;
 }
 
 .Line {

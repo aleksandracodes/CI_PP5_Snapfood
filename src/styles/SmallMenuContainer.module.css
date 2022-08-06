@@ -1,3 +1,4 @@
+/* Display of links within the small side menus  */
 .Link {
   display: inline;
   margin-left: 7px;
@@ -14,6 +15,7 @@
   border-spacing: 7px;
 }
 
+/* Adjust display of icons in the menu */
 @media all and (min-width: 991px) {
   .LikeFeedAddDisplay {
     display: flex;
@@ -22,7 +24,7 @@
 }
 
 @media all and (max-width: 991px) {
-  /* 3 columns on medium - small screens */
+  /* Display of 3 columns with menus on medium to small screens */
   .CollapsedColumn {
     display: table-cell;
     width: 31%;
@@ -36,6 +38,7 @@
 }
 
 @media all and (max-width: 768px) {
+  /* Display of menus one under another on smaller screens */
   .CollapsedColumn {
     display: inline-flex;
     width: 100%;
@@ -46,17 +49,20 @@
     margin: 0;
   }
 
+  /* Adjust display of top users' icons and follow buttons */
   .UsersDisplay {
     display: flex;
     justify-content: space-around;
   }
 
+  /* Display of posts categories badges */
   .CategoriesColumn {
     display: inline-table;
   }
 }
 
 @media all and (max-width: 430px) {
+  /* Adjust display of icons and links below them */
   .Link {
     display: block;
   }

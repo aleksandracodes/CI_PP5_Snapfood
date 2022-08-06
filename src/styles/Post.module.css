@@ -1,20 +1,21 @@
 .Post {
-  background-color: #fff;
+  background-color: white;
   border-radius: 3px;
   margin-bottom: 16px;
   text-align: center;
 }
 
 .Container {
-    display: grid;
-    grid-template-columns: 60px auto 60px;
-    grid-template-rows: 30px 30px;
-    grid-auto-flow: row;
+  display: grid;
+  grid-template-columns: 60px auto 60px;
+  grid-template-rows: 30px 30px;
+  grid-auto-flow: row;
 }
 
+/* Display of user avatar, username & post date */
 .AvatarGrid {
-    grid-column: 1;
-    grid-row: 1 / 3;
+  grid-column: 1;
+  grid-row: 1 / 3;
 }
 
 .Username {
@@ -42,8 +43,9 @@
   align-items: center;
 }
 
+/* Type of cuisine badge within the post */
 .BadgePost {
-  padding: 5px;
+  padding: 5px 8px;
   margin: 0 4px;
   font-size: inherit;
 }
