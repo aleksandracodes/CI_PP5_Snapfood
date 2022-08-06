@@ -132,17 +132,14 @@ const Post = (props) => {
       </Link>
 
       <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
+        <Card.Title className="text-center">{title}</Card.Title>
         {description && <Card.Text>{description}</Card.Text>}
-        {category && (
-          <Card.Text>
-            Type:
-            <Badge variant="secondary" className={styles.BadgePost}>
-              {" "}
-              {category}
-            </Badge>
-          </Card.Text>
-        )}
+        <Card.Text>
+          Type:
+          <Badge variant="secondary" className={styles.BadgePost}>
+            {category}
+          </Badge>
+        </Card.Text>
         <hr className={appStyles.Line} />
 
         <div>
