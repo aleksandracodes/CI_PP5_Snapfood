@@ -10,7 +10,6 @@ import { useSetProfileData } from "../../contexts/ProfileDataContext";
 const Profile = (props) => {
   const { profile, imageSize = 40 } = props;
   const { id, following_id, image, owner } = profile;
-
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
@@ -32,6 +31,7 @@ const Profile = (props) => {
       </div>
 
       <div className={`${buttonsStyles.FollowButtonsRemove} ml-auto`}>
+        {/* Displays follow/unfollow buttons and do not allow users to follow themselves */}
         {currentUser &&
           !is_owner &&
           (following_id ? (

@@ -26,6 +26,11 @@ const Comment = (props) => {
   const is_owner = currentUser?.username === owner;
   const [showAlert, setShowAlert] = useState(false);
 
+  /*
+    Handles deleting of the comment based on its id
+    Decrements the number of current comments by 1
+    Removes the comment from all comments
+  */
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/comments/${id}/`);
@@ -47,10 +52,10 @@ const Comment = (props) => {
 
   return (
     <div>
-      {showAlert &&
+      {showAlert && (
         <FeedbackMsg variant="info" message="Comment has been updated" />
-       }
-      
+      )}
+
       <Media>
         <Link to={`/profiles/${profile_id}`} className="my-3">
           <Avatar src={profile_image} />
@@ -60,6 +65,8 @@ const Comment = (props) => {
             <span className={styles.OwnerName}>{owner}</span>
             <span className={styles.Date}> | {updated_on}</span>
             <span className={styles.DropdownDots}>
+              {/* Display the dropdown menu for owner of the comment
+                  to either edit or delete it */}
               {is_owner && !showEditForm && (
                 <DropdownMenu
                   handleEdit={() => setShowEditForm(true)}

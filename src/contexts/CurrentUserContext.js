@@ -32,7 +32,7 @@ export const CurrentUserProvider = ({ children }) => {
   }, []);
 
   /* 
-    Handle access tokens
+    Handles access tokens
     Redirects user to log-in page if refreshing of token fails
   */
   useMemo(() => {

@@ -17,6 +17,12 @@ export const ProfileDataProvider = ({ children }) => {
 
   const currentUser = useCurrentUser();
 
+  /*
+    Makes a request to the /followers/ endpoint
+    Sends information about what profile (its id)
+    the user just followed (clicked)
+    Updates profile page and PopularProfiles data
+  */
   const handleFollow = async (clickedProfile) => {
     try {
       const { data } = await axiosRes.post("/followers/", {
@@ -42,6 +48,12 @@ export const ProfileDataProvider = ({ children }) => {
     }
   };
 
+  /*
+    Makes a request to the /followers/ endpoint
+    Sends information about what profile (its id)
+    the user just followed (clicked)
+    Updates PopularProfiles data
+  */
   const handleUnfollow = async (clickedProfile) => {
     try {
       await axiosRes.delete(`/followers/${clickedProfile.following_id}/`);
@@ -64,6 +76,11 @@ export const ProfileDataProvider = ({ children }) => {
     }
   };
 
+  /*
+    Fetches app popularProfiles data on mount
+    in the descending order of how many followers they have
+    Displays the most followed profile at the top
+  */
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -83,7 +100,9 @@ export const ProfileDataProvider = ({ children }) => {
 
   return (
     <ProfileDataContext.Provider value={profileData}>
-      <SetProfileDataContext.Provider value={{ setProfileData, handleFollow, handleUnfollow }}>
+      <SetProfileDataContext.Provider
+        value={{ setProfileData, handleFollow, handleUnfollow }}
+      >
         {children}
       </SetProfileDataContext.Provider>
     </ProfileDataContext.Provider>

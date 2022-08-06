@@ -5,6 +5,11 @@ import { useHistory } from "react-router";
 export const useRedirect = (userAuthStatus) => {
   const history = useHistory();
 
+  /*
+    Checks if the user is currently logged in or not
+    Refreshes the access token if a user is logged in
+    Redirects the user to the home page
+  */
   useEffect(() => {
     const handleMount = async () => {
       try {

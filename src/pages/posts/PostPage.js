@@ -73,6 +73,7 @@ function PostPage() {
               "Comments"
             ) : null}
             {comments.results.length ? (
+              // InfiniteScroll component handles loading more pages of comments as the user scrolls
               <InfiniteScroll
                 children={comments.results.map((comment) => (
                   <Comment

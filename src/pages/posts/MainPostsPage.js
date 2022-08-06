@@ -118,6 +118,7 @@ function MainPostsPage({ message, filter = "" }) {
         {hasLoaded ? (
           <>
             {posts.results.length ? (
+              // InfiniteScroll component handles loading more pages of posts as the user scrolls
               <InfiniteScroll
                 children={posts.results.map((post) => (
                   <Post 

@@ -30,6 +30,10 @@ function ProfilePage() {
   const [profile] = pageProfile.results;
   const is_owner = currentUser?.username === profile?.owner; // check if the logged-in user is the profile's owner
 
+  /*
+    Makes an API request to fetch user profile and their posts
+    Updates profile page data
+  */
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -52,6 +56,9 @@ function ProfilePage() {
     fetchData();
   }, [id, setProfileData]);
 
+  /*
+    Displays the profile information
+  */
   const mainProfile = (
     <>
       <Row noGutters className="px-3 text-center">
@@ -107,17 +114,25 @@ function ProfilePage() {
             ))}
         </Col>
 
-        {profile?.description && <Col className="p-3"><hr className={appStyles.Line} />{profile?.description}</Col>}
+        {profile?.description && (
+          <Col className="p-3">
+            <hr className={appStyles.Line} />
+            {profile?.description}
+          </Col>
+        )}
       </Row>
     </>
   );
 
+  /*
+    Displays posts belonging to the profile
+  */
   const mainProfilePosts = (
     <>
       <hr className={appStyles.Line} />
-        <p className="text-center">{profile?.owner}'s posts</p>
+      <p className="text-center">{profile?.owner}'s posts</p>
       <hr className={appStyles.Line} />
-      
+
       {profilePosts.results.length ? (
         <InfiniteScroll
           children={profilePosts.results.map((post) => (
@@ -140,8 +155,11 @@ function ProfilePage() {
   return (
     <Container>
       <Row>
-        <Col className={`${columnStyles.SplitColumns} ${columnStyles.TwoColumns} py-2 p-0 p-lg-2`} lg={4}>
-            <LikeFeedAddPost />
+        <Col
+          className={`${columnStyles.SplitColumns} ${columnStyles.TwoColumns} py-2 p-0 p-lg-2`}
+          lg={4}
+        >
+          <LikeFeedAddPost />
 
           <Container
             className={`${appStyles.Content} ${columnStyles.CollapsedColumn}`}

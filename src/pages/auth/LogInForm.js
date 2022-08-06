@@ -34,7 +34,7 @@ function LogInForm() {
   /* 
     Handles submitted in the form data on logging in
     Redirect user to home page
-*/
+  */
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -60,7 +60,7 @@ function LogInForm() {
                 {message}
               </Alert>
             ))}
-            
+
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control

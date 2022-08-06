@@ -7,10 +7,18 @@ function CommentEditForm(props) {
   const { id, content, setShowEditForm, setComments, setShowAlert } = props;
   const [formContent, setFormContent] = useState(content);
 
+  /* 
+    Handles changes to form input
+  */
   const handleChange = (e) => {
     setFormContent(e.target.value);
   };
 
+  /* 
+    Handles the edit comment form submission
+    Updates displayed comment with date set to 'now'
+    Displays confirmation alert to the user 
+  */
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -25,16 +33,13 @@ function CommentEditForm(props) {
                 ...comment,
                 content: formContent.trim(),
                 updated_on: "now",
-                
               }
             : comment;
         }),
       }));
       setShowEditForm(false);
       setShowAlert(true);
-      
-    } catch (err) {
-    }
+    } catch (err) {}
   };
 
   return (
@@ -48,20 +53,22 @@ function CommentEditForm(props) {
           rows={2}
         />
       </Form.Group>
-      
-      <div className="text-right">
 
-        <Button 
-            className={styles.CommentsButton}
-            disabled={!content.trim()}
-            onMouseDown={(e) => e.preventDefault()}
-            type="submit"
-        >
-            Update
-      </Button>
-      <Button
+      <div className="text-right">
+        <Button
           className={styles.CommentsButton}
-          onClick={() => { setShowEditForm(false); setShowAlert(false);}}
+          disabled={!content.trim()}
+          onMouseDown={(e) => e.preventDefault()}
+          type="submit"
+        >
+          Update
+        </Button>
+        <Button
+          className={styles.CommentsButton}
+          onClick={() => {
+            setShowEditForm(false);
+            setShowAlert(false);
+          }}
           onMouseDown={(e) => e.preventDefault()}
           type="button"
         >

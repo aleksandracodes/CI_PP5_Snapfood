@@ -34,6 +34,9 @@ const Post = (props) => {
   const history = useHistory();
   const [showAlert, setShowAlert] = useState(false);
 
+  /*
+    Handles editing of the post
+  */
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
   };
