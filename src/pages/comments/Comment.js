@@ -25,32 +25,40 @@ const Comment = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const [showAlert, setShowAlert] = useState(false);
+  const [isDeleted, setIsDeleted] = useState(false);
 
   /*
     Handles deleting of the comment based on its id
-    Decrements the number of current comments by 1
     Removes the comment from all comments
+    Displays a feedback message to a user in place of deleted comment
+    Decrements the number of current comments by 1
   */
   const handleDelete = async () => {
-    try {
-      await axiosRes.delete(`/comments/${id}/`);
-      setPost((prevPost) => ({
-        results: [
-          {
-            ...prevPost.results[0],
-            comments_number: prevPost.results[0].comments_number - 1,
-          },
-        ],
-      }));
+    setIsDeleted(true);
 
-      setComments((prevComments) => ({
-        ...prevComments,
-        results: prevComments.results.filter((comment) => comment.id !== id),
-      }));
-    } catch (err) {}
+    setTimeout(async () => {
+      try {
+        await axiosRes.delete(`/comments/${id}/`);
+        setPost((prevPost) => ({
+          results: [
+            {
+              ...prevPost.results[0],
+              comments_number: prevPost.results[0].comments_number - 1,
+            },
+          ],
+        }));
+
+        setComments((prevComments) => ({
+          ...prevComments,
+          results: prevComments.results.filter((comment) => comment.id !== id),
+        }));
+      } catch (err) {}
+    }, 2500);
   };
 
-  return (
+  return isDeleted ? (
+    <FeedbackMsg variant="info" message="Comment has been deleted" />
+  ) : (
     <div>
       {showAlert && (
         <FeedbackMsg variant="info" message="Comment has been updated" />
