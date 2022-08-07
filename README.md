@@ -107,6 +107,24 @@ The key functionality aspects:
 ##### Back to [top](#table-of-contents)
 
 
+## Design
+
+### Colours
+
+The colour scheme for this application was inspired by the pallet found on [Pinterest](https://i.pinimg.com/originals/75/60/95/7560957eb677f91110b4677515b911db.jpg). It was the aim to keep the colours neutral and warm to create a calming feeling and gather user's focus on the photographs without distraction by other graphics on the website. App background color is light (gainsboro) grey with matching navbar and the containers with the main content are white. Action buttons, highlight of text and search bar have contrasting colour of darker schade of 'salmon'. Bootstrap 'secondary' variant was also used, eg. for the post category badges.
+These colours were used throughout all the pages in such a way as to ensure adequate contrast and good user experience.
+
+<img src="docs/readme/color-scheme-snapfood.jpg">
+
+
+### Fonts
+
+Google Fonts were implemented on the website. Inter with sans-serif as fallback was used thoughout the site to ensure high legibility of the content.
+Inter features a tall x-height to aid in readability of mixed-case and lower-case text.
+
+##### Back to [top](#table-of-contents)
+
+
 ## Credits
 
 ### Images
