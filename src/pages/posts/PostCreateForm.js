@@ -115,26 +115,26 @@ function PostCreateForm() {
           onChange={handleChange}
         >
           <option>Select type of cousine</option>
-          <option value="spanish">Spanish</option>
-          <option value="polish">Polish</option>
-          <option value="portuguese">Portuguese</option>
-          <option value="greek">Greek</option>
-          <option value="italian">Italian</option>
-          <option value="turkish">Turkish</option>
-          <option value="french">French</option>
-          <option value="moroccan">Moroccan</option>
-          <option value="british">British</option>
-          <option value="german">German</option>
-          <option value="austrian">Austrian</option>
-          <option value="lebanese">Lebanese</option>
-          <option value="caribbean">Caribbean</option>
-          <option value="indian">Indian</option>
-          <option value="thai">Thai</option>
-          <option value="japanese">Japanese</option>
-          <option value="chinese">Chinese</option>
-          <option value="mexican">Mexican</option>
-          <option value="american">American</option>
-          <option value="other">Other</option>
+          <option value="Spanish">Spanish</option>
+          <option value="Polish">Polish</option>
+          <option value="Portuguese">Portuguese</option>
+          <option value="Greek">Greek</option>
+          <option value="Italian">Italian</option>
+          <option value="Turkish">Turkish</option>
+          <option value="French">French</option>
+          <option value="Moroccan">Moroccan</option>
+          <option value="British">British</option>
+          <option value="German">German</option>
+          <option value="Austrian">Austrian</option>
+          <option value="Lebanese">Lebanese</option>
+          <option value="Caribbean">Caribbean</option>
+          <option value="Indian">Indian</option>
+          <option value="Thai">Thai</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Mexican">Mexican</option>
+          <option value="American">American</option>
+          <option value="Other">Other</option>
         </Form.Control>
       </Form.Group>
 

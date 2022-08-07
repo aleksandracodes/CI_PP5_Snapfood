@@ -74,26 +74,26 @@ function MainPostsPage({ message, filter = "" }) {
           >
             <p className=" font-weight-bold ml-2">Post categories</p>
               <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory(null)}>All</Badge>     
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("spanish")}>Spanish</Badge>             
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("polish")}>Polish</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("portuguese")}>Portuguese</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("italian")}>Italian</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("greek")}>Greek</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("turkish")}>Turkish</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("french")}>French</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("british")}>British</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("german")}>German</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("austrian")}>Austrian</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("lebanese")}>Lebanese</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("moroccan")}>Moroccan</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("caribbean")}>Caribbean</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("indian")}>Indian</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("thai")}>Thai</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("japanese")}>Japanese</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("chinese")}>Chinese</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("mexican")}>Mexican</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("american")}>American</Badge>
-              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("other")}>Other</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Spanish")}>Spanish</Badge>             
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Polish")}>Polish</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Portuguese")}>Portuguese</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Italian")}>Italian</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Greek")}>Greek</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Turkish")}>Turkish</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("French")}>French</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("British")}>British</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("German")}>German</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Austrian")}>Austrian</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Lebanese")}>Lebanese</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Moroccan")}>Moroccan</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Caribbean")}>Caribbean</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Indian")}>Indian</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Thai")}>Thai</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Japanese")}>Japanese</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Chinese")}>Chinese</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Mexican")}>Mexican</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("American")}>American</Badge>
+              <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Other")}>Other</Badge>
           </Container>
         </Col>
 
