@@ -2,9 +2,9 @@
 
 **Developer: Aleksandra Haniok**
 
-💻 [Visit live website]()
+💻 [Visit live website](https://ci-pp5-snapfood.herokuapp.com/)
 
-![Mockup image]()
+![Mockup image](docs/readme/ami-responsivedesign-snapfood.jpg)
 
 
 ## Table of Contents
@@ -12,12 +12,29 @@
   - [User Stories](#user-stories)
 
 
+
 ## About
 
-##### Back to [top](#table-of-contents)
+SnapFood is a platform where users can share photos of food they made, ordered or like with the rest of the community.
+Everyone can like other users' pictures and share their opinion on a certain post. Users can also follow their favourite profiles and easily see updates on their activity. SnapFood is an app for all food lovers who want to get inspired or share inspirations with others.
+
+## Project Goals
+
+The goal for this project was to build a platform to enable users to interact with others in various ways such as commenting posts or following their profile.
+The idea was to keep the portal very informal and for the entertainment purpose.
+
+The key functionality aspects:
+- simple and intuitive navigation across all pages
+- user authentication
+- user interaction via posts, comments, likes, followers
+- user profiles with their description and images
+- CRUD functionality for posts, comments, likes, followers and profile information
+- posts filtering by title, author and category
+- posts filtering by liked posts and followed users posts
+- responsiveness to allow users use the app on various devices
+
 
 ## User Stories
-
 
 ### Navigation 
 
@@ -40,41 +57,47 @@
 9. As a user, I can view user's avatars so that I can easily identify other users of the app 
 10. As a user, I can update the picture and description of my profile on the profile page so that other users view up to date info about me 
 11. As a user, I can change password to my account so that I can keep my profile secure 
-12. As a user, I can delete my account if I decide to no longer use the app 
 
 ### Other Users Profiles 
 
-13. As a user, I can view all the posts by a specific user so that I can see their latest activity 
-14. As a user, I can view other users’ profiles with their profile description, number of posts, followers and users followed so that I can learn more about them 
-15. As a user, I can follow and unfollow other users so that I can get specific users’ posts in my posts feed 
-16. As a user, I can see a list of the most followed profiles so that I can see which profiles are popular 
+12. As a user, I can view all the posts by a specific user so that I can see their latest activity 
+13. As a user, I can view other users’ profiles with their profile description, number of posts, followers and users followed so that I can learn more about them 
+14. As a user, I can follow and unfollow other users so that I can get specific users’ posts in my posts feed 
+15. As a user, I can see a list of the most followed profiles so that I can see which profiles are popular 
 
 ### Posts 
 
-17. As a user, I can create posts so that I can share my food images with the community 
-18. As a user, I can categories my post so that other users can find it by its tag 
-19. As a user, I can view other people’s posts so that I can get inspired by their images 
-20. As a user, I can view the details of a single post so that I can see its full description and other users’ comments 
-21. As user, I can like a specific post so that I can show my interest 
+16. As a user, I can create posts so that I can share my food images with the community 
+17. As a user, I can categories my post so that other users can find it by its tag 
+18. As a user, I can view other people’s posts so that I can get inspired by their images 
+19. As a user, I can view the details of a single post so that I can see its full description and other users’ comments 
+20. As user, I can like a specific post so that I can show my interest 
 
  
 ### Main page 
 
-22. As a user, I can view posts ordered by most recently added so that I am up to date with the newest content 
-23. As a user, I can keep scrolling through the posts so that they are loaded automatically and I don't have to select the next page 
-24. As a user, I can see the posts I liked so that I can find the posts I enjoy the most 
-25. As a user, I can view posts from users I followed, so I can follow their activity
-26. As a user, I can view posts category tags, so that I choose posts to display that I’m particularly interested in
+21. As a user, I can view posts ordered by most recently added so that I am up to date with the newest content 
+22. As a user, I can keep scrolling through the posts so that they are loaded automatically and I don't have to select the next page 
+23. As a user, I can see the posts I liked so that I can find the posts I enjoy the most 
+24. As a user, I can view posts from users I followed, so I can follow their activity
+25. As a user, I can view posts category tags, so that I choose posts to display that I’m particularly interested in
 
 ### The Post Page 
 
-27. As a user, I can view the details of a single posts so that I can read other users’ comments and know what they think about it
-28. As a user, I can view a category for the post so that I know what cuisine the food image relates to 
-29. As user, I can add comments to a post so that I can share my thoughts about the post with the community 
-30. As a user, I can see when the comments were created so that I know how old a comment is 
-31. As an owner of a comment, I can edit my comment so that I can update my existing comment 
-32. As an owner of a comment, I can delete my comment from the post 
-33. As a post owner, I can edit my post title and description so that I can make corrections or update my post after it was created
+26. As a user, I can view the details of a single posts so that I can read other users’ comments and know what they think about it
+27. As a user, I can view a category for the post so that I know what cuisine the food image relates to 
+28. As user, I can add comments to a post so that I can share my thoughts about the post with the community 
+29. As a user, I can see when the comments were created so that I know how old a comment is 
+30. As an owner of a comment, I can edit my comment so that I can update my existing comment 
+31. As an owner of a comment, I can delete my comment from the post 
+32. As a post owner, I can edit my post title and description so that I can make corrections or update my post after it was created
+
+
+### General
+
+33. As a site owner I want my site to be fully responsive so that users can you use it on different devices
+34. As a site owner, I want users to come to a 404 error page so that they don't have to user the browser back button if they enter a URL that does not exist
+35. As a site user, I can view feedback messages, so that I know if my comment/profile/post has been updated
 
 ##### Back to [top](#table-of-contents)
 
@@ -85,7 +108,7 @@
 
 - 404 picture tweaked using Paint taken from [here](https://www.istockphoto.com/pl/wektor/broken-danie-gm1132925979-300527202)
 - No results found picture taken from [here](https://www.vecteezy.com/vector-art/7104553-search-no-result-not-found-concept-illustration-flat-design-vector-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon)
--Speech bubble image on comments page with no comments was taken from [here](https://www.freepik.com/free-vector/illustration-speech-bubble_2606145.htm#query=chat&position=17&from_view=search)
+- Speech bubble image on comments page with no comments was taken from [here](https://www.freepik.com/free-vector/illustration-speech-bubble_2606145.htm#query=chat&position=17&from_view=search)
 - The lading page image of hands holding smartphone and taking photo of food comes from [here](https://media.istockphoto.com/vectors/hands-holding-smartphone-and-capture-photo-of-healthy-food-in-modern-vector-id1263096919?k=20&m=1263096919&s=612x612&w=0&h=YQ70hwbYb1LcCl16TvpzVv03lIVfiQ848fLhFCvW4BY=)
 - The thumb-up icon for like/unlike was taken from [here](https://image.shutterstock.com/shutterstock/photos/1391842757/display_1500/stock-vector-vector-hand-like-icon-template-good-food-logo-illustration-with-fork-sign-line-symbol-for-farmers-1391842757.jpg) and tweaked using Paint
 - Site logo was created with [Fiverr Logo Maker](https://www.fiverr.com/logo-maker/brief/logo_name?brief_id=0d212c49-2416-401d-99a5-780b9b233ff7)
