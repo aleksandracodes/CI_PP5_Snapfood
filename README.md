@@ -116,11 +116,24 @@ These colours were used throughout all the pages in such a way as to ensure adeq
 
 <img src="docs/readme/color-scheme-snapfood.jpg">
 
-
 ### Fonts
 
 Google Fonts were implemented on the website. Inter with sans-serif as fallback was used thoughout the site to ensure high legibility of the content.
 Inter features a tall x-height to aid in readability of mixed-case and lower-case text.
+
+### Wireframes
+
+<details><summary>Big screens - laptop & desktop</summary>
+<img src="docs/wireframes/wireframes-snapfood-desktop.png">
+</details>
+<details><summary>Medium screens - tablet</summary>
+<img src="docs/wireframes/wireframes-snapfood-tablet.png">
+</details>
+<details><summary>Small screens - mobile</summary>
+<img src="docs/wireframes/wireframes-snapfood-mobile.png">
+</details>
+
+
 
 ##### Back to [top](#table-of-contents)
 
