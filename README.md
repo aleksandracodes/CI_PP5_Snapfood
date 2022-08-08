@@ -133,9 +133,49 @@ Inter features a tall x-height to aid in readability of mixed-case and lower-cas
 <img src="docs/wireframes/wireframes-snapfood-mobile.png">
 </details>
 
+##### Back to [top](#table-of-contents)
+
+
+## Technologies Used
+
+### Languages
+
+- HTML
+- CSS
+- Javascript
+  - React (17.0.2)
+
+
+### Libraries, frameworks and dependencies
+
+- [Axios](https://axios-http.com/docs/intro) - axios were used for promise-based HTTP
+- [Gitpod](https://gitpod.io) was used to host a virtual workspace
+- [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
+- [GitHub](https://github.com/) was used as a remote repository to store project code
+- [Heroku Platform](https://id.heroku.com/login) was used to deploy the project into live environment
+- [JWT](https://jwt.io/) - library to decode out JSON Web token. Used to prevent unauthenticated user from making extra network requests to refresh their access token. Also used to remove the timestamp from the browser when the user refreshes token expires or the user logs out.
+- [React 17](https://17.reactjs.org/) - JavaScript library for building user interfaces
+- [React-Bootstrap 4.6](https://react-bootstrap-v4.netlify.app/) - Bootstrap library used for UI components, styling and responsiveness.
+- [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) - used to load content (posts/comments) automatically as the user scrolls towards the bottom of the page
+- [React Router](https://v5.reactrouter.com/web/guides/quick-start) - used for dynamic routing (controls what the user sees depending on the URL they have accessed in the browser)
+
+
+### Tools
+
+- [Am I Responsive](http://ami.responsivedesign.is/) was used to create the multi-device mock-up at the top of this README.md file
+- [Balsamiq](https://balsamiq.com/) to create the projects wireframes
+- [Favicon.io](https://favicon.io) for making the site favicon
+- [Cloudinary](https://cloudinary.com/) to store static files
+- [Coolors](https://coolors.co/?home) was used to create the color scheme palette
+- [Remove.bg](https://www.remove.bg/) was used to remove background on app images
+- [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/) was used for debugging of the code and checking site for responsiveness
+- [Fiverr](https://www.fiverr.com/logo-maker/saved-logos?tab=designs) - app logo was created using Fiverr
+- [Font Awesome](https://fontawesome.com/) - Icons from Font Awesome were used throughout the site
+- [Google Fonts](https://fonts.google.com/)
 
 
 ##### Back to [top](#table-of-contents)
+
 
 
 ## Credits
