@@ -96,7 +96,7 @@ const NavBar = () => {
       <Container>
         <NavLink to="/">
           <Navbar.Brand>
-            <img src={logo} alt="SnapFood logo" height="60" width="90" />
+            <img src={logo} alt="SnapFood logo" height="60" width="85" />
           </Navbar.Brand>
         </NavLink>
         <Navbar.Toggle
