@@ -107,7 +107,7 @@ function LogInForm() {
             </Button>
 
             <Link className={styles.Link} to="/signup">
-              Don't have an account? Click <span>here </span>to sign up.
+              Don&lsquo;t have an account? Click <span>here </span>to sign up.
             </Link>
           </Form>
         </Container>

@@ -29,7 +29,9 @@ const NavBar = () => {
       setCurrentUser(null);
       setExpanded(false);
       removeTokenTimestamp();
-    } catch (err) {}
+    } catch (err) {
+      //console.log(err)
+    }
   };
 
   /* 

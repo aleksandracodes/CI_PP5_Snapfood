@@ -44,7 +44,9 @@ function PostEditForm() {
         is_owner
           ? setPostData({ title, category, description, image })
           : history.push("/");
-      } catch (err) {}
+      } catch (err) {
+        //console.log(err)
+      }
     };
 
     handleMount();
