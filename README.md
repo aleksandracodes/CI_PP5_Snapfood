@@ -1,4 +1,4 @@
-# SnapFood <img src="https://ci-pp5-snapfood.herokuapp.com/static/media/SnapFood-logo.cc1cf20d.png" style="width: 90px; height:60px;">
+# SnapFood <img src="src/assets/SnapFood-logo.png" style="width: 85px; height:60px;">
 
 **Developer: Aleksandra Haniok**
 
@@ -8,8 +8,6 @@
 
 
 ## Table of Contents
-  - [About](#about)
-  - [User Stories](#user-stories)
 
 
 
@@ -265,6 +263,99 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 <details><summary>Main posts page</summary> 
 <img src="docs/validation/lighthouse-mainpage-mobile.png "> 
 </details> 
+
+##### Back to [top](#table-of-contents)
+
+
+## Testing
+ 
+### Manual testing of user stories
+
+ - As a user, I can see the home page with explanation of the portal, so that I know what the app is about
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-snapfood.herokuapp.com/ | Landing page loads with application description | Works as expected |
+ 
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-01.png">
+</details>
+
+
+- As a user, I can see a navbar on every page, so that I can easily return to main page, find a post and access my profile page
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Load any page of the application| Navbar with different links is displayed on top of each page | Works as expected |
+ 
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-02-a.png">
+<img src="docs/testing/user-stories-testing/user-story-02-b.png">
+<img src="docs/testing/user-stories-testing/user-story-02-c.png">
+<img src="docs/testing/user-stories-testing/user-story-02-d.png">
+</details>
+
+
+- As a logged-out user, I can see log in and sign up options so that I can log in or sign up
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to the main page and ensure you are logged out. If logged in, click on the profile avatar in the navbar and select ‘logout’ from the dropdown menu | Redirects to the landing page and displays options to log in or sign up | Works as expected |
+ 
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-03.png">
+</details>
+
+
+- As a new user, I can create a new account so that I can access the app
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to https://ci-pp5-snapfood.herokuapp.com/, click ‘sign up’ icon in the navbar or ‘Happy to join!’ button. Type username, password and confirm the password | Redirects user to login page and on successful login with created credentials the user is logged in and this is indicated by display of their username and default avatar in the navbar | Works as expected |
+ 
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-04-a.png">
+<img src="docs/testing/user-stories-testing/user-story-04-b.png">
+<img src="docs/testing/user-stories-testing/user-story-04-c.png">
+<img src="docs/testing/user-stories-testing/user-story-04-d.png">
+</details>
+
+
+- As a returning user, I can log in with my existing credentials so that I can access the app
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+If logged out, on the landing page click on the ‘log in’ icon in the navbar or ‘I’m already a member, log me in!’ button. Type your existing username and password | Logs user in and displays the main posts page. Displays username and default avatar/profile picture in the navbar | Works as expected |
+ 
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-05-a.png">
+<img src="docs/testing/user-stories-testing/user-story-05-b.png">
+<img src="docs/testing/user-stories-testing/user-story-05-c.png">
+</details>
+
+
+-	As a user, I can maintain my logged-in status until I choose to log out so that my use of app is not compromised
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Log in to the application and do not log out within the 24 hours | Users stay logged in for 24 hours unless choosing to log out themselves | Works as expected |
+ 
+
+- As a user, I can create posts so that I can share my food images with the community
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Click on the ‘Add post’ in the left-hand side small menu and the posts create page will be shown | Add the post title, select the category and upload image (post description is optional) and click ‘create’ button. The post will appear in the main posts page | Works as expected |
+ 
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-06-a.png">
+<img src="docs/testing/user-stories-testing/user-story-06-b.png">
+<img src="docs/testing/user-stories-testing/user-story-06-c.png">
+</details>
+
+
+-	As a user, I can categories my post so that other users can find it by its tag
+
 
 
 ## Credits
