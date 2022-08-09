@@ -172,6 +172,11 @@ Inter features a tall x-height to aid in readability of mixed-case and lower-cas
 - [Gitpod](https://gitpod.io) was used to host a virtual workspace
 - [Heroku Platform](https://id.heroku.com/login) was used to deploy the project into live environment
 - [Remove.bg](https://www.remove.bg/) was used to remove background on app images
+- Validation:
+  - [WC3 Validator](https://validator.w3.org/) was used to validate the html
+  - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/) was used to validate the css
+  - [ESLint](https://eslint.org/) used to validate JSX code
+  - [Lighthouse](https://developers.google.com/web/tools/lighthouse/) used to validate performance, accessibility, best practice and SEO of the app
 
 ##### Back to [top](#table-of-contents)
 
@@ -232,6 +237,10 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 <details><summary>CSS</summary> 
 <img src="docs/validation/snapfood-css-validation.png"> 
 </details> 
+
+
+### JSX
+The JSX code was validated using the ESLint utility and it passes without any significant issues affecting functionality of the application.
 
 ### Chrome Dev Tools Lighthouse 
 
