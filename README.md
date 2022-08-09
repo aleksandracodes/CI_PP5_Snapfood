@@ -173,7 +173,6 @@ Inter features a tall x-height to aid in readability of mixed-case and lower-cas
 - [Heroku Platform](https://id.heroku.com/login) was used to deploy the project into live environment
 - [Remove.bg](https://www.remove.bg/) was used to remove background on app images
 
-
 ##### Back to [top](#table-of-contents)
 
 
@@ -182,7 +181,6 @@ Inter features a tall x-height to aid in readability of mixed-case and lower-cas
 ### React
 
 React is a declarative, efficient, and flexible JavaScript library for building user interfaces. Its primary goal is to make it easy to reason about an interface and its state at any point in time, by dividing the UI into a collection of independent and reusable components ([source](https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795/)).
-
 
 There were various components created and reused across this application.
 
@@ -214,6 +212,50 @@ There were various components created and reused across this application.
 ### Django REST Framework
 
 The API for this Front-End application was built with the Django REST Framework. The repository with a README file for the DRF Back-End can be found [here](https://github.com/aleksandracodes/snapfood-drf-api).
+
+##### Back to [top](#table-of-contents)
+
+
+## Validation 
+
+### HTML
+The W3C Markup Validation Service was used to validate the HTML of the website. No errors were identified. 
+
+<details><summary>HTML</summary> 
+<img src="docs/validation/snapfood-html-validation.png"> 
+</details> 
+
+### CSS
+
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. The app passes the validation with no errors. 
+
+<details><summary>CSS</summary> 
+<img src="docs/validation/snapfood-css-validation.png"> 
+</details> 
+
+### Chrome Dev Tools Lighthouse 
+
+Lighthouse was used to test the performance, accessibility, best practice and SEO of the site. The validation was done for both desktop & mobile.  
+
+#### Desktop 
+
+<details><summary>Landing page</summary> 
+<img src="docs/validation/lighthouse-landing-desktop.png "> 
+</details> 
+
+<details><summary>Main posts page</summary> 
+<img src="docs/validation/lighthouse-mainpage-desktop.png "> 
+</details> 
+
+#### Mobile 
+
+<details><summary>Landing page</summary> 
+<img src="docs/validation/lighthouse-landing-mobile.png "> 
+</details> 
+
+<details><summary>Main posts page</summary> 
+<img src="docs/validation/lighthouse-mainpage-mobile.png "> 
+</details> 
 
 
 ## Credits
