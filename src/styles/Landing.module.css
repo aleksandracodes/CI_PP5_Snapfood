@@ -1,6 +1,7 @@
 .LandingImage {
   width: 370px;
   margin: 0 auto;
+  height: 100%;
 }
 
 .LandingButtonMargin {
@@ -28,5 +29,6 @@
 @media all and (max-width: 440px) {
   .LandingImage {
     width: 80%;
+    height: 80%;
   }
 }
