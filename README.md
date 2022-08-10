@@ -348,13 +348,23 @@ Log in to the application and do not log out within the 24 hours | Users stay lo
 Click on the ‘Add post’ in the left-hand side small menu and the posts create page will be shown | Add the post title, select the category and upload image (post description is optional) and click ‘create’ button. The post will appear in the main posts page | Works as expected |
  
 <details><summary>Screenshot</summary>
-<img src="docs/testing/user-stories-testing/user-story-06-a.png">
-<img src="docs/testing/user-stories-testing/user-story-06-b.png">
-<img src="docs/testing/user-stories-testing/user-story-06-c.png">
+<img src="docs/testing/user-stories-testing/user-story-07-a.png">
+<img src="docs/testing/user-stories-testing/user-story-07-b.png">
+<img src="docs/testing/user-stories-testing/user-story-07-c.png">
 </details>
 
 
 -	As a user, I can categories my post so that other users can find it by its tag
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Click on the ‘Add post’ in the left-hand side small menu and the posts create page will be shown. Add posts details and select a category of the post (mandatory field) | Post is added and a category badge (type of cuisine) is displayed within the post under its title and description | Works as expected |
+ 
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-08-a.png">
+<img src="docs/testing/user-stories-testing/user-story-08-b.png">
+<img src="docs/testing/user-stories-testing/user-story-08-c.png">
+</details>
 
 
 
