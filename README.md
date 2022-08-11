@@ -38,68 +38,68 @@ The key functionality aspects:
 
 #### Navigation 
 
-- As a user, I can see the home page with explanation of the portal, so that I know what the app is about
-- As a user, I can see a navbar on every page, so that I can easily return to main page, find a post and access my profile page
-- As a logged-out user, I can see log in and sign up options so that I can log in or sign up
+1. As a user, I can see the home page with explanation of the portal, so that I know what the app is about
+2. As a user, I can see a navbar on every page, so that I can easily return to main page, find a post and access my profile page
+3. As a logged-out user, I can see log in and sign up options so that I can log in or sign up
  
 #### Authentication 
 
-- As a new user, I can create a new account so that I can access the app 
-- As a returning user, I can log in with my existing credentials so that I can access the app 
-- As a user, I can maintain my logged-in status until I choose to log out so that my use of app is not compromised 
+4. As a new user, I can create a new account so that I can access the app 
+5. As a returning user, I can log in with my existing credentials so that I can access the app 
+6. As a user, I can maintain my logged-in status until I choose to log out so that my use of app is not compromised 
 
 ### Second sprint
 
 #### Posts 
 
-- As a user, I can create posts so that I can share my food images with the community 
-- As a user, I can categories my post so that other users can find it by its tag 
-- As a user, I can view other people’s posts so that I can get inspired by their images 
-- As a user, I can view the details of a single post so that I can see its full description and other users’ comments 
-- As user, I can like a specific post so that I can show my interest 
+7. As a user, I can create posts so that I can share my food images with the community 
+8. As a user, I can categorise my post so that other users can find it by its tag 
+9. As a user, I can view other people’s posts so that I can get inspired by their images 
+10.  As a user, I can view the details of a single post so that I can see its full description and other users’ comments 
+11. As user, I can like a specific post so that I can show my interest 
 
 #### The Post Page 
 
-- As a user, I can view the details of a single posts so that I can read other users’ comments and know what they think about it
-- As a user, I can view a category for the post so that I know what cuisine the food image relates to 
-- As user, I can add comments to a post so that I can share my thoughts about the post with the community 
-- As a user, I can see when the comments were created so that I know how old a comment is 
-- As an owner of a comment, I can edit my comment so that I can update my existing comment 
-- As an owner of a comment, I can delete my comment from the post 
-- As a post owner, I can edit my post title and description so that I can make corrections or update my post after it was created
+12. As a user, I can view the details of a single posts so that I can read other users’ comments and know what they think about it
+13. As a user, I can view a category for the post so that I know what cuisine the food image relates to 
+14. As user, I can add comments to a post so that I can share my thoughts about the post with the community 
+15. As a user, I can see when the comments were created so that I know how old a comment is 
+16. As an owner of a comment, I can edit my comment so that I can update my existing comment 
+17. As an owner of a comment, I can delete my comment from the post 
+18. As a post owner, I can edit my post title and description so that I can make corrections or update my post after it was created
 
 ### Third sprint
 
 #### Main page 
 
-- As a user, I can view posts ordered by most recently added so that I am up to date with the newest content 
-- As a user, I can keep scrolling through the posts so that they are loaded automatically and I don't have to select the next page 
-- As a user, I can see the posts I liked so that I can find the posts I enjoy the most
-- As a user, I can view posts from users I followed, so I can follow their activity
-- As a user, I can view posts category tags, so that I choose posts to display that I’m particularly interested in
-- As a user, I can search for posts with keywords so that I can find the posts I am interested in 
+19. As a user, I can view posts ordered by most recently added so that I am up to date with the newest content 
+20. As a user, I can keep scrolling through the posts so that they are loaded automatically and I don't have to select the next page 
+21. As a user, I can see the posts I liked so that I can find the posts I enjoy the most
+22. As a user, I can view posts from users I followed, so I can follow their activity
+23. As a user, I can view posts category tags, so that I choose posts to display that I’m particularly interested in
+24. As a user, I can search for posts with keywords so that I can find the posts I am interested in 
 
 #### User Profile Page 
 
-- As a user, I can add my profile avatar so that other users can easily identify me 
-- As a user, I can view user's avatars so that I can easily identify other users of the app 
-- As a user, I can update the picture and description of my profile on the profile page so that other users view up to date info about me 
-- As a user, I can change password to my account so that I can keep my profile secure 
+25. As a user, I can add my profile avatar so that other users can easily identify me 
+26. As a user, I can view user's avatars so that I can easily identify other users of the app 
+27. As a user, I can update the picture and description of my profile on the profile page so that other users view up to date info about me 
+28. As a user, I can change password to my account so that I can keep my profile secure 
 
 ### Fourth sprint
 
 #### Other Users Profiles 
 
-- As a user, I can view all the posts by a specific user so that I can see their latest activity 
-- As a user, I can view other users’ profiles with their profile description, number of posts, followers and users followed so that I can learn more about them 
-- As a user, I can follow and unfollow other users so that I can get specific users’ posts in my posts feed 
-- As a user, I can see a list of the most followed profiles so that I can see which profiles are popular 
+29. As a user, I can view all the posts by a specific user so that I can see their latest activity 
+30. As a user, I can view other users’ profiles with their profile description, number of posts, followers and users followed so that I can learn more about them 
+31. As a user, I can follow and unfollow other users so that I can get specific users’ posts in my posts feed 
+32. As a user, I can see a list of the most followed profiles so that I can see which profiles are popular 
 
 #### General
 
-- As a site owner I want my site to be fully responsive so that users can you use it on different devices
-- As a site owner, I want users to come to a 404 error page so that they don't have to user the browser back button if they enter a URL that does not exist
-- As a site user, I can view feedback messages, so that I know if my comment/profile/post has been updated
+33. As a site owner I want my site to be fully responsive so that users can you use it on different devices
+34. As a site owner, I want users to come to a 404 error page so that they don't have to user the browser back button if they enter a URL that does not exist
+35. As a site user, I can view feedback messages, so that I know if my comment/profile/post has been updated
 
 
 ##### Back to [top](#table-of-contents)
@@ -271,7 +271,7 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
  
 ### Manual testing of user stories
 
- - As a user, I can see the home page with explanation of the portal, so that I know what the app is about
+1. As a user, I can see the home page with explanation of the portal, so that I know what the app is about
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -282,13 +282,13 @@ Navigate to https://ci-pp5-snapfood.herokuapp.com/ | Landing page loads with app
 </details>
 
 
-- As a user, I can see a navbar on every page, so that I can easily return to main page, find a post and access my profile page
+2. As a user, I can see a navbar on every page, so that I can easily return to main page, find a post and access my profile page
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Load any page of the application| Navbar with different links is displayed on top of each page | Works as expected |
  
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
 <img src="docs/testing/user-stories-testing/user-story-02-a.png">
 <img src="docs/testing/user-stories-testing/user-story-02-b.png">
 <img src="docs/testing/user-stories-testing/user-story-02-c.png">
@@ -296,7 +296,7 @@ Load any page of the application| Navbar with different links is displayed on to
 </details>
 
 
-- As a logged-out user, I can see log in and sign up options so that I can log in or sign up
+3. As a logged-out user, I can see log in and sign up options so that I can log in or sign up
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -307,13 +307,13 @@ Navigate to the main page and ensure you are logged out. If logged in, click on 
 </details>
 
 
-- As a new user, I can create a new account so that I can access the app
+4. As a new user, I can create a new account so that I can access the app
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Navigate to https://ci-pp5-snapfood.herokuapp.com/, click ‘sign up’ icon in the navbar or ‘Happy to join!’ button. Type username, password and confirm the password | Redirects user to login page and on successful login with created credentials the user is logged in and this is indicated by display of their username and default avatar in the navbar | Works as expected |
  
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
 <img src="docs/testing/user-stories-testing/user-story-04-a.png">
 <img src="docs/testing/user-stories-testing/user-story-04-b.png">
 <img src="docs/testing/user-stories-testing/user-story-04-c.png">
@@ -321,49 +321,179 @@ Navigate to https://ci-pp5-snapfood.herokuapp.com/, click ‘sign up’ icon in 
 </details>
 
 
-- As a returning user, I can log in with my existing credentials so that I can access the app
+5. As a returning user, I can log in with my existing credentials so that I can access the app
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 If logged out, on the landing page click on the ‘log in’ icon in the navbar or ‘I’m already a member, log me in!’ button. Type your existing username and password | Logs user in and displays the main posts page. Displays username and default avatar/profile picture in the navbar | Works as expected |
  
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
 <img src="docs/testing/user-stories-testing/user-story-05-a.png">
 <img src="docs/testing/user-stories-testing/user-story-05-b.png">
 <img src="docs/testing/user-stories-testing/user-story-05-c.png">
 </details>
 
 
--	As a user, I can maintain my logged-in status until I choose to log out so that my use of app is not compromised
+6.	As a user, I can maintain my logged-in status until I choose to log out so that my use of app is not compromised
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Log in to the application and do not log out within the 24 hours | Users stay logged in for 24 hours unless choosing to log out themselves | Works as expected |
  
 
-- As a user, I can create posts so that I can share my food images with the community
+7. As a user, I can create posts so that I can share my food images with the community
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Click on the ‘Add post’ in the left-hand side small menu and the posts create page will be shown | Add the post title, select the category and upload image (post description is optional) and click ‘create’ button. The post will appear in the main posts page | Works as expected |
  
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
 <img src="docs/testing/user-stories-testing/user-story-07-a.png">
 <img src="docs/testing/user-stories-testing/user-story-07-b.png">
 <img src="docs/testing/user-stories-testing/user-story-07-c.png">
 </details>
 
 
--	As a user, I can categories my post so that other users can find it by its tag
+8.	As a user, I can categorise my post so that other users can find it by its tag
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 Click on the ‘Add post’ in the left-hand side small menu and the posts create page will be shown. Add posts details and select a category of the post (mandatory field) | Post is added and a category badge (type of cuisine) is displayed within the post under its title and description | Works as expected |
  
-<details><summary>Screenshot</summary>
+<details><summary>Screenshots</summary>
 <img src="docs/testing/user-stories-testing/user-story-08-a.png">
 <img src="docs/testing/user-stories-testing/user-story-08-b.png">
 <img src="docs/testing/user-stories-testing/user-story-08-c.png">
+</details>
+
+
+9. As a user, I can view other people’s posts so that I can get inspired by their images 
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+As a logged in user navigate to the main page by clicking on the 'Home' icon in the navbar | All posts will be displayed on the page | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-09-a.png">
+</details>
+
+
+10. As a user, I can view the details of a single post so that I can see its full description and other users’ comments
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+On the main post page click on the post image | Redirects to a specific post page and displays post details | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-10-a.png">
+<img src="docs/testing/user-stories-testing/user-story-10-b.png">
+</details>
+
+
+11. As user, I can like a specific post so that I can show my interest
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+On the main page or within specific profile page, click on the like icon under the post | Post is liked and like icon is marked green. Post is added to liked post page (/liked) | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-11-a.png">
+<img src="docs/testing/user-stories-testing/user-story-11-b.png">
+<img src="docs/testing/user-stories-testing/user-story-11-c.png">
+
+</details>
+
+
+12. As a user, I can view the details of a single posts so that I can read other users’ comments and know what they think about it
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Click on the post image | Redirects to a chosen post page and displays post details with comments below | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-12-a.png">
+<img src="docs/testing/user-stories-testing/user-story-12-b.png">
+</details>
+
+
+13. As a user, I can view a category for the post so that I know what cuisine the food image relates to
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+(no specific step to follow) | Once the post has been created by the user, a category is displayed within each post | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-13.png">
+</details>
+
+
+14. As user, I can add comments to a post so that I can share my thoughts about the post with the community
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Within the post page (click on the post image to navigate to) under the post write your comment in the comment box and click 'Add' | Adds a comment to the comments list and increments the number of likes by 1 | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-14-a.png">
+<img src="docs/testing/user-stories-testing/user-story-14-b.png">
+</details>
+
+
+15. As a user, I can see when the comments were created so that I know how old a comment is
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Click on a post image to navigate to the post page  | All comments with the creation date are displayed under the post | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-15.png">
+</details>
+
+
+16. As an owner of a comment, I can edit my comment so that I can update my existing comment
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+In the post page, click on the dropdown icon on the right hand side of your comment and click edit icon | Opens the edit post box | Works as expected |
+Update the comment and click 'Update' button | Updates the comment, displays updated date to 'now' and displays a feedback message to the user | Works as expected |
+
+Note: editing of other users' comments is not possible
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-16-a.png">
+<img src="docs/testing/user-stories-testing/user-story-16-b.png">
+<img src="docs/testing/user-stories-testing/user-story-16-b.png">
+</details>
+
+
+17. As an owner of a comment, I can delete my comment from the post
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+In the post page, click on the dropdown icon on the right hand side of your comment and click delete (bin) icon | Removes the comment from all comments, displays a feedback message to the user in place of the comment and decrements the number of likes by 1 once the message has disappeared after a delay | Works as expected |
+
+Note: deleting other users' comments is not possible
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-17-a.png">
+<img src="docs/testing/user-stories-testing/user-story-17-b.png">
+<img src="docs/testing/user-stories-testing/user-story-17-c.png">
+</details>
+
+
+18. As a post owner, I can edit my post title and description so that I can make corrections or update my post after it was created
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Click on the post you have added and within the post page click on the dropdown menu and then edit post icon | Redirects to the edit post page | Works as expected |
+In the edit post page update details of your post and click 'Save' button | Updates post details and redirects to the post page | Works as expected |
+
+Note: editing of other users' post is not possible
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-18-a.png">
+<img src="docs/testing/user-stories-testing/user-story-18-b.png">
+<img src="docs/testing/user-stories-testing/user-story-18-c.png">
 </details>
 
 
