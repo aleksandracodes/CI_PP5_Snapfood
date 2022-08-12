@@ -39,7 +39,7 @@ The key functionality aspects:
 #### Navigation 
 
 1. As a user, I can see the home page with explanation of the portal, so that I know what the app is about
-2. As a user, I can see a navbar on every page, so that I can easily return to main page, find a post and access my profile page
+2. As a user, I can see a navbar on every page, so that I can easily return to main page and access my profile page
 3. As a logged-out user, I can see log in and sign up options so that I can log in or sign up
  
 #### Authentication 
@@ -219,6 +219,161 @@ The API for this Front-End application was built with the Django REST Framework.
 ##### Back to [top](#table-of-contents)
 
 
+## Features
+
+### Landing page
+- Includes navbar, main body and a footer
+- Lading page main body includes explanation what the app is about
+- Contains direct links to sign-up and log-in pages
+- User stories covered: 1, 3
+
+<details><summary>See feature image</summary>
+<img src="docs/features/feature-landing-page.png">
+</details>
+
+
+### Logo and Navigation Bar
+- Featured and consistent on the all pages
+- Two variants of the navbar:
+  - New or not logged-in users will see the Home, Sign up & Log in icons - options to either register or log in
+  - Logged-in users will see the Home icon and their user avatar & name with option on click to either view their profile or log out
+- The nav bar is fully responsive and changes to a toggler (hamburger menu) on smaller size screens
+- User stories covered: 2, 3
+
+<details><summary>See feature images</summary>
+<img src="docs/features/feature-navbar-1.png">
+<img src="docs/features/feature-navbar-2.png">
+<img src="docs/features/feature-navbar-3.png">
+<img src="docs/features/feature-navbar-4.png">
+</details>
+
+
+### Footer
+- A footer is displayed at the bottom of the landing page
+- Contains copyrights info
+- Contains links to social media and GitHub page (opening in a separate window)
+
+<details><summary>See feature image</summary>
+<img src="docs/features/feature-footer.png">
+</details>
+
+
+### Sign up form
+- New users can create an account
+- The user must provide a valid username (between 1-10 characters long), password and password confirmation
+- Password must meet certain criteria which user can see on hovering/taping the ‘view password criteria’ button
+- User cannot register the same details twice for an account
+- Once registered, the user is redirected to the login page to log in
+- User stories covered: 4
+
+<details><summary>See feature images</summary>
+<img src="docs/features/feature-signup-1.png">
+<img src="docs/features/feature-signup-2.png">
+</details>
+
+
+### Login form
+- Returning users can login to their account
+- The user must have an account in the system and they must enter the correct username and password
+- Both fields are mandatory
+- Once logged in the user will be navigated to the main posts page
+- Warning message is displayed on incorrect input
+- User stories covered: 5
+
+<details><summary>See feature image</summary>
+<img src="docs/features/feature-login.png">
+</details>
+
+
+### Post create/update form
+- Contains image, title, category and description
+- Description field is optional
+- Allows user to share their pictures with others
+- Allows user to categorise their post to make it easy to be found by other users
+- User stories covered: 7, 8, 18, 23
+
+<details><summary>See feature images</summary>
+<img src="docs/features/feature-post-create-edit-form.png">
+</details>
+
+
+### Main posts page
+- Main posts page is displayed for logged-in users instead of the landing page
+- Contains 3 small menus:
+  - Add, likes & feed
+  - Top Users
+  - Post category badges
+- Contain search bar above all posts
+- Without any applied search filter displays posts added by all users
+- Display all posts ordered by the most recent one
+- User stories covered: 9, 19,
+
+<details><summary>See feature image</summary>
+<img src="docs/features/feature-main-posts-page.png">
+</details>
+
+
+### Post page
+- Contains details of a single post - image, title, description (if provided by the user) and its category tag
+- Contains number of likes and comments the post has
+- Contains like icon to allow user to like the post
+- Features comments section below the post
+- User stories covered: 10, 11, 12, 13, 14
+
+<details><summary>See feature image</summary>
+<img src="docs/features/feature-post-page.png">
+</details>
+
+
+### Comments
+- Enable users to share their opinion on a specific post
+- Display passed time since adding the post (e.g. 4 minutes ago)
+- Users have an option to update or delete the comment
+- User stories covered: 14, 15, 16, 17
+
+<details><summary>See feature image</summary>
+<img src="docs/features/feature-comments.png">
+</details>
+
+
+### Likes
+- Allow user to express their interest in the post
+- Like icons is marked green if user likes the post
+- User cannot like their own posts
+- Allow user to narrow their search to liked posts only when clicked on the ‘Feed’ option in the small menu
+- User stories covered: 11
+
+<details><summary>See feature images</summary>
+<img src="docs/features/feature-likes-1.png">
+<img src="docs/features/feature-likes-2.png">
+</details>
+
+
+### Profile page
+- Contains information about the user
+- Displays info how many posts and followers user has and how many users they are following
+- Displays profile information if it was provided by the profile owner
+- Contains a dropdown menu to edit the profile and change profile password
+- User stories covered: 25, 26, 27, 29, 30
+
+<details><summary>See feature image</summary>
+<img src="docs/features/feature-profile-page.png">
+</details>
+
+
+### Profile avatar
+- Allow users to change their default avatar to their own avatar or picture
+- Displayed in the navbar, at top of the post, within profile page and by user comment
+- Displayed within ’Top Users’ menu
+- User stories covered: 25, 26
+
+<details><summary>See feature image</summary>
+<img src="docs/features/feature-avatar.png">
+</details>
+
+
+
+
 ## Validation 
 
 ### HTML
@@ -282,7 +437,7 @@ Navigate to https://ci-pp5-snapfood.herokuapp.com/ | Landing page loads with app
 </details>
 
 
-2. As a user, I can see a navbar on every page, so that I can easily return to main page, find a post and access my profile page
+2. As a user, I can see a navbar on every page, so that I can easily return to main page and access my profile page
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -753,6 +908,10 @@ Firefox Browser version 103.0.2 (64-bit)
 ##### Back to [top](#table-of-contents)
 
 
+## Deployment
+
+##### Back to [top](#table-of-contents)
+
 ## Credits
 
 ### Images
@@ -765,3 +924,9 @@ Firefox Browser version 103.0.2 (64-bit)
 - Site logo was created with [Fiverr Logo Maker](https://www.fiverr.com/logo-maker/brief/logo_name?brief_id=0d212c49-2416-401d-99a5-780b9b233ff7)
 - Upload image icon taken from [here](https://static.thenounproject.com/png/741679-200.png) combining [this](https://cdn-icons-png.flaticon.com/512/80/80320.png) image using Paint
 - Admin user avatar found [here](https://us.123rf.com/450wm/yupiramos/yupiramos1704/yupiramos170412377/75993207-businesswoman-avatar-character-icon-vector-illustration-design.jpg?ver=6)
+- A majority of food photographs added as posts were found via Google Search Engine or added directly by each user testing the app. Due to extensive testing of this app, I'm not able to provide the sources of all of the pictures found via search engine. As this application was created for the education purpose only, please do not repost the images without crediting the source.
+
+
+### Code
+
+### Acknowledgements
