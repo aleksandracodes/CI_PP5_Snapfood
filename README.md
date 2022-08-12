@@ -372,6 +372,107 @@ The API for this Front-End application was built with the Django REST Framework.
 </details>
 
 
+### Password change form
+- Allows user to change their profile password
+- Contains password criteria visible on hover/tap of ‘view password criteria’ button
+- User stories covered: 28
+
+<details><summary>See feature images</summary>
+<img src="docs/features/feature-password-change-form-1.png">
+<img src="docs/features/feature-password-change-form-2.png">
+</details>
+
+
+### Infinitive scroll
+- Allows user to scroll through the content without having to select the next/previous page
+- Used for the posts and comments
+- Improves general user experience and user engagement
+- Displays the loading spinner before loading
+- User stories covered: 20
+
+<details><summary>See feature images</summary>
+<img src="docs/features/feature-infinite-scroll-1.png">
+<img src="docs/features/feature-infinite-scroll-2.png">
+</details>
+
+
+### Follow/unfollow
+- Users are able to follow a specific profile they like and then be able to easily view their posts in the Feed
+- User stories covered: 31
+
+<details><summary>See feature image</summary>
+<img src="docs/features/feature-follow-unfollow.png">
+</details>
+
+
+### ‘Add, liked, feed’ menu
+- Allow user to create a post
+- Featured on every page (except for the create/update post/profile or change password)
+- Allow user to view only posts they liked
+- Allow user to view only posts created by users they follow
+- User stories covered: 7, 21, 22
+
+<details><summary>See feature images</summary>
+<img src="docs/features/feature-add-liked-feed-1.png">
+<img src="docs/features/feature-add-liked-feed-2.png">
+</details>
+
+
+### Top Users menu
+- Displays three most followed users in the app
+- Contains follow buttons next to username which allow following these users
+- Featured on the majority of pages (except for edit post/profile or change password)
+- User stories covered: 32
+
+<details><summary>See feature images</summary>
+<img src="docs/features/feature-top-users-2.png">
+<img src="docs/features/feature-top-users-2.png">
+</details>
+
+
+### Category badges:
+- Allow to tag the post by the type of the cuisine
+- Allow other users to find content they are most interested in 
+- User stories covered: 23
+
+<details><summary>See feature images</summary>
+<img src="docs/features/feature-category-badges-1.png">
+<img src="docs/features/feature-category-badges-2.png">
+</details>
+
+
+### Search bar
+- By typing a phrase in the search bar users can find a specific post or a user they are looking for
+- Allows to search through all post title, users or post category
+- Allows search through liked posts only or posts by users followed
+- User can click on the eraser icon to clear the search content instead of hitting the backspace button
+- User stories covered: 24
+
+<details><summary>See feature images</summary>
+<img src="docs/features/feature-search-bar-1.png">
+<img src="docs/features/feature-search-bar-2.png">
+</details>
+
+
+### 404 error page
+- Displays if the user enters a URL that does not exist
+- Contains a button to redirect user to the main page (in addition to the one in the nabber)
+- User stories covered: 34
+
+<details><summary>See feature image</summary>
+<img src="docs/features/feature-404-page.png">
+</details>
+
+
+### Feedback messages
+- User is provided with feedback message about the action their performed such as edited/deleted comment, updated profile or password, deleted a post
+- User stories covered: 35
+
+<details><summary>See feature image</summary>
+<img src="docs/features/feature-feedback-messages.png">
+</details>
+
+##### Back to [top](#table-of-contents)
 
 
 ## Validation 
@@ -649,6 +750,7 @@ Note: editing of other users' post is not possible
 <img src="docs/testing/user-stories-testing/user-story-18-a.png">
 <img src="docs/testing/user-stories-testing/user-story-18-b.png">
 <img src="docs/testing/user-stories-testing/user-story-18-c.png">
+<img src="docs/testing/user-stories-testing/user-story-18-d.png">
 </details>
 
 
@@ -717,7 +819,7 @@ On the main posts page click on the category badge of posts you'd like to view |
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-On the main posts page click on the search box and type a phrase | Searches through all posts, users and post categories and displays posts containing searched words in their title, username or category | Works as expected |
+On the main posts page click on the search bar and type a phrase | Searches through all posts, users and post categories and displays posts containing searched words in their title, username or category | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-stories-testing/user-story-24-a.png">
