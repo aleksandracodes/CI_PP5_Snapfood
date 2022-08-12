@@ -60,7 +60,7 @@ The key functionality aspects:
 
 #### The Post Page 
 
-12. As a user, I can view the details of a single posts so that I can read other users’ comments and know what they think about it
+12. As a user, I can view the details of a single post so that I can read other users’ comments and know what they think about it
 13. As a user, I can view a category for the post so that I know what cuisine the food image relates to 
 14. As user, I can add comments to a post so that I can share my thoughts about the post with the community 
 15. As a user, I can see when the comments were created so that I know how old a comment is 
@@ -404,7 +404,7 @@ On the main page or within specific profile page, click on the like icon under t
 </details>
 
 
-12. As a user, I can view the details of a single posts so that I can read other users’ comments and know what they think about it
+12. As a user, I can view the details of a single post so that I can read other users’ comments and know what they think about it
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -497,6 +497,261 @@ Note: editing of other users' post is not possible
 </details>
 
 
+19. As a user, I can view posts ordered by most recently added so that I am up to date with the newest content
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Add a new post and navigate to the main posts page | Adds post on top of the other posts and displays a date when it was added | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-19.png">
+</details>
+
+20. As a user, I can keep scrolling through the posts so that they are loaded automatically and I don't have to select the next page
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to the main posts page and scroll to the bottom of the page | Loads new content and moves the scroll bar. Displays a spinning icon before the posts have been loaded | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-20-a.png">
+<img src="docs/testing/user-stories-testing/user-story-20-b.png">
+</details>
+
+
+21. As a user, I can see the posts I liked so that I can find the posts I enjoy the most
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+On the main posts page click on the 'Liked posts' icon/text | Loads all liked posts | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-21-a.png">
+<img src="docs/testing/user-stories-testing/user-story-21-b.png">
+<img src="docs/testing/user-stories-testing/user-story-21-c.png">
+</details>
+
+
+22. As a user, I can view posts from users I followed, so I can follow their activity
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+On the main posts page click on the 'Feed' icon/text | Loads all posts from followed users | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-22-a.png">
+<img src="docs/testing/user-stories-testing/user-story-22-b.png">
+</details>
+
+
+23. As a user, I can view posts category tags, so that I choose posts to display that I’m particularly interested in
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+On the main posts page click on the category badge of posts you'd like to view | Loads all posts with the selected category | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-23-a.png">
+<img src="docs/testing/user-stories-testing/user-story-23-b.png">
+<img src="docs/testing/user-stories-testing/user-story-23-c.png">
+<img src="docs/testing/user-stories-testing/user-story-23-d.png">
+</details>
+
+
+24. As a user, I can search for posts with keywords so that I can find the posts I am interested in
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+On the main posts page click on the search box and type a phrase | Searches through all posts, users and post categories and displays posts containing searched words in their title, username or category | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-24-a.png">
+<img src="docs/testing/user-stories-testing/user-story-24-b.png">
+<img src="docs/testing/user-stories-testing/user-story-24-c.png">
+<img src="docs/testing/user-stories-testing/user-story-24-d.png">
+</details>
+
+
+25. As a user, I can add my profile avatar so that other users can easily identify me
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Each user has a default avatar upon signing up to the app. Click on the profile avatar/user name in the navbar and select the 'Profile' from the dropdown | Redirects to the profile page | Works as expected |
+Click on the dropdown menu and 'edit' icon | Redirects to the edit profile page | Works as expected |
+Upload a profile avatar and click 'Save' | Saves user profile, displays a feedback message to the user, redirects to user profile page and displays updated user avatar and info | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-25-a.png">
+<img src="docs/testing/user-stories-testing/user-story-25-b.png">
+<img src="docs/testing/user-stories-testing/user-story-25-c.png">
+<img src="docs/testing/user-stories-testing/user-story-25-d.png">
+</details>
+
+
+26. As a user, I can view user's avatars so that I can easily identify other users of the app
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to the main page or specific post page | User avatars are displayed next to username in top users, by each post or user comment | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-26-a.png">
+<img src="docs/testing/user-stories-testing/user-story-26-b.png">
+<img src="docs/testing/user-stories-testing/user-story-26-c.png">
+</details>
+
+
+27. As a user, I can update the picture and description of my profile on the profile page so that other users view up to date info about me
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to the user profile page and click on the dropdown menu and 'edit' icon | Redirects to the profile page | Works as expected |
+Add profile description and click 'Save' button | Saves user profile information, displays a feedback message to the user, redirects to user profile page and displays updated user info | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-27-a.png">
+<img src="docs/testing/user-stories-testing/user-story-27-b.png">
+<img src="docs/testing/user-stories-testing/user-story-27-c.png">
+<img src="docs/testing/user-stories-testing/user-story-27-d.png">
+</details>
+
+
+28. As a user, I can change password to my account so that I can keep my profile secure
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Navigate to the user profile page and click on the dropdown menu and the key icon | Redirects to the password change page | Works as expected |
+Input password in the 'new password' and 'confirm password' fields | Displays warning massage if password criteria are not met. Otherwise, saves a new password, displays a feedback message and redirects user to the profile page after a short delay | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-28-a.png">
+<img src="docs/testing/user-stories-testing/user-story-28-b.png">
+<img src="docs/testing/user-stories-testing/user-story-28-c.png">
+<img src="docs/testing/user-stories-testing/user-story-28-d.png">
+</details>
+
+
+29. As a user, I can view all the posts by a specific user so that I can see their latest activity
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Click on the user avatar or name | Redirects to the chosen user profile page and displays all their posts within the profile page | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-29-a.png">
+<img src="docs/testing/user-stories-testing/user-story-29-b.png">
+<img src="docs/testing/user-stories-testing/user-story-29-c.png">
+</details>
+
+
+30. As a user, I can view other users’ profiles with their profile description, number of posts, followers and users followed so that I can learn more about them
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Click on the user avatar or name | Redirects to the chosen user profile page and displays user avatar, number of followers, number of users followed, number of posts, user profile description (if added by the user) and user posts | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-30-a.png">
+<img src="docs/testing/user-stories-testing/user-story-30-b.png">
+</details>
+
+
+31. As a user, I can follow and unfollow other users so that I can get specific users’ posts in my posts feed
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Click on the 'follow' button within the user profile page or by the username in 'Top Users' menu | Follows the user, increases the 'following' number on current profile and increases the number of followers on followed user's profile | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-31-a.png">
+<img src="docs/testing/user-stories-testing/user-story-31-b.png">
+<img src="docs/testing/user-stories-testing/user-story-31-c.png">
+<img src="docs/testing/user-stories-testing/user-story-31-d.png">
+</details>
+
+
+32. As a user, I can see a list of the most followed profiles so that I can see which profiles are popular
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+(no specific step to follow) | The small navigation menu with top most followed profiles is displayed on the main page, specific post page and profile page | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-32-a.png">
+<img src="docs/testing/user-stories-testing/user-story-32-b.png">
+<img src="docs/testing/user-stories-testing/user-story-32-c.png">
+</details>
+
+
+33. As a site owner I want my site to be fully responsive so that users can you use it on different devices
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Change device screen size using chrome dev tools | The web functionality remains the same on various screen sizes | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-33-a.png">
+<img src="docs/testing/user-stories-testing/user-story-33-b.png">
+<img src="docs/testing/user-stories-testing/user-story-33-c.png">
+<img src="docs/testing/user-stories-testing/user-story-33-d.png">
+<img src="docs/testing/user-stories-testing/user-story-33-e.png">
+<img src="docs/testing/user-stories-testing/user-story-33-f.png">
+</details>
+
+
+34. As a site owner, I want users to come to a 404 error page so that they don't have to user the browser back button if they enter a URL that does not exist
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+Type the wrong page in the www address (e.g. https://ci-pp5-snapfood.herokuapp.com/xyz) | Reroutes to a customised 404 page | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/testing/user-stories-testing/user-story-34.png">
+</details>
+
+
+35. As a site user, I can view feedback messages, so that I know if my comment/profile/post has been updated
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+In the post page comments section click on the dropdown menu and 'edit' icon to edit your existing comment. Make changes to your comment and click 'Update' | Saves the comment, changes time display to 'now' and displays the feedback message to the user | Works as expected |
+In the post page comments section click on the dropdown menu and 'bin' icon to delete your existing comment | Deletes the comment and displays the feedback message in its place | Works as expected |
+In the profile page click on the dropdown menu and 'edit' icon to edit user profile. Make desired changes and click 'Save' | Updates the profile, displays the feedback message and redirects the user to their profile page after a short delay | Works as expected |
+In the profile page click on the dropdown menu and the key icon to change user password. Update the password and click 'Save' | Updates the password, displays the feedback message and redirects the user to their profile page after a short delay | Works as expected |
+Within the post page click on the dropdown menu and 'bin' icon to delete the post | Deletes the post, displays the feedback message and redirects the user to the main posts page | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-stories-testing/user-story-35-a.png">
+<img src="docs/testing/user-stories-testing/user-story-35-b.png">
+<img src="docs/testing/user-stories-testing/user-story-35-c.png">
+<img src="docs/testing/user-stories-testing/user-story-35-d.png">
+<img src="docs/testing/user-stories-testing/user-story-35-e.png">
+<img src="docs/testing/user-stories-testing/user-story-35-f.png">
+<img src="docs/testing/user-stories-testing/user-story-35-g.png">
+<img src="docs/testing/user-stories-testing/user-story-35-h.png">
+<img src="docs/testing/user-stories-testing/user-story-35-i.png">
+<img src="docs/testing/user-stories-testing/user-story-35-j.png">
+</details>
+
+
+### Performing tests on various devices
+
+The website was tested using Google Chrome Developer Tools Toggle Device Toolbar to simulate viewports of different devices.
+
+The website was tested on the following devices:
+- ASUS ZenBook (laptop screen)
+- Samsung Galaxy Tab A (tablet screen)
+- Samsung S7 (mobile screen)
+
+
+### Browser compatibility
+
+Testing has been carried out on the following browsers:
+Googe Chrome Version Version 104.0.5112.79 (Official Build) (64-bit)
+Firefox Browser version 103.0.2 (64-bit)
+
+##### Back to [top](#table-of-contents)
+
 
 ## Credits
 
@@ -509,3 +764,4 @@ Note: editing of other users' post is not possible
 - The thumb-up icon for like/unlike was taken from [here](https://image.shutterstock.com/shutterstock/photos/1391842757/display_1500/stock-vector-vector-hand-like-icon-template-good-food-logo-illustration-with-fork-sign-line-symbol-for-farmers-1391842757.jpg) and tweaked using Paint
 - Site logo was created with [Fiverr Logo Maker](https://www.fiverr.com/logo-maker/brief/logo_name?brief_id=0d212c49-2416-401d-99a5-780b9b233ff7)
 - Upload image icon taken from [here](https://static.thenounproject.com/png/741679-200.png) combining [this](https://cdn-icons-png.flaticon.com/512/80/80320.png) image using Paint
+- Admin user avatar found [here](https://us.123rf.com/450wm/yupiramos/yupiramos1704/yupiramos170412377/75993207-businesswoman-avatar-character-icon-vector-illustration-design.jpg?ver=6)
