@@ -227,7 +227,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Contains direct links to sign-up and log-in pages
 - User stories covered: 1, 3
 
-<details><summary>See feature image</summary>
+<details><summary>See feature screenshot</summary>
 <img src="docs/features/feature-landing-page.png">
 </details>
 
@@ -240,7 +240,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - The nav bar is fully responsive and changes to a toggler (hamburger menu) on smaller size screens
 - User stories covered: 2, 3
 
-<details><summary>See feature images</summary>
+<details><summary>See feature screenshots</summary>
 <img src="docs/features/feature-navbar-1.png">
 <img src="docs/features/feature-navbar-2.png">
 <img src="docs/features/feature-navbar-3.png">
@@ -253,7 +253,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Contains copyrights info
 - Contains links to social media and GitHub page (opening in a separate window)
 
-<details><summary>See feature image</summary>
+<details><summary>See feature screenshot</summary>
 <img src="docs/features/feature-footer.png">
 </details>
 
@@ -266,7 +266,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Once registered, the user is redirected to the login page to log in
 - User stories covered: 4
 
-<details><summary>See feature images</summary>
+<details><summary>See feature screenshots</summary>
 <img src="docs/features/feature-signup-1.png">
 <img src="docs/features/feature-signup-2.png">
 </details>
@@ -280,7 +280,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Warning message is displayed on incorrect input
 - User stories covered: 5
 
-<details><summary>See feature image</summary>
+<details><summary>See feature screenshot</summary>
 <img src="docs/features/feature-login.png">
 </details>
 
@@ -292,7 +292,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Allows user to categorise their post to make it easy to be found by other users
 - User stories covered: 7, 8, 18, 23
 
-<details><summary>See feature images</summary>
+<details><summary>See feature screenshots</summary>
 <img src="docs/features/feature-post-create-edit-form.png">
 </details>
 
@@ -308,7 +308,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Display all posts ordered by the most recent one
 - User stories covered: 9, 19,
 
-<details><summary>See feature image</summary>
+<details><summary>See feature screenshot</summary>
 <img src="docs/features/feature-main-posts-page.png">
 </details>
 
@@ -320,7 +320,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Features comments section below the post
 - User stories covered: 10, 11, 12, 13, 14
 
-<details><summary>See feature image</summary>
+<details><summary>See feature screenshot</summary>
 <img src="docs/features/feature-post-page.png">
 </details>
 
@@ -331,7 +331,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Users have an option to update or delete the comment
 - User stories covered: 14, 15, 16, 17
 
-<details><summary>See feature image</summary>
+<details><summary>See feature screenshot</summary>
 <img src="docs/features/feature-comments.png">
 </details>
 
@@ -343,7 +343,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Allow user to narrow their search to liked posts only when clicked on the ‘Feed’ option in the small menu
 - User stories covered: 11
 
-<details><summary>See feature images</summary>
+<details><summary>See feature screenshots</summary>
 <img src="docs/features/feature-likes-1.png">
 <img src="docs/features/feature-likes-2.png">
 </details>
@@ -356,7 +356,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Contains a dropdown menu to edit the profile and change profile password
 - User stories covered: 25, 26, 27, 29, 30
 
-<details><summary>See feature image</summary>
+<details><summary>See feature screenshot</summary>
 <img src="docs/features/feature-profile-page.png">
 </details>
 
@@ -367,7 +367,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Displayed within ’Top Users’ menu
 - User stories covered: 25, 26
 
-<details><summary>See feature image</summary>
+<details><summary>See feature screenshot</summary>
 <img src="docs/features/feature-avatar.png">
 </details>
 
@@ -377,7 +377,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Contains password criteria visible on hover/tap of ‘view password criteria’ button
 - User stories covered: 28
 
-<details><summary>See feature images</summary>
+<details><summary>See feature screenshots</summary>
 <img src="docs/features/feature-password-change-form-1.png">
 <img src="docs/features/feature-password-change-form-2.png">
 </details>
@@ -390,7 +390,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Displays the loading spinner before loading
 - User stories covered: 20
 
-<details><summary>See feature images</summary>
+<details><summary>See feature screenshots</summary>
 <img src="docs/features/feature-infinite-scroll-1.png">
 <img src="docs/features/feature-infinite-scroll-2.png">
 </details>
@@ -400,7 +400,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Users are able to follow a specific profile they like and then be able to easily view their posts in the Feed
 - User stories covered: 31
 
-<details><summary>See feature image</summary>
+<details><summary>See feature screenshot</summary>
 <img src="docs/features/feature-follow-unfollow.png">
 </details>
 
@@ -412,7 +412,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Allow user to view only posts created by users they follow
 - User stories covered: 7, 21, 22
 
-<details><summary>See feature images</summary>
+<details><summary>See feature screenshots</summary>
 <img src="docs/features/feature-add-liked-feed-1.png">
 <img src="docs/features/feature-add-liked-feed-2.png">
 </details>
@@ -424,8 +424,8 @@ The API for this Front-End application was built with the Django REST Framework.
 - Featured on the majority of pages (except for edit post/profile or change password)
 - User stories covered: 32
 
-<details><summary>See feature images</summary>
-<img src="docs/features/feature-top-users-2.png">
+<details><summary>See feature screenshots</summary>
+<img src="docs/features/feature-top-users-1.png">
 <img src="docs/features/feature-top-users-2.png">
 </details>
 
@@ -435,7 +435,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Allow other users to find content they are most interested in 
 - User stories covered: 23
 
-<details><summary>See feature images</summary>
+<details><summary>See feature screenshots</summary>
 <img src="docs/features/feature-category-badges-1.png">
 <img src="docs/features/feature-category-badges-2.png">
 </details>
@@ -448,7 +448,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - User can click on the eraser icon to clear the search content instead of hitting the backspace button
 - User stories covered: 24
 
-<details><summary>See feature images</summary>
+<details><summary>See feature screenshots</summary>
 <img src="docs/features/feature-search-bar-1.png">
 <img src="docs/features/feature-search-bar-2.png">
 </details>
@@ -459,7 +459,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Contains a button to redirect user to the main page (in addition to the one in the nabber)
 - User stories covered: 34
 
-<details><summary>See feature image</summary>
+<details><summary>See feature screenshot</summary>
 <img src="docs/features/feature-404-page.png">
 </details>
 
@@ -468,7 +468,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - User is provided with feedback message about the action their performed such as edited/deleted comment, updated profile or password, deleted a post
 - User stories covered: 35
 
-<details><summary>See feature image</summary>
+<details><summary>See feature screenshot</summary>
 <img src="docs/features/feature-feedback-messages.png">
 </details>
 
