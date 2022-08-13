@@ -472,6 +472,26 @@ The API for this Front-End application was built with the Django REST Framework.
 <img src="docs/features/feature-feedback-messages.png">
 </details>
 
+
+## Future features / improvements
+
+Example of potential improvements to this project:
+
+- Authentication
+  - Allow user sign up to the app using email or require email input for registration
+  - Forgotten password option to recover access to the account via email
+  - Allow user authentication with already existing accounts, e.g. LinkedIn, Google, etc. 
+- Profile
+  - Option to send a message to other user
+- Posts
+  - Additional field to include the recipe of the dish
+  - Show most liked posts in the app - similar to ‘Top Users’ menu
+- Comments
+  - Option to reply to a selected comment and create a conversation
+  - Option to like/unlike other users’ comments
+
+I was initially planning to have the functionality to delete user account but I decided to keep all the signed-up users within the database and do not allow them to remove their profile.
+
 ##### Back to [top](#table-of-contents)
 
 
@@ -1004,8 +1024,9 @@ The website was tested on the following devices:
 ### Browser compatibility
 
 Testing has been carried out on the following browsers:
-Googe Chrome Version Version 104.0.5112.79 (Official Build) (64-bit)
-Firefox Browser version 103.0.2 (64-bit)
+- Googe Chrome Version Version 104.0.5112.79 (Official Build) (64-bit)
+- Firefox Browser version 103.0.2 (64-bit)
+- Version 104.0.1293.54 (Official build) (64-bit)
 
 ##### Back to [top](#table-of-contents)
 
