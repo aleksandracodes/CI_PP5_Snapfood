@@ -1048,7 +1048,60 @@ Testing has been carried out on the following browsers:
 
 ## Deployment
 
+Due to security issues, Heroku has disabled automated deployments from GitHub which was making the process much faster. Although this function has been reactivated during creation of this app, this project has been deployed from GitHub to Heroku via Heroku Git method by following the steps:
+
+1. Create or log in to your account at heroku.com
+2. Create a new app, add a unique app name (this project is named "ci-pp5-snapfood") and choose your region
+3. Click on create app
+4. In package.json file, in the “scripts” section, add the following prebuild command:
+   ```
+   "heroku-prebuild": "npm install -g serve",
+   ```
+5. Add a Procfile file at the root of the project with the following web command:
+   ```
+   web: serve -s build
+   ```
+6. Ensure the config vars in your Back-End app on Heroku are correct: the 'CLIENT_ORIGIN' is set to the URL of the Front-End app deployed to Heroku and the 'CLIENT_ORIGIN_DEV' is set to the Front-End workspace URL
+7. Instal axios and create axiosDefault.js and define axios.defaults.baseURL as your Back-End URL and the content type
+8. Log in to your heroku account by typing in the terminal:
+   ```
+   heroku login -i
+   ```
+9. Enter your email and password
+10. Get your app name from Heroku by entering the following command in the terminal: 
+    ```
+    heroku apps
+    ```
+11. Set the Heroku remote by entering the following command in the terminal:
+    ```
+    heroku git:remote -a <app_name>
+    ```
+    (Replace <app_name> with your actual app name and remove the <> characters)
+12. Save any changes to your code and push to GitHub
+13. Push changes to Heroku with the command: 
+    ```
+    git push heroku main
+    ```
+
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+   
+### Making a Local Clone
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click it
+3. Highlight the "HTTPS" button to clone with HTTPS and copy the link
+4. Open commandline interface on your computer
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard 
+  ```
+  $ git clone https://github.com/aleksandracodes/ci_pp5_snapfood.git
+  ```
+7. Press Enter to create your local clone
+
 ##### Back to [top](#table-of-contents)
+
 
 ## Credits
 
