@@ -1031,6 +1031,21 @@ Testing has been carried out on the following browsers:
 ##### Back to [top](#table-of-contents)
 
 
+## Bugs
+
+| **Bug** | **Fix** |
+| ------- | ------- |
+| Dropdown menu three dots going off the container on smaller screens | Changed grid-template-columns: from ‘60px auto 200px’ to ‘60px auto 60px’ |
+| User was redirected to 404 page after signing up and logging in | Changed history.goBack(); to history.push("/") |
+| Lighthouse validation: Poor performance of the landing page | Resized (compressed) the landing image |
+| Lighthouse validation: Image not displayed with the correct image ratio | Resized the site logo image with to correct dimensions and ratio |
+| Console warning: Please use ```require("react-router-dom").NavLink``` instead of ```require("react-router-dom/NavLink")```. Support for the latter will be removed in the next major release. | Changed import { NavLink } from "react-router-dom" to import { NavLink } from "react-router-dom" |
+| On small screens, clicking on the hamburger menu and then on user avatar/ user name was not displaying the dropdown menu with ‘Profile’ & ‘Logout’ options | Added a class to the Avatar component, and a div in the ‘loggedInNavBar’ dropdown. In the ‘useClickOutsideToggle’ hook added a check to see if element is the one we don’t want to cause the collapse of navbar |
+| The time under the post was displayed in UTC instead of the local time post was added | Unsuccessful fix. Added 'USE_TZ = True' in back-end settings but it didn't work as expected. Time fix is a future improvement |
+
+##### Back to [top](#table-of-contents)
+
+
 ## Deployment
 
 ##### Back to [top](#table-of-contents)
