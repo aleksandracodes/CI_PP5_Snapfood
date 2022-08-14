@@ -1048,6 +1048,8 @@ Testing has been carried out on the following browsers:
 
 ## Deployment
 
+
+### Heroku Deployment
 Due to security issues, Heroku has disabled automated deployments from GitHub which was making the process much faster. Although this function has been reactivated during creation of this app, this project has been deployed from GitHub to Heroku via Heroku Git method by following the steps:
 
 1. Create or log in to your account at heroku.com
@@ -1115,9 +1117,12 @@ Due to security issues, Heroku has disabled automated deployments from GitHub wh
 - Site logo was created with [Fiverr Logo Maker](https://www.fiverr.com/logo-maker/brief/logo_name?brief_id=0d212c49-2416-401d-99a5-780b9b233ff7)
 - Upload image icon taken from [here](https://static.thenounproject.com/png/741679-200.png) combining [this](https://cdn-icons-png.flaticon.com/512/80/80320.png) image using Paint
 - Admin user avatar found [here](https://us.123rf.com/450wm/yupiramos/yupiramos1704/yupiramos170412377/75993207-businesswoman-avatar-character-icon-vector-illustration-design.jpg?ver=6)
-- A majority of food photographs added as posts were found via Google Search Engine or added directly by each user testing the app. Due to extensive testing of this app, I'm not able to provide the sources of all of the pictures found via search engine. As this application was created for the education purpose only, please do not repost the images without crediting the source.
+- This application was created for the education purpose only. A majority of food photographs added as posts were found via Google Search Engine or added directly by each user testing the app. Due to extensive testing of this app, I'm not able to provide the sources of all of the pictures found via search engine. Please do not repost the images without crediting the source.
 
 
 ### Code
+
+This project was inspired by the ['Moments'](https://github.com/Code-Institute-Solutions/moments) social media platform which was a final walk-through project with Code Institute. I have built my own styles and added extra functionality, such as filtering of posts based on their category. The SnapFood application can be expanded on and include the potential improvements mentioned in the 'Future features / improvements' section.
+
 
 ### Acknowledgements
