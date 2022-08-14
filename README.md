@@ -1126,3 +1126,8 @@ This project was inspired by the ['Moments'](https://github.com/Code-Institute-S
 
 
 ### Acknowledgements
+
+I would like to thank everyone who supported me in the development of this project:
+- My mentor Mo for professional guidance and helpful feedback
+- Tutors (Sean, Alan & John) at Code Institute for help on sorting various issues and sharing their knowledge
+- Code Institute community on Slack for their support
