@@ -170,6 +170,7 @@ Inter features a tall x-height to aid in readability of mixed-case and lower-cas
 - [Gitpod](https://gitpod.io) was used to host a virtual workspace
 - [Heroku Platform](https://id.heroku.com/login) was used to deploy the project into live environment
 - [Remove.bg](https://www.remove.bg/) was used to remove background on app images
+- [Unscreen](https://www.unscreen.com/upload) - remove white background from the loading gif (spinner)
 - Validation:
   - [WC3 Validator](https://validator.w3.org/) was used to validate the html
   - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/) was used to validate the css
@@ -188,7 +189,7 @@ React is a declarative, efficient, and flexible JavaScript library for building 
 There were various components created and reused across this application.
 
 - `<Asset />` - multipurpose reusable compontent which displays different versions of the component depending on the props we pass to it. 
-  - loading spinner (from React Bootstrap) when content is being loaded
+  - loading gif (spinner) when content is being loaded
   - image with src and alt attribute
   - paragraph with a message
 
@@ -390,6 +391,7 @@ The API for this Front-End application was built with the Django REST Framework.
 - Displays the loading spinner before loading
 - User stories covered: 20
 
+* bootstrap spinner 
 <details><summary>See feature screenshots</summary>
 <img src="docs/features/feature-infinite-scroll-1.png">
 <img src="docs/features/feature-infinite-scroll-2.png">
@@ -1117,6 +1119,7 @@ Due to security issues, Heroku has disabled automated deployments from GitHub wh
 - Site logo was created with [Fiverr Logo Maker](https://www.fiverr.com/logo-maker/brief/logo_name?brief_id=0d212c49-2416-401d-99a5-780b9b233ff7)
 - Upload image icon taken from [here](https://static.thenounproject.com/png/741679-200.png) combining [this](https://cdn-icons-png.flaticon.com/512/80/80320.png) image using Paint
 - Admin user avatar found [here](https://us.123rf.com/450wm/yupiramos/yupiramos1704/yupiramos170412377/75993207-businesswoman-avatar-character-icon-vector-illustration-design.jpg?ver=6)
+- Loading gif (spinner) taken from [here](https://icon-library.com/icon/loading-icon-animated-gif-17.html)
 - This application was created for the education purpose only. A majority of food photographs added as posts were found via Google Search Engine or added directly by each user testing the app. Due to extensive testing of this app, I'm not able to provide the sources of all of the pictures found via search engine. Please do not repost the images without crediting the source.
 
 
