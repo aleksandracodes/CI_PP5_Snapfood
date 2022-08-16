@@ -199,6 +199,7 @@ Inter features a tall x-height to aid in readability of mixed-case and lower-cas
   - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/) was used to validate the css
   - [ESLint](https://eslint.org/) used to validate JSX code
   - [Lighthouse](https://developers.google.com/web/tools/lighthouse/) used to validate performance, accessibility, best practice and SEO of the app
+  - [Wave](https://wave.webaim.org/) - used to evaluate application accessibility
 
 ##### Back to [top](#table-of-contents)
 
@@ -563,6 +564,26 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 <details><summary>Main posts page</summary> 
 <img src="docs/validation/lighthouse-mainpage-mobile.png "> 
 </details> 
+
+
+### Wave
+The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
+
+<details><summary>Landing page</summary>
+<img src="docs/validation/wave-landing-page.png">
+</details>
+
+<details><summary>Sign up page</summary>
+<img src="docs/validation/wave-sign-up.png">
+</details>
+
+<details><summary>Log in page</summary>
+<img src="docs/validation/wave-log-in.png">
+</details>
+
+<details><summary>Main posts page</summary>
+<img src="docs/validation/wave-main-posts-page.png">
+</details>
 
 ##### Back to [top](#table-of-contents)
 
@@ -1066,6 +1087,7 @@ Testing has been carried out on the following browsers:
 | Console warning: Please use ```require("react-router-dom").NavLink``` instead of ```require("react-router-dom/NavLink")```. Support for the latter will be removed in the next major release. | Changed import { NavLink } from "react-router-dom" to import { NavLink } from "react-router-dom" |
 | On small screens, clicking on the hamburger menu and then on user avatar/ user name was not displaying the dropdown menu with ‘Profile’ & ‘Logout’ options | Added a class to the Avatar component, and a div in the ‘loggedInNavBar’ dropdown. In the ‘useClickOutsideToggle’ hook added a check to see if element is the one we don’t want to cause the collapse of navbar |
 | The time under the post was displayed in UTC instead of the local time post was added | Unsuccessful fix. Added 'USE_TZ = True' in back-end settings but it didn't work as expected. Time fix is a future improvement |
+| Wave validator: Empty link | Add 'aria-label'|
 
 ##### Back to [top](#table-of-contents)
 

@@ -106,12 +106,14 @@ function MainPostsPage({ message, filter = "" }) {
           className={styles.SearchBar}
           onSubmit={(e) => e.preventDefault()}
         >
+          
           <Form.Control
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             type="text"
             className="mr-sm-2"
             placeholder="Search posts"
+            aria-label="search bar"
           />
           <i className={`fa-solid fa-eraser ${styles.Clear}`} onClick={() => setQuery("")} />
         </Form>

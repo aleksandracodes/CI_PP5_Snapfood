@@ -186,7 +186,7 @@ const Post = (props) => {
           }
           <span className="ml-1">{likes_number}</span>
 
-          <Link to={`/posts/${id}`}>
+          <Link to={`/posts/${id}`} aria-label="view comments">
             <i className="fa-regular fa-comment ml-2" />
           </Link>
           <span className="ml-1">{comments_number}</span>
