@@ -168,14 +168,14 @@ Inter features a tall x-height to aid in readability of mixed-case and lower-cas
 
 ### Libraries, frameworks and dependencies
 
-- [Axios](https://axios-http.com/docs/intro) - axios were used for promise-based HTTP
-- [ClassNames] - JavaScript utility for conditionally joining classNames together, used in the FeedbackMsg component
-- [JWT](https://jwt.io/) - library to decode out JSON Web token. Used to prevent unauthenticated user from making extra network requests to refresh their access token. Also used to remove the timestamp from the browser when the user refreshes token expires or the user logs out.
-- [Popper](https://popper.js.org/) - a 3rd party library used by React-Bootstrap. Used to make sure the dropdown menus position is fixed on all browsers.
+- [Axios](https://axios-http.com/docs/intro) - axios were used for promise-based HTTP. Justification: I used axios to send API requests from the React project to the API and avoid any CORS errors when sending cookies.
+- [ClassNames](https://www.npmjs.com/package/classnames/) - JavaScript utility for conditionally joining classNames together, used in the FeedbackMsg component. Justification: I used it to apply the styles dynamically based on the type of style and apply more than one style to elements in FeedbackMsg component
+- [JWT](https://jwt.io/) - library to decode out JSON Web token. Justification: I used JWT to prevent unauthenticated user from making extra network requests to refresh their access token. Also used to remove the timestamp from the browser when the user refreshes token expires or the user logs out.
+- [Popper](https://popper.js.org/) - a 3rd party library used by React-Bootstrap. Justification: I used Popper to make sure the dropdown menus position is fixed on all browsers.
 - [React 17](https://17.reactjs.org/) - JavaScript library for building user interfaces
-- [React-Bootstrap 4.6](https://react-bootstrap-v4.netlify.app/) - Bootstrap library used for UI components, styling and responsiveness.
-- [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) - used to load content (posts/comments) automatically as the user scrolls towards the bottom of the page
-- [React Router](https://v5.reactrouter.com/web/guides/quick-start) - used for dynamic routing (controls what the user sees depending on the URL they have accessed in the browser)
+- [React-Bootstrap 4.6](https://react-bootstrap-v4.netlify.app/) - Justification: I used Bootstrap React library for UI components, styling and responsiveness.
+- [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) - Justification: I used this component to load content (posts/comments) automatically as the user scrolls towards the bottom of the page without having to jump to next/previous page.
+- [React Router](https://v5.reactrouter.com/web/guides/quick-start) - used for dynamic routing. Justification: I used this library to enable the navigation among views of various components and control what the user sees depending on the URL they have accessed in the browser.
 
 ### Tools & Programs
 
@@ -217,7 +217,7 @@ There were various components created and reused across this application.
   - image with src and alt attribute
   - paragraph with a message
 
-- `<Avatar />` - resuable component, used to render profile images in the UI. Passed props allow for setting image source and size and adjust image dimensions depending on where the component is rendered. Example of use include the `<NavaBar />` component, Post page or the Profile page. On mobile screens Avatar component within the Profile Page will be significantly bigger than on other screen sizes.
+- `<Avatar />` - resuable component, used to render profile images in the UI. Passed props allow for setting image source and size and adjust image dimensions depending on where the component is rendered. Example of use include the `<NavBar />` component, Post page or the Profile page. On mobile screens Avatar component within the Profile Page will be significantly bigger than on other screen sizes.
 
 - `<DropdownMenu />` - reusable component, used to render the dropdown menu which allows user to edit or delete their own posts orcomments, and also edit their profile or change profile password.
 
@@ -550,7 +550,7 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 </details>
 
 <details><summary>Profile page</summary>
-<img src="docs/validation/html-validation-profile-page">
+<img src="docs/validation/html-validation-profile-page.png">
 </details>
 
 <details><summary>Profile edit page</summary>
@@ -1199,9 +1199,9 @@ The website was tested on the following devices:
 ### Browser compatibility
 
 Testing has been carried out on the following browsers:
-- Googe Chrome Version Version 104.0.5112.79 (Official Build) (64-bit)
-- Firefox Browser version 103.0.2 (64-bit)
-- Version 104.0.1293.54 (Official build) (64-bit)
+- Googe Chrome, version 104.0.5112.79 (Official Build) (64-bit)
+- Firefox Browser, version 103.0.2 (64-bit)
+- Microsoft Edge, version 104.0.1293.54 (Official build) (64-bit)
 
 ##### Back to [top](#table-of-contents)
 
