@@ -8,13 +8,36 @@
 
 
 ## Table of Contents
-
+  - [About](#about)
+  - [Project Goals](#project-goals)
+  - [User Stories](#user-stories)
+  - [Design](#design)
+    - [Colours](#colours)
+    - [Fonts](#fonts)
+    - [Wireframes](#wireframes)
+  - [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Libraries, frameworks and dependencies](#libraries-frameworks-and-dependencies)
+    - [Tools & Programs](#tools--programs)
+  - [Front-End](#front-end)
+  - [Back-End API](#back-end-api)
+  - [Features](#features)
+  - [Future features / improvements](#future-features--improvements)
+  - [Validation](#validation)
+  - [Testing](#testing)
+    - [Manual testing of user stories](#manual-testing-of-user-stories)
+    - [Performing tests on various devices](#performing-tests-on-various-devices)
+    - [Browser compatibility](#browser-compatibility)
+  - [Bugs](#bugs)
+  - [Deployment](#deployment)
+  - [Credits](#credits)
 
 
 ## About
 
 SnapFood is a platform where users can share photos of food they made, ordered or like with the rest of the community.
-Everyone can like other users' pictures and share their opinion on a certain post. Users can also follow their favourite profiles and easily see updates on their activity. SnapFood is an app for all food lovers who want to get inspired or share inspirations with others.
+Everyone can like other users' pictures and share their opinion on every post. Users can also follow their favourite profiles and easily see updates on their activity. SnapFood is an app for all food lovers who want to get inspired or share inspirations with others.
+
 
 ## Project Goals
 
@@ -384,14 +407,13 @@ The API for this Front-End application was built with the Django REST Framework.
 </details>
 
 
-### Infinitive scroll
+### Infinite scroll
 - Allows user to scroll through the content without having to select the next/previous page
 - Used for the posts and comments
 - Improves general user experience and user engagement
 - Displays the loading spinner before loading
 - User stories covered: 20
 
-* bootstrap spinner 
 <details><summary>See feature screenshots</summary>
 <img src="docs/features/feature-infinite-scroll-1.png">
 <img src="docs/features/feature-infinite-scroll-2.png">
