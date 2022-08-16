@@ -20,6 +20,7 @@
   box-shadow: 1px 1px 5px var(--dark-slate-grey) !important;
   border-color: var(--salmon) !important;
   font-weight: bold;
+  color: var(--dark-slate-grey);
 }
 
 .ButtonUnfollow {
