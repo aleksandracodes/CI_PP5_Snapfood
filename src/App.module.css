@@ -1,9 +1,9 @@
 /* Colors pallet */
 :root {
-  --dark-slate-grey: #293f4a;
+  --dark-slate-grey: #20323C;
   --light-grey: #718085;
   --light: #d6dad9;
-  --salmon: #f87364;
+  --salmon: #ff978b;
 }
 
 /* Highlighting of text */
@@ -65,6 +65,7 @@ i {
   box-shadow: 1px 1px 5px var(--salmon);
   border-color: var(--salmon);
   font-weight: bold;
+  color: var(--dark-slate-grey);
 }
 
 .button:hover,
