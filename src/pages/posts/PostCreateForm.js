@@ -95,6 +95,7 @@ function PostCreateForm() {
           className={appStyles.Input}
           value={title}
           onChange={handleChange}
+          aria-label="title"
         />
       </Form.Group>
 
@@ -113,6 +114,7 @@ function PostCreateForm() {
           className={appStyles.Input}
           value={category}
           onChange={handleChange}
+          aria-label="category"
         >
           <option>Select type of cousine</option>
           <option value="Spanish">Spanish</option>
@@ -147,6 +149,7 @@ function PostCreateForm() {
           className={appStyles.Input}
           value={description}
           onChange={handleChange}
+          aria-label="post description"
         />
       </Form.Group>
 

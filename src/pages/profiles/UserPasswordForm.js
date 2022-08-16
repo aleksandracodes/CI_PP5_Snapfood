@@ -78,6 +78,7 @@ const UserPasswordForm = () => {
                 onChange={handleChange}
                 name="new_password1"
                 className={`${appStyles.Input} text-center`}
+                aria-label="new password"
               />
             </Form.Group>
 
@@ -96,6 +97,7 @@ const UserPasswordForm = () => {
                 onChange={handleChange}
                 name="new_password2"
                 className={`${appStyles.Input} text-center`}
+                aria-label="confirm new password"
               />
 
               <PasswordCriteria />

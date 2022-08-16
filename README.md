@@ -568,6 +568,7 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 ### Wave
 The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
+There were a few errors related to missing labels and contrast issues on buttons. These errors were rectified.
 
 <details><summary>Landing page</summary>
 <img src="docs/validation/wave-landing-page.png">
@@ -583,6 +584,30 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 
 <details><summary>Main posts page</summary>
 <img src="docs/validation/wave-main-posts-page.png">
+</details>
+
+<details><summary>Post page</summary>
+<img src="docs/validation/wave-post-page.png">
+</details>
+
+<details><summary>Post edit page</summary>
+<img src="docs/validation/wave-post-edit-page.png">
+</details>
+
+<details><summary>Post edit page</summary>
+<img src="docs/validation/wave-post-edit-page.png">
+</details>
+
+<details><summary>Profile page</summary>
+<img src="docs/validation/wave-profile-page.png">
+</details>
+
+<details><summary>Profile edit page</summary>
+<img src="docs/validation/wave-profile-edit-page.png">
+</details>
+
+<details><summary>Password change page</summary>
+<img src="docs/validation/wave-password-change-page.png">
 </details>
 
 ##### Back to [top](#table-of-contents)
@@ -1088,6 +1113,7 @@ Testing has been carried out on the following browsers:
 | On small screens, clicking on the hamburger menu and then on user avatar/ user name was not displaying the dropdown menu with ‘Profile’ & ‘Logout’ options | Added a class to the Avatar component, and a div in the ‘loggedInNavBar’ dropdown. In the ‘useClickOutsideToggle’ hook added a check to see if element is the one we don’t want to cause the collapse of navbar |
 | The time under the post was displayed in UTC instead of the local time post was added | Unsuccessful fix. Added 'USE_TZ = True' in back-end settings but it didn't work as expected. Time fix is a future improvement |
 | Wave validator: Empty link | Add 'aria-label'|
+| Wave validator: Contrast errors | Change shade of initially set color 'salmon' and change font color from white to 'dark-slate-grey' on buttons |
 
 ##### Back to [top](#table-of-contents)
 

@@ -118,6 +118,7 @@ const ProfileEditForm = () => {
           name="description"
           rows={7}
           className={appStyles.Input}
+          aria-label="profile description"
         />
       </Form.Group>
 

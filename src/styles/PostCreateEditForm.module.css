@@ -3,7 +3,7 @@
 }
 
 .ButtonChangeImage {
-  color: #fff;
+  color: var(--dark-slate-grey);
   padding: 7px;
 }
 
