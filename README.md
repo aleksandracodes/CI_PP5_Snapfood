@@ -659,7 +659,27 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 
 
 ### JSX
-The JSX code was validated using the ESLint utility and it passes without any significant issues affecting functionality of the application.
+The JSX code was validated using the ESLint utility.
+When initially installed and run on Gitpod, there were a few errors to address such as escaping a single quotes using ```&lsquo;``` and correcting empty block statements. After I've done the testing when I tried to run my project again with 'npm start' I encountered issues with version compatibility and settings (recorded in [here](docs/validation/eslint-issue.jpg)). I followed the instructions and deleted package-lock.json and removed eslint from dependencies.
+
+As I didn't document the conducted tests, I decided to download my project and run it locally in Visual Studio Code editor. I installed the eslint package again and tested all js modules using command ```npx eslint yourfile.js```. See evidence of no errors shown below. Note: there were no feedback messages for no errors/warnings found.
+
+<details><summary>Eslint validation for components</summary> 
+<img src="docs/validation/eslint-components.png"> 
+</details> 
+
+<details><summary>Eslint validation for contexts</summary> 
+<img src="docs/validation/eslint-contexts.png"> 
+</details> 
+
+<details><summary>Eslint validation for hooks</summary> 
+<img src="docs/validation/eslint-hooks.png"> 
+</details> 
+
+<details><summary>Eslint validation for all pages</summary> 
+<img src="docs/validation/eslint-pages.png"> 
+</details> 
+
 
 ### Chrome Dev Tools Lighthouse 
 
