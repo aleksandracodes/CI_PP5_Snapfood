@@ -212,28 +212,40 @@ React is a declarative, efficient, and flexible JavaScript library for building 
 
 There were various components created and reused across this application.
 
-- `<Asset />` - multipurpose reusable compontent which displays different versions of the component depending on the props we pass to it. 
+- `<Asset />` - multipurpose reusable compontent which displays different versions of the component depending on the props we pass to it:
   - loading gif (spinner) when content is being loaded
   - image with src and alt attribute
   - paragraph with a message
 
+  - User stories covered: 20
+
 - `<Avatar />` - resuable component, used to render profile images in the UI. Passed props allow for setting image source and size and adjust image dimensions depending on where the component is rendered. Example of use include the `<NavBar />` component, Post page or the Profile page. On mobile screens Avatar component within the Profile Page will be significantly bigger than on other screen sizes.
+  - User stories covered: 25, 26
 
 - `<DropdownMenu />` - reusable component, used to render the dropdown menu which allows user to edit or delete their own posts orcomments, and also edit their profile or change profile password.
+  - User stories covered: 16, 17, 27, 28
 
 - `<FeedbackMsg />` - component for displaying feedback messages to the user upon editing/deleting comments, deleting post, updating profile information or a password.
+  - User stories covered: 35
 
 - `<Landing />` - specific component for displaying a landing page for new / not logged-in users, which contains links to sign up and log in, in addition to the navbar.
+  - User stories covered: 1
 
 - `<LikeFeedAddPost />` - reusable component containing 3 icons to add a post, show liked post or show posts by profiles the users follows. Displayed on various pages of the app.
+  - User stories covered: 7, 21, 22
 
 - `<NavBar />` - reusable component with the content depending on the login status of the user. For logged in user it shows icon link to the main posts page and user avatar/picture. For those who are not logged in, it displays icon links to sign up or log in instead of the avatar. The component is used on each page of the app.
+  - User stories covered: 2, 3
 
 - `<PageNotFound />` - specific component for displaying a 404 graphic error message with a return to menu button when user enters the url which does not exist.
+  - User stories covered: 34
 
-- `<PasswordCriteria />` - reusable component containing password criteria which are displayed on button hoover or focus. Used on sign up page and profile password change page.
+- `<PasswordCriteria />` - reusable component containing password criteria which are displayed on button hover or focus. Used on sign up page and profile password change page.
+  - User stories covered: 4, 28
 
 - `<PopularProfiles />` - reusable component showing first three most followed profiles in the app. The component displays user avatar, name and follow/unfollow button. These buttons are hidden on medium screen size devices. The component is used across the app together with the `<LikeFeedAddPost />` component and post categories badges on relevant pages.
+  - User stories covered: 32
+
 
 ## Back-End API
 

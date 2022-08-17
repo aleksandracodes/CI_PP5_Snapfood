@@ -36,7 +36,9 @@ function PostPage() {
         ]);
         setPost({ results: [post] });
         setComments(comments);
-      } catch (err) {}
+      } catch (err) {
+        // console.log(err)
+      }
     };
 
     handleMount();
