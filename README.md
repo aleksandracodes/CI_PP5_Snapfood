@@ -2,7 +2,7 @@
 
 **Developer: Aleksandra Haniok**
 
-💻 [Visit live website](https://ci-pp5-snapfood.herokuapp.com/)
+💻 [Visit live website](https://ci-pp5-snapfood.onrender.com/)
 
 ![Mockup image](docs/readme/ami-responsivedesign-snapfood.jpg)
 
@@ -29,7 +29,7 @@
     - [Performing tests on various devices](#performing-tests-on-various-devices)
     - [Browser compatibility](#browser-compatibility)
   - [Bugs](#bugs)
-  - [Deployment](#deployment)
+  - [Config](#config)
   - [Credits](#credits)
 
 
@@ -191,7 +191,7 @@ Inter features a tall x-height to aid in readability of mixed-case and lower-cas
 - [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
 - [GitHub](https://github.com/) was used as a remote repository to store project code
 - [Gitpod](https://gitpod.io) was used to host a virtual workspace
-- [Heroku Platform](https://id.heroku.com/login) was used to deploy the project into live environment
+- [Render Platform](https://render.com) was used to deploy the project into live environment
 - [Remove.bg](https://www.remove.bg/) was used to remove background on app images
 - [Unscreen](https://www.unscreen.com/upload) - remove white background from the loading gif (spinner)
 - Validation:
@@ -765,7 +765,7 @@ There were a few errors related to missing labels and contrast issues on buttons
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp5-snapfood.herokuapp.com/ | Landing page loads with application description | Works as expected |
+Navigate to https://ci-pp5-snapfood.onrender.com/ | Landing page loads with application description | Works as expected |
  
 <details><summary>Screenshot</summary>
 <img src="docs/testing/user-stories-testing/user-story-01.png">
@@ -801,7 +801,7 @@ Navigate to the main page and ensure you are logged out. If logged in, click on 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Navigate to https://ci-pp5-snapfood.herokuapp.com/, click ‘sign up’ icon in the navbar or ‘Happy to join!’ button. Type username, password and confirm the password | Redirects user to login page and on successful login with created credentials the user is logged in and this is indicated by display of their username and default avatar in the navbar | Works as expected |
+Navigate to https://ci-pp5-snapfood.onrender.com/, click ‘sign up’ icon in the navbar or ‘Happy to join!’ button. Type username, password and confirm the password | Redirects user to login page and on successful login with created credentials the user is logged in and this is indicated by display of their username and default avatar in the navbar | Works as expected |
  
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-stories-testing/user-story-04-a.png">
@@ -1194,7 +1194,7 @@ Change device screen size using chrome dev tools | The web functionality remains
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-Type the wrong page in the www address (e.g. https://ci-pp5-snapfood.herokuapp.com/xyz) | Reroutes to a customised 404 page | Works as expected |
+Type the wrong page in the www address (e.g. https://ci-pp5-snapfood.onrender.com/xyz) | Reroutes to a customised 404 page | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="docs/testing/user-stories-testing/user-story-34.png">
@@ -1262,44 +1262,7 @@ Testing has been carried out on the following browsers:
 ##### Back to [top](#table-of-contents)
 
 
-## Deployment
-
-
-### Heroku Deployment
-Due to security issues, Heroku has disabled automated deployments from GitHub which was making the process much faster. Although this function has been reactivated during creation of this app, this project has been deployed from GitHub to Heroku via Heroku Git method by following the steps:
-
-1. Create or log in to your account at heroku.com
-2. Create a new app, add a unique app name (this project is named "ci-pp5-snapfood") and choose your region
-3. Click on create app
-4. In package.json file, in the “scripts” section, add the following prebuild command:
-   ```
-   "heroku-prebuild": "npm install -g serve",
-   ```
-5. Add a Procfile file at the root of the project with the following web command:
-   ```
-   web: serve -s build
-   ```
-6. Ensure the config vars in your Back-End app on Heroku are correct: the 'CLIENT_ORIGIN' is set to the URL of the Front-End app deployed to Heroku and the 'CLIENT_ORIGIN_DEV' is set to the Front-End workspace URL
-7. Instal axios and create axiosDefault.js and define axios.defaults.baseURL as your Back-End URL and the content type
-8. Log in to your heroku account by typing in the terminal:
-   ```
-   heroku login -i
-   ```
-9. Enter your email and password
-10. Get your app name from Heroku by entering the following command in the terminal: 
-    ```
-    heroku apps
-    ```
-11. Set the Heroku remote by entering the following command in the terminal:
-    ```
-    heroku git:remote -a <app_name>
-    ```
-    (Replace <app_name> with your actual app name and remove the <> characters)
-12. Save any changes to your code and push to GitHub
-13. Push changes to Heroku with the command: 
-    ```
-    git push heroku main
-    ```
+## Config
 
 ### Forking the GitHub Repository
 1. Go to the GitHub repository
